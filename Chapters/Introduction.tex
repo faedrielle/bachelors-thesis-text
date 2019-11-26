@@ -1,17 +1,19 @@
 \linebreak
 With the growing popularity of smart wearables in the general public, a number of groups of people have been able to adjust their behaviour according to the way their data gets processed and fed back to them.
-People at risk of cordial disease \todo[color=green]{wording?} have been eyeing the Apple Watch 5 (https://www.apple.com/apple-watch-series-5/health/)\todo[color=green]{bib reference}\todo[color=green]{is not really a behaviour adjustment?}, runners can barely imagine not checking how fast they just ran their daily track or how much they have improved over the last month, people with sedentary jobs attempt to keep their daily step count above a currently recommended number, etc.
-All of this data is collected from a variety of devices, such as smart watches, textiles with integrated sensors, or implants, all of which are meant to be worn on the user's body and which measure and send data for analysis - hence the name wearable technology, or smartwear.\todo[color=green]{wording}\todo[color=green]{make name italics, or quote?}\todo[color=green]{get a source}
+People have been saving up for the Apple Watch 5 \cite{AppleWatch5} in spite of the ECG health monitor being virtually unnecessary for those not at risk of cardiac disease \cite{ecg-screening},
+runners can barely imagine not checking how fast and how efficiently they just ran their daily track or how much they have improved over the last month,
+people with sedentary jobs attempt to keep their daily step count above a currently recommended number, etc.
+All of this data is collected from a variety of devices, such as smart watches, textiles with integrated sensors, or implants, all of which are meant to be worn on the user's body and which measure and send data for analysis - hence the name \textit{wearable technology}, or \textit{smartwear}.\todo[color=green]{get a source}
 
-The result of this thesis will be a design for an IoT solution, mainly to be used by hikers \todo[color=green]{fit 'in advance' in here somewhere} who want to not only see how long a track is going to take them (which generally isn't tailored to the individual's fitness),
-but also an objective difficulty level of particular sections of said track, which may additionally be used by people with blood pressure issues, who are interested in a more detailed insight into the heart rate induced by the track\todo[color=green]{wording}.
+The result of this thesis will be a design for an IoT solution, mainly to be used by hikers who want to not only see in advance how long a track is going to take them (which generally isn't tailored to the individual's fitness),
+but also an objective difficulty level of particular sections of said track, which may have additional benefits for people with blood pressure issues, who are interested in a more detailed insight into the heart rate induced by the track\todo[color=green]{wording}.
 
 Using methods of software engineering, I am going to analyse the use of wearable technology in existing applications and document the most common features as well as their outstanding traits and their use of IoT principles (or lack thereof).
 Based on this analysis, I will pick the most relevant features to include in my design and extend them with features of my own devising, which will set my solution apart from existing software.\todo[color=green]{is this sentence necessary?}
 
 I will design and implement a PoC IoT solution - a mobile application which will collect data from the smart watch sensor and from the smart phone's GPS locator, a backend IoT platform for receiving and processing of collected data, and the communication channels used between these two modules.
-I will neither design nor implement a full-fledged IoT platform - that's not the aim of this thesis.
-I will design (not implement) the frontend mobile application for displaying of processed data, track selection and explore the necessary legal requirements for the use of integrated maps.
+I will neither design nor implement a full-fledged IoT platform - that's not in the scope of this thesis.
+I will design (not implement) the frontend mobile application for displaying of processed data, track selection and explore the necessary legal requirements for the use of integrated maps \todo[color = green]{introduce the maps in some other way?}.
 
 I will study the protocols used by a smart watch \todo[color=green]{use specific name once chosen} and adjust my mobile application accordingly.
 
