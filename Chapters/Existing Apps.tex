@@ -30,15 +30,14 @@ maybe a chapter on economics - app as a startup}
 \subsection{Existing solutions analysis}
 There's a plethora of applications taking advantage of wearable tech, not all of them using the available bio sensors from basic real-time heart rate monitoring to progress tracking, to calorie measuring, and to social network sized fitness communities.
 
-In this chapter I will research a couple \todo[color = green]{reword} such applications, compare and rate them based on following criteria.
+In this chapter I will research a couple \todo[color = green]{reword} such applications, compare and rate them based on following criteria. \todo{add weight to individual points}
 \begin{itemize}
-    \item Use of IoT possibilities -- data collection from the community, big data
-    \item Use of sensors
+    \item Use of IoT possibilities -- data collection from the community, big data, use of available sensors
     \item User fitness assessment -- self-assessment, questionnaire
     \item similarity in features \todo[color = green]{reword}
     \item Community -- built-in sharing options
     \item Extra features
-    \item User-friendliness
+    \item User-friendliness -- Navigation around the mobile application - finding the general settings, creating and clearing a route
     \item Availability -- free/microtransactions/paid
     \item Cross-platform -- major operating systems supporting the mobile application and sensors, if any are used \todo[color = green]{reword}
     \item Propriety -- open-source, closed-source
@@ -46,26 +45,37 @@ In this chapter I will research a couple \todo[color = green]{reword} such appli
 
 
 \subsection{komoot}
-The cross-platform application for outdoor track suggestion can also be used as a tour planner, guide and a navigation system.
+The cross-platform application for outdoor track suggestion can also be used as a tour planner, a map and a navigation system.
 
-While being rich with features, komoot doesn't base its functionality on objective data - it's the users themselves who rate and recommend the specific 'routes' (as they are named here),
-which in its nature \todo[color = green]{wording} is prone to error and there are only limited ways of eliminating the human factor.
-
-Moreover, since the app is not open source, \todo[color = green]{finish sentence}
+\todo[color = green]{add numeric ratings}
 
 \begin{itemize}
-    \item Use of IoT possibilities -- komoot doesn't quite qualify as an Iot solution, since it doesn't use any sensors other than GPS and requires user input for track rating.
-    \item Use of sensors -- The smart watch only gets used for displaying of routes and navigation, not taking any advantage of the available sensors.
+    \item Use of IoT possibilities -- Given its use of GPS sensors, komoot does qualify as a basic IoT system, however, it also relies heavily on user input for track rating.
+    The smart watch only gets used for displaying of routes and navigation, not taking any advantage of the available sensors.
+    \item User fitness assessment -- When a user is creating a route, they can set its difficulty as one of five levels, 
+    describing the user's self-reported physical fitness and their current taste for a challenge (or lack thereof): Couch Potato, Average, In Good Shape, Athletic, and Pro.
+    This parameter is considered when the app is generating a suitable route -- presumably by trying to adjust the elevation profile of the possible routes.
     \item Availability -- The region-based pricing model allows users who do not travel too much to use the app for free,
-    since the first region is provided at no extra cost.
+    since the first region is provided at no cost.
     In the other pricing options -- Single Region, Region Bundle and All Regions -- the price-performance ratio seems to be scaled reasonably. \todo[color = green]{anything to add?}
-    \item Cross-platform -- The system has full support with the Apple Watch and Samsung gear, and -- at least limitedly -- supports a number of other brands of smart watches and other Bluetooth-enabled devices.
-    \item Propriety -- the system is not entirely open-source, as a few of their repositories are public, but the core components remain hidden. \todo[color = green]{recheck}
-    \item 
+    \item Community -- With features like sharing of routes users have taken, following of other users, upvoting and commenting on their posts, the mobile application integrates a full-fledged social network.
+    \item Extra features -- Thanks to the maps (provided by the OpenStreetMap) users are able to pick a starting point, a destination, as well as any number of waypoints in between for their route.
+    Once the route is chosen, the user can go through the route's stats - the average time it will take to get from start to finish, its length, the elevation profile (uphill, downhill, highest and lowest points, estimated average speed) and the surfaces and their use in proportion to the route's length.
+    All this information is deliveered in easy-to-understand charts as well as interactive mappings -- using a slider, the user can see which stat applies in which part of the route.
+    \item User-friendliness -- The navigation through the mobile app takes some time to get used to -- it took me a while to find the Settings after I didn't see them in the burger menu on the bottom navigation bar, which contained only the different pricing options.
+    Once I created a route, the information provided was well-delivered and easy to read, however, there was no obvious way of completely cancelling the chosen route and picking another one.
+    Instead, hiding in the Options of the route -- which at first I didn't even notice -- I found the "Reset route" option, which did just what I needed.
+    \item Cross-platform -- The system is fully integrated with the Apple Watch and Samsung gear, and -- at least limitedly -- supports a number of other brands of smart watches and other Bluetooth-enabled devices.
+    The mobile application runs both on iPhones and Android phones.
+    \item Propriety -- The system is not entirely open-source, as a few of their repositories are public, but the core components remain proprietary. \todo[color = green]{recheck}
 \end{itemize}
+
+While being rich with features, komoot doesn't base its functionality on objective data -- it's the users themselves who rate and recommend the specific 'routes' (as they are named here),
+an approach in its nature prone to error and with only limited ways of eliminating the human factor.
 
 \subsection{endomondo}
 
 \subsection{Strava}
 
 \subsection{myFitnessPal}
+
