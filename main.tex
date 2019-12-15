@@ -44,23 +44,24 @@
 \abstractEN{Summarize the contents and contribution of your work in a few sentences in English language.}
 \abstractCS{V n{\v e}kolika v{\v e}t{\' a}ch shr{\v n}te obsah a p{\v r}{\' i}nos t{\' e}to pr{\' a}ce v {\v c}esk{\' e}m jazyce.}
 \placeForDeclarationOfAuthenticity{Prague}
-\keywordsEN{Internet of Things, hiking track difficulty, activity tracking, heart rate monitoring, physical fitness assessment,\todo[color = red]{add analysis keyword} smart wearables, user experience}
-\keywordsCS{Internet vecí, náročnosť turistickej trasy, sledovanie fyzickej aktivity, meranie tepu srdca, posudzovanie telesnej kondície, nositeľná elektronika, užívateľské skúsenosti}
+\keywordsEN{Internet of Things, hiking track difficulty, activity tracking, heart rate monitoring, physical fitness assessment, smart wearables, software analysis, user experience}
+\keywordsCS{Internet vecí, náročnosť turistickej trasy, sledovanie fyzickej aktivity, meranie tepu srdca, posudzovanie telesnej kondície, nositeľná elektronika, softvérová analýza, užívateľské skúsenosti}
 \declarationOfAuthenticityOption{1} %select as appropriate, according to the desired license (integer 1-6)
 % \website{http://site.example/thesis} %optional thesis URL
 
+\graphicspath{ {./Images/} }
 
 \begin{document}
 
 % \newacronym{CVUT}{{\v C}VUT}{{\v C}esk{\' e} vysok{\' e} u{\v c}en{\' i} technick{\' e} v Praze}
 % \newacronym{FIT}{FIT}{Fakulta informa{\v c}n{\' i}ch technologi{\' i}}
 
-\chapter{Task - temporary chapter}
-\input{Chapters/Task.tex}
 
 \setsecnumdepth{part}
-\chapter{Dictionary}
-\input{Chapters/Dictionary.tex}
+\chapter{Task - temporary chapter}
+\input{Chapters/Task.tex}
+\chapter{Aims}
+\input{Chapters/Aims.tex}
 \chapter{Introduction}
 \input{Chapters/Introduction.tex}
 
@@ -68,13 +69,14 @@
 \setsecnumdepth{all}
 \chapter{Existing solutions}
 \input{"Chapters/Existing Apps.tex"}
-\chapter{Analysis and design}
-
-\chapter{Realisation}
+\chapter{Requirements}
+\input{Chapters/Requirements.tex}
+\chapter{Architecture}
+\input{Chapters/Architecture.tex}
 
 \setsecnumdepth{part}
 \chapter{Conclusion}
-
+\input{Chapters/Conclusion.tex}
 
 \bibliographystyle{iso690}
 \bibliography{mybibliographyfile}
@@ -83,28 +85,23 @@
 \appendix
 
 \chapter{Acronyms}
-% \printglossaries
-\begin{description}
-	\item[GUI] Graphical user interface
-	\item[XML] Extensible markup language
-\end{description}
+\input{Chapters/Dictionary.tex}
 
-
-\chapter{Contents of enclosed CD}
+% \chapter{Contents of enclosed CD}
 
 %change appropriately
 
-\begin{figure}
-	\dirtree{%
-		.1 readme.txt\DTcomment{the file with CD contents description}.
-		.1 exe\DTcomment{the directory with executables}.
-		.1 src\DTcomment{the directory of source codes}.
-		.2 wbdcm\DTcomment{implementation sources}.
-		.2 thesis\DTcomment{the directory of \LaTeX{} source codes of the thesis}.
-		.1 text\DTcomment{the thesis text directory}.
-		.2 thesis.pdf\DTcomment{the thesis text in PDF format}.
-		.2 thesis.ps\DTcomment{the thesis text in PS format}.
-	}
-\end{figure}
+% \begin{figure}
+% 	\dirtree{%
+% 		.1 readme.txt\DTcomment{the file with CD contents description}.
+% 		.1 exe\DTcomment{the directory with executables}.
+% 		.1 src\DTcomment{the directory of source codes}.
+% 		.2 wbdcm\DTcomment{implementation sources}.
+% 		.2 thesis\DTcomment{the directory of \LaTeX{} source codes of the thesis}.
+% 		.1 text\DTcomment{the thesis text directory}.
+% 		.2 thesis.pdf\DTcomment{the thesis text in PDF format}.
+% 		.2 thesis.ps\DTcomment{the thesis text in PS format}.
+% 	}
+% \end{figure}
 
 \end{document}
