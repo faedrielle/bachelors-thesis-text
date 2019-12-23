@@ -497,7 +497,7 @@ sp\^ osobom, ktor\'y nezni\v zuje hodnotu Diela (vr\'atane komer\v cn\'eho vyu\v
 	\fi
 
 	\if@keywordscsdefined
-		\paragraph*{Kl{\' i}{\v c}ov{\' a} slova} \thekeywordscs{}
+		\paragraph*{K{\v l}{\' u}{\v c}ov{\' e} slov{\' a}} \thekeywordscs{}
 	\else
 		\ClassError{FITthesis}{Czech keywords unspecified}{Specify the keywords in Czech of your thesis using \keywordsCS command.}
 	\fi
