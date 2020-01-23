@@ -1,17 +1,60 @@
 A physical fitness test usually evaluates multiple components of one's health, including cardiovascular endurance, muscular strength, muscular endurance, flexibility and body composition.
 
-In this chapter I will focus on familiarizing the reader with cardiovascular endurance testing, as it is the most related to hiking.\todo{add details, reword}
-
-There are multiple models of how fitness is estimated, some using lung capacity, others heart rate, and others a combination of the two.
+In this chapter I will focus on familiarizing the reader with cardiovascular endurance testing, as it has the largest effect on hiking.\todo{add details, reword}
 
 \section{VO2 max}
-VO2 max is considered the most accurate measure of cardiovascular fitness.\todo{add how this can be measured, and other indicators od fitness}
 
-Measured in millilitres of oxygen consumed per minute, it is the amount of oxygen the body is able to effectively use during intense or maximal exercise.\cite{vo2max-definition}
+VO2 max is considered the most accurate metric of cardiovascular fitness.
+
+Measured in millilitres of oxygen consumed per minute, it is the amount of oxygen the body is able to effectively use during intense or maximal exercise.
+With the growing amount of oxygen the body can consume, it can perform better during strenuous activity and give improved results.\cite{vo2max-definition}
+
+This is limited by the ability of the cardiorespiratory system to deliver oxygen to the exercising muscle, thus making it impossible for an athlete to operate above 100\% of their VO2 max for extended periods.\cite{vo2max-oxygen-delivery}
 
 \subsection{How to measure Vo2 max}
 
 \subsubsection*{Laboratory test}
+
+Typically, VO2 max is measured directly in laboratory conditions while wearing a mask, by analyzing inspired and expired breathing gases during maximal exertion,\cite{vo2max-definition} usually running on a treadmill.
+This method of determining VO2 max is highly accurate, but given the need for expensive equipment and trained staff, laboratory testing just isn't feasible for everyday population-wide testing.
+
 \subsubsection*{Cooper test - 12 minute run}
+
+First suggested in the 1970's, Cooper's Twelve-Minute Run-Walk is an endurance test, where the main goal is to run (or walk) as long a distance as possible in twelve minutes.
+It is mainly used in armies and police agencies, but popularly (and unnecessarily\cite{cooper-pupils}) used in schools on untrained pupils.
+It is not suitable for sprinting due to the long time period a subject should spend on the move.
+
+There is a high correlation between the distance an individual can run and their VO2 max value, which can be calculated thusly:
+
+\[VO2max = (22.351 \multiply kilometers) - 11.288\]
+
+and then referenced with this chart\cite{cooper-vo2max}\todo{add chart}
+
+
+
 \subsubsection*{Multistage Fitness Test - Beep test}
 \subsubsection*{Walking tests}
+
+\section{The Performance Condition}
+
+A person's VO2 max is recognized as their baseline fitness level index, however, everybody has days when they perform better, and days when they perform worse, while the factors in play are the amount of sleep they get, being sore from previous workouts, and general physical and mental wellbeing.
+
+That is why the Performance Condition was introduced.\todo{wait for response from firstbeat, if it's their own device}
+It is a real-time index of a user's immediate fitness and fatigue level compared to their baseline fitness level.
+
+This indicator is measured on a scale of -20 to +20, with each point representing roughly 1\% of their Vo2 max.
+So if the user's current Performance Condition is +4, they can expect to perform outstandingly,
+but at the same time, during the course of a workout, this number will decrease as fatigue from the exercise gets closer.\cite{performance-condition-firstbeat}\cite{performance-condition-garmin}
+
+This is calculated based on the user's pace, heart rate and heart rate variability (HRV).
+HRV is the variability in intervals between cardiac cycles.
+It can be demonstrated, for example, by feeling one's pulse on the wrist while resting and breathing deeply - the interval shortens (heart beating faster) when breathing in, and lengthens (heart beating slower) when breathing out.\cite{hrv}
+It's a complicated enough metric that to calculate it accurately, HRV should be measured using a chest strap,
+an intrusive heart rate monitoring method which generally available to a runner on a daily basis.
+
+Additionally, the only activities that are currently supported for measuring of the Performance Condition, are running and cycling,
+and the methods Firstbeat has developed to measure it has failed to satisfy a number of users, leading to them not paying much attention to the metric or outright ignoring the values.\cite{performance-condition-unreliable1}\cite{performance-condition-unreliable-reasoning}
+One of the reasons behind their dissatisfaction is the fact that the metric only connects the effort the user is making with the distance they are covering,
+ without taking into account the steepness of the slope, the humidity, temperature, and other external factors 
+ and should be perceived more as an indicator of simply how much effort your body is making (as explained in BHerman's comment on a post\cite{performance-condition-unreliable-reasoning} in Firstbeat's forum), 
+while being marketed as a highly precise metric that shows you how your training is going and not really explained well to the users.
