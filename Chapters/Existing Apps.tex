@@ -88,13 +88,35 @@ While being rich with features, komoot doesn't base its functionality on objecti
 an approach in its nature prone to error and with only limited ways of eliminating the human factor.
 
 \subsection{endomondo}
-https://www.endomondo.com/
-\subsubsection*{Use of IoT possibilities} --
-\subsubsection*{User fitness assessment} --
-\subsubsection*{Availability} --
+
+The endomondo application serves as a personal trainer for distance-based sports, such as running, cycling, or hiking.
+Their main focus is on the endorphin release people get from encouragement and motivation -- this is why the app gives coaching advice, allows the users to send each other peptalks, and has over time built a global fitness community.
+\subsubsection*{Use of IoT possibilities}
+The application integrates with a wide range of watches and sensors, collecting data from GPS trackers, bike speed and cadence sensors, bike power sensors and heart rate measurement units.
+Some basic statistics based on this data (such as average heart rate) is presented to the user with a free plan, 
+while the more interesting statistics displayed with interactive graphs are for premium users only -- average heart rate history, heart rate zone analysis, even weather information collected from AccuWeather.com at the time of the workout.
+
+The application uses other users' data to compare, \textit{how [the individual stacks] up against similar users}.\cite{endomondo-premium-features} \todo{ask the support what that means}
+\subsubsection*{User fitness assessment}
+The premium version of the application promises personal exercise plans for running goals, and the heart rate zones are calculated using the Karvonen formula: $((max HR − resting HR) × \% Intensity) + resting HR$, where the maximal heart rate is calculated by \todo{add how it's done - wait for support to respond}
+A user's results are compared with other similar users, \todo{ask support what this means - presumably they calculate HRmax and group users based on that}
+\subsubsection*{Availability}
+Endomondo comes in two versions -- free and premium.
+The free version has basic functionality, which is so limited that some have opted for free alternatives with more useful features such as Strava or Runmeter.\cite{endomondo-review}
+It is supported by not too obtrusive ads on the bottom of the screen.
+
+The premium version is ad-free, brings a number of features to the table and is based on a monthly subscription.
+
 \subsubsection*{Community} -- 
-\subsubsection*{Extra features} -- 
-\subsubsection*{User-friendliness} -- 
+\subsubsection*{Extra features}
+After the end of the workout, you can answer a ``How was your workout?'', however, since this is a plain text option, this data is only for the user's later reading, and cannot be used in any machine processing.
+
+A user can post photos in the description of the activity, as well use tags which are then used on social media.
+With premium, one can filter based on these tags -- useful for tracking the number of miles that the user has run in a specific pair of shoes, or biked with a specific chain.
+Other users can also be tagged, for example running partners or the person you're trying to beat in a challenge.
+
+\subsubsection*{User-friendliness}
+
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{Images/endomondo-history-example.png}
     \caption{endomondo history example\cite{endomondo-history-img}}
@@ -105,7 +127,9 @@ https://www.endomondo.com/
     \caption{Statistics of a biking trip on endomondo\cite{endomondo-bike-stats-img}}
 \end{figure}
 
-\subsubsection*{Cross-platform} -- 
+\subsubsection*{Cross-platform}
+All the features are available for iOS 9 and newer, Android 4.1 and newer.
+It used be available on Blackberry and Windows phones.
 \subsubsection*{Propriety} -- 
 \subsubsection*{Overall evaluation}
 
