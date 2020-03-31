@@ -91,7 +91,7 @@ but they consider it a precise enough method to be used for public health monito
 
 Another study from 2015\cite{6min-walk-test-burr} instead used resting heart rate and arrived at this formula:
 
-$VO2 max =70.161 + 0.023 \times distance - 0.276 \times weight - 6.79 \times sex - 0.193 \times resting +_HR - 0.191 \times age$
+$VO2 max =70.161 + 0.023 \times distance - 0.276 \times weight - 6.79 \times sex - 0.193 \times resting_HR - 0.191 \times age$
 
 using $distance$ walked during 6MWT (m), $weight$ (kg), $sex$ -- 1 for female, 0 for male, and $resting_HR$ for resting heart rate in beats per minute.
 
@@ -167,14 +167,19 @@ The range between HR min and HR max is commonly divided into zones, based on the
 
 
 Calculating HR min is an easy enough task - just measure your heart rate right after enjoying some good sleep; HR max is trickier.
-Studies have found that VO2 max correlates strongly with heart rate (and less strongly with perceived exertion) \cite{vo2-max-hr-correlation}, which is why they are usually tested using the same methods, and, in fact, simultaneously.
-And because these methods are generally too complex to do "on the spot", there have been attempts to calculate HR max based on readily available data.
+
+\subsection*{Running methods to calculate HR max}
+There are some methods to estimate HR max by interval running.\todo{add some}
 
 \subsection*{Age-based methods to calculate HR max}
-The most commonly used formula to get one's maximal heart rate, $HRmax=220-age$ also known as the Fox formula, has been time and time again found largely inaccurate.
-Originally intended as a rough formulation, with cross-sectional data from participants who are by no means representatives of a population\cite{220-hrmax-new-formula} and based on unoriginal research\cite{220-hrmax-disproved}, it was improved upon by the cross-sectional research of Tanaka et al., who formulated the equation $208-0.7\times age$.
-This formula was later validated by Gellish et al. in 2007 by conducting an analysis of longitudinal data from participants from various groups and developing a similar formula $207-0.7\times age$,
-however, both Fox and Tanaka were disproved by Sarzynski et al. in 2014 as not precise enough based on standard error of estimate of the two formulas.\cite{hrmax-age-disproved}
-Sarzynski stresses \textit{the importance of finding and validating other measures to be used in exercise prescriptions for the determination of intensity of exercise, the estimation of fitness levels, and as a criterion for achieving maximal exertion.}
+As the running methods are generally too complex to do "on the spot", there have been attempts to calculate HR max based on readily available data.
 
-\subsection*{Other methods to calculate HR max}
+The most commonly used formula to get one's maximal heart rate, $HRmax=220-age$ also known as the Fox formula, has been time and time again found largely inaccurate.
+Originally intended as a rough formulation, with cross-sectional data from participants who are by no means representatives of a population\cite{220-hrmax-new-formula} and based on unoriginal research\cite{220-hrmax-disproved},
+a number of researchers have tried to find a similarly simple but more accurate formulas, most of them claiming to have found the right one.
+One of the popularly used is the cross-sectional research of Tanaka et al., who formulated the equation $208-0.7\times age$.
+This formula was later validated by Gellish et al. in 2007 by conducting an analysis of longitudinal data from participants from various groups and developing a similar formula $207-0.7\times age$,
+however, both Fox and Tanaka were disproved by Sarzynski et al. in 2014 as not precise enough based on standard error of estimate (12.4 and 11.4 bpm respectively )of the two formulas.\cite{hrmax-age-disproved}
+In that study, Sarzynski stresses \textit{the importance of finding and validating other measures to be used in exercise prescriptions for the determination of intensity of exercise, the estimation of fitness levels, and as a criterion for achieving maximal exertion.}
+
+The HUNT fitness study carried out on over three thousand people by Nes et al. found a more accurate formula $211 − 0.64\times age$, with the standard error of estimate of 10.8 bpm, but couldn't find evidence of interaction with gender, physical activity, VO2 max or BMI.\cite{hrmax-Nes-HUNT}
