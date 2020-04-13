@@ -2,14 +2,15 @@
 Based on the analysis of existing solutions, I will now describe the most important features that should be provided by my software.
 
 I decided to construe the user-focused features (usually functional requirements) as one would in a real-life agile project, as this is in my experience more straightforward and easier to alter when necessary than flooding the reader -- for example, a developer -- with a long list of elaborate use cases right away.
-The discussions that took place before reaching a specific conclusion should be well documented -- brief enough and detailed enough at the same time to provide good value after a quick read.
+The discussions that take place before reaching a specific decision should be well documented -- brief enough and detailed enough at the same time to provide good value after a quick read.
 If the reader has access to a good transcript of these discussions, it is less likely that they will misunderstand the requested functionality;
-in the best case scenario, if the reader is the potential developer, they are an active part in those discussions, so they have a substantial impact on the outcome, thus diminishing the `coding monkey' phenomenon.
+in the best-case scenario, if the reader is the potential developer, they are an active part of those discussions, so they have a substantial impact on the outcome, thus diminishing the `coding monkey' phenomenon.
 
-The top-down approach of the agile methodology which is perhaps the most common and natural to grasp is creating epics, decomposing them into user stories, and with good knowledge of the project's architecture and after due consideration, technical subtasks in an issue tracker of choice.
+The top-down approach of the agile methodology which is perhaps the most common and natural to grasp is creating epics, decomposing them into user stories,
+and with good knowledge of the project's architecture and after due consideration, add technical subtasks in an issue tracker of choice.
 
 Epics are complex, high-level characterizations of desired functionality, which usually take longer to deliver than a few weeks.
-An epic is usually comprised of a description and multiple user stories, which cover the extent of the epic in higher granularity.
+An epic is usually comprised of description and multiple user stories, which cover the extent of the epic in higher granularity.
 Once all the stories are delivered, the whole epic is considered finished.
 Epics are sometimes formulated using the same format as user stories.
 
@@ -18,9 +19,12 @@ Often they are written in simple, non-technical language, as most systems don't 
 The typical template for a user story is:
 \textit{As a < type of user >, I want < some goal > so that < some reason >.}\cite{user-story-definition}
 Sometimes the US's aren't technical per se, but request deeper analysis and block further progress on the epic.
+Another important component of a US are \textit{acceptance criteria}, which define the functionality which needs to be covered for the story to be finished.
+In general, acceptance criteria should be testable, which is why they are often used as starting points by testers, to get a better idea of what has been done, and provide them with some inspiration.
 
-The main focus of this chapter will be to document my internal discussions, occassionally consulted with developer friends. \todo{cite? delete completely?}
-I will always start with a high-level description of the requested feature formulated as an epic or a user story and elaborate on its details incrementally.
+The main focus of this chapter will be to document my internal analytical discussions.
+I will always start with a high-level description of the requested feature formulated as an epic or a US and elaborate on its details incrementally, summing all of this up in acceptance criteria.
+Some stories will also contain hints toward completion for the potential developer, which will be based on research done in previous parts of this thesis.
 Since a part of this thesis will focus on implementing a proof of concept, some of the most imperative stories will also be fully processed and finished.
 
 Features
@@ -34,52 +38,67 @@ Features
     \item F -- Track segment details display
     \item F -- How long the track will take
     \item F -- History of tracks the user has chosen
-    \item F -- Mood of user after finishing of track
+    \item F -- User's mood after finishing of track
     \item F -- Option to insert fitness level manually instead of using the built-in calculator (maybe the user has done a lab test)
 \end{itemize}
 
 \subsection*{E01 -- Heart rate monitoring}
-The application should monitor a user's heart rate inobtrusively and reliably.
+The application should monitor a user's heart rate unobtrusively and reliably.
 
-The user needs a method for getting their data to the mobile application and then to the backend, do it comfortably, preferably without need for direct user-computer interaction.
+The user needs a method for getting their data to the mobile application and then to the backend, do it comfortably, preferably without any need for direct user---computer interaction.
 
 \subsection*{E01-US01 -- Choose and integrate a wearable}
 As an APP user, I want my heart rate-enabled wearable to work with the APP, so that I don't have to buy a new one.
 
-Based on the analysis of existing applications, the most often used type of wearable tech are smart watches.
+Based on the analysis of existing applications, the most often used type of wearable tech are smartwatches.
 While most applications support other devices, such as chest straps, watches are the most convenient and wide-spread gadgets to be used by the general public.
-There are a few quite popular smart watch vendors, most of whom have proprietary protocols of communicating with the system for data processing.\todo{recheck}
+There are a few quite popular smartwatch vendors, most of whom have proprietary protocols of communicating with the system for data processing.\todo{recheck}
 At the time of writing, however, Garmin seems like the most popular option, in spite of being more than a little costly.
 
 It will be more difficult to integrate some devices.
-Some vendors don't disclose their devices' API, or the API's documentation is only in Chinese and available to for use exclusively by partners of the given vendor,
-some don't get paired with the phone itself but with a vendor app using server based pairing (such as the Xiaomi Mi Band 4 I initially intended to use) and there is no easy or straight-forward way to get the data.
+Some vendors don't disclose their devices' API, or the API's documentation is only available for use exclusively by partners of the given vendor,
+some don't get paired with the phone itself and communicate with a proprietary app using server-based pairing instead (such as the Xiaomi Mi Band 4 I initially intended to use) and there is no easy or straightforward way to get the data.
 For example, getting data from the Mi Band 4 would require root access to the user's phone\cite{miband4-server-based}, which is just not an option for a normal user.
-Therefore I recommend limiting the supported devices to those that do not use server based pairing, as this would cover most of the currently available gadgets.
+Therefore I recommend limiting the supported devices to those that do not use server-based pairing, as this would cover most of the currently available gadgets.
 
 For my PoC in this thesis, I chose the XXXXXXXXX.\todo{add what and why}
+
+\textbf{Acceptance criteria:}
+\begin{itemize}
+    \item A popular kind of wearables can communicate with the APP in both directions.
+\end{itemize}
 
 \subsection*{E01-US02 -- Manage devices paired with the APP}
 As an APP user, I want to pair and unpair my wearables with the APP, so that the APP can use the data of all devices that I currently own.
 
-The user should be able to pair and unpair any number of wearables they choose.
-The app should provide the user with the list of the phone's paired devices, so that they can choose their fitness gadgets.
+\textbf{Acceptance criteria:}
+\begin{itemize}
+    \item The user can pair any number of compatible wearables.
+    \item The user can unpair any number of compatible wearables down to zero.
+\end{itemize}
 
-Restrictions on which data gets processed if multiple devices are measuring the same biometric is described in E01-US03.
+The app should provide the user with the list of the phone's paired devices, so that they can choose their fitness gadgets.
 
 \subsection*{E01-US03 -- Activate a device}
 As an APP user, I want to mark a wearable I'm using as active, so that only its data is relevant to the statistics.
 
 The user should be able to activate a device they want to use for monitoring of current activity or activity in the near future.
-Only one device should be active at a time, so if device A is marked as active and user tries to activate device B, device A gets deactivated before device B is marked as active.
+
+\textbf{Acceptance criteria:}
+\begin{itemize}
+    \item The user can mark a device as active.
+    \item When a device is active, the platform can receive data from it.
+    \item The user can mark a device as inactive.
+    \item Only one device at a time is active; if activating a new one, the old device must be deactivated.
+\end{itemize}    
 
 \subsection*{E02 -- Objective user fitness assessment}
 As an APP user, I want my fitness to be assessed, so that I can get relevant estimations of track difficulty.
 
-Having analyzed the conventional ways of user fitness assessment in a previous chapter, the application should allow a user to use one of multiple ways to get their fitness level.
+Having analyzed the conventional ways of user fitness assessment in a previous chapter, the application should allow a user to use one of the multiple ways to get their fitness level.
 The outcome of the assessment should be the individual's VO2 max index and their heart rate zones -- so that if they need to maintain their heart rate in a specific range, they can cross-reference it with the exhaustion they perceive and learn to recognize when they are in the desired zone.
 
-If the user has no physical impairments, they can have their HR max assessed by a simple age-based formula, such as the one developed by Nes et al. (see chapter on fitness assessment).
+If the user has no physical impairments, they can have their HR max assessed by a simple age-based formula, such as the one developed by Nes et al. (see the chapter on fitness assessment).
 
 Users with physical impairments could self-evaluate how much their condition affects their fitness, and based on this their HR max can be set by using one of the standard formulas and subtracting a smaller or larger number of beats per minute (further research needs to be done on how many beats this should be).
 This self-assessed value should be corrected as more data is available about the user.
@@ -90,9 +109,15 @@ The networks can learn from the data collected from a good number of users over 
 \subsection*{E02-US01 -- Implement support for VO2 max tests}
 As an APP user, I want to be able to take a guided test of my fitness in the APP, so that I don't have to look for tests elsewhere.
 
+\textbf{Acceptance criteria:}
+\begin{itemize}
+    \item The user can take at least one VO2 max test using the APP.
+    \item During the test, the user gets directions on their smartwatch.
+\end{itemize}
+
 The APP should implement a guide to multiple tests of VO2 max, with instructions on what they should do, and signals to direct the user while taking the test.
 The instructions should also contain a description of the signals the user will receive.
-The initial instructions should definitely be textual and possibly audible, so that the user understands the aim of the test before taking it.
+The initial instructions should be textual and possibly audible, so that the user understands the aim of the test before taking it.
 During the test, a watch vibration should alert the user about an incoming signal which will be displayed on the watch.
 This signal would contain directions like 'Turn in N seconds' where N is a countdown to 'Turn now!'.
 When no signals are occupying the device's screen, there should be pep talks like 'Keep going!' and 'Great job!'.
@@ -104,13 +129,109 @@ In order to calculate VO2 max, the APP can use Mänttäri's formulas.
 \subsection*{E02-US02 -- Implement support for HR max tests}
 As an APP user, I want to be able to take a guided test to find my heart rate zones in the APP, so that I don't have to look for tests elsewhere and get as accurate heart rate zones as possible.
 
-The implementation should be similar to VO2 max tests; in fact, if possible, both metrics should be measured by a single test if possible.
+The implementation should be similar to VO2 max tests; if possible, both metrics should be measured by a single test to reduce the time a user has to spend setting up the APP.
 
-\subsection*{E02-US03 -- Allow other input of biometric values}
-As an APP user who has done lab fitness tests, I want the APP to use these values instead of doing the APP's tests, so that I don't have to take fitness tests that are most probably less accurate than what I know.
+\textbf{Acceptance criteria:}
+\begin{itemize}
+    \item The user can take at least one HR max test using the APP.
+    \item During the test, the user gets directions on their smartwatch.
+\end{itemize}
+
+\subsection*{E03 -- Manual input of biometric data}
+The users might not want to take an exhausting test at the time of setting up the APP.
+This is why they should be allowed to input the data in other ways.
 
 If a public universal database with all people's medical data existed, it would make sense to get the necessary information directly via an API.
-In the real world, however, we will let the user enter their biometric data manually.
-The APP definitely needs easily available data like age, sex and weight.
-Then it should be possible to either take tests on or manually enter the VO2 max, resting heart rate and maximum heart rate.
+However, as no such thing exists (and for good reasons), we will let the user enter their biometric data manually or possibly by setting up an integration with a popularly used fitness app that does measure the necessary data.
 
+\subsection*{E03-US01 -- Allow manual input of basic biometric values}
+As an APP user, I want to provide the APP with my basic metrics, so that the results are relevant to me.
+
+\textbf{Acceptance criteria:}
+\begin{itemize}
+    \item User can enter their basic metrics - height, weight, age, sex - manually.
+\end{itemize}
+
+If the user has a smart scale, it could be integrated to get the most recent values, however, that seems like a bit of an overkill, considering that it's just one number - the weight.
+
+The APP needs the user's height, weight, biological sex and age.
+The age should be calculated based on their date of birth, so that it is always reasonably accurate.
+However, I myself have had issues with disclosing my exact date of birth to anybody, and the accuracy would be good enough with even just the month and year.
+Yet again, it is reasonable to consider whether a user who doesn't have an issue giving out their heart rate and fitness data would show similar concern.
+
+\subsection*{E03-US02 -- Allow manual input of advanced biometric values}
+As an APP user who has recently done lab fitness tests, I want the APP to use these values instead of doing the APP's tests, so that I don't have to take fitness tests that are most probably less accurate than what I know.
+
+\textbf{Acceptance criteria:}
+\begin{itemize}
+    \item User can enter their extended metrics - VO2 man and HR max - manually.
+\end{itemize}
+
+A user should be able to manually enter the VO2 max, resting heart rate and maximum heart rate, as well as the severity of the effect a potential condition might have on the individual's fitness.
+
+\subsection*{E04 -- Tracks and maps}
+
+\subsection*{E04-US01 -- Integrate a map}
+As an APP user, I want to use a map to visualize my hikes, so that I can follow them easily.
+
+\textbf{Acceptance criteria:}
+\begin{itemize}
+    \item An interactive map is displayed in the APP.
+\end{itemize}
+
+Since the APP is meant to be used as a hike planner, the user needs a simple to follow aid to help them plan their tracks.
+The whole APP should be focused around the hikes a user takes and around their difficulty given the user's fitness level.
+
+There aren't many different maps available for use by developers.
+While Google Maps would probably be a popular choice, Google decided to put their maps behind a paywall\cite{google-maps-paywall} in 2018.
+Therefore it makes sense to choose the open-source OpenStreetMap\cite{OpenStreetMap} and use one of its derivatives with a public API for route planning (such as OpenRouteService\cite{OpenRouteService}).
+
+\subsection*{E04-US02 -- Choose a track}
+As an APP user, I want to plan a route from point A to point B.
+
+\textbf{Acceptance criteria:}
+\begin{itemize}
+    \item A user can pick a starting point from the map.
+    \item The user's current location can be automatically found and set as the starting point.
+    \item A user can choose points on the map through which they want to pass.
+    \item A user can choose a destination point from the map.
+    \item A user can remove points from the planned route.
+    \item The points in a planned route can be rearranged in any order.
+    \item If the last point is removed, the previous point becomes the last point.
+    \item If multiple different tracks are available, the user can compare their attributes.
+    \item If multiple different tracks are available, the user can choose one of them.
+\end{itemize}
+
+\subsection*{E04-US03 -- History of tracks hiked}
+As an APP user, I want to see which routes I've taken while using the APP, so that I can compare my impressions of the tracks.
+
+Every track is taken over a network of geographical coordinates, which means one can create thumbnails from its projection on the map.
+This, along with the names of nearby prominent landmarks, such as the mountain range through which the user hiked, and the date of the hike, should be enough for the user to identify the track they were searching for.
+Since there is a number of attributes a track can have, it should be possible to filter by them.
+Filters should include the date on which the route was taken, the time it took to complete it, the route's length.
+Since there can be hundreds of such routes, the list should be paginated.
+
+\textbf{Acceptance criteria:}
+\begin{itemize}
+    \item Show a paginated, filterable list of routes taken by the user.
+\end{itemize}
+
+\subsection*{E04-US04 -- Favourite tracks}
+As an APP user, I want to highlight and retake some planned routes, so that I can compare my results over time.
+
+\textbf{Acceptance criteria:}
+\begin{itemize}
+    \item A user can plan a brand new track and set it as favourite.
+    \item A user can choose a previous track and set it as favourite.
+    \item A user can remove a track from favourites.
+    \item User can name favourite tracks.
+    \item User can choose a favourite track and hike it again.
+\end{itemize}
+
+\subsection*{E04-US05 -- Copy and a track}
+As an APP user, I want to create new, similar tracks, based on existing ones, so that I don't have to enter all the details again.
+
+\textbf{Acceptance criteria:}
+\begin{itemize}
+    
+\end{itemize}
