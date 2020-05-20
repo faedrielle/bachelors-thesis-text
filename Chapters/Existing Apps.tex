@@ -21,30 +21,9 @@ Given its use of GPS sensors, komoot does qualify as a basic IoT system, however
 The smart watch only gets used for displaying of routes and navigation, not taking any advantage of the available biosensors.
 \subsubsection*{User fitness assessment}
 When a user is creating a route, they can set its difficulty as one of five levels, 
-describing the user's self-reported physical fitness and their current will to take up a challenge (or lack thereof): \textit{Couch Potato}, \texit{Average}, \textit{In Good Shape}, \textit{Athletic}, and \textit{Pro}.
+describing the user's self-reported physical fitness and their current will to take up a challenge (or lack thereof): \textit{Couch Potato}, \textit{Average}, \textit{In Good Shape}, \textit{Athletic}, and \textit{Pro}.
 This parameter is considered when the app is generating a suitable route -- presumably by trying to adjust the elevation profile of the possible routes.
 The user's real fitness is not taken into account.
-
-\begin{figure}[h]
-    \includegraphics[width=\textwidth]{Images/komoot-nav.png}
-    \caption{Offline maps in the komoot app\cite{komoot-nav-img}}
-\end{figure}
-
-\begin{figure}[h]
-    \includegraphics[width=\textwidth]{Images/komoot-route-details.png}
-    \caption{Route elevation profile\cite{komoot-route-details-img}}
-\end{figure}
-
-\begin{figure}[h]
-    \includegraphics[width=\textwidth]{Images/komoot-route-elevation-detail.jpg}
-    \caption{Detailed view of the route's elevation\cite{komoot-route-elevation-detail-img}}
-\end{figure}
-
-\begin{figure}[h]
-    \includegraphics[width=\textwidth]{Images/komoot-route-surface-detail.jpg}
-    \caption{Overview of the route's surface. The detailed view is similar to the elevation detail.\cite{komoot-route-surface-overview-img}}
-\end{figure}
-
 
 \subsubsection*{Availability}
 The region-based pricing model allows users who do not travel too much to use the app for free,
@@ -66,9 +45,23 @@ If a user decides to skip all planning and just go into the world, their route c
     \item edit the route according to one's liking.
 \end{enumerate}
 
-Users can pick a starting point, a destination, as well as any number of waypoints in between for their route.
-Once the route is chosen, the user can go through the route's stats - the estimated time it will take to get from start to finish, its length, the elevation profile (uphill, downhill, highest and lowest points, estimated average speed) and the surfaces and their use in proportion to the route's length.
+Users can pick a starting point, a destination, as well as any number of waypoints in between for their route (see fig.\ref{komoot-nav-img})
+Once the route is chosen, the user can go through the route's stats - the estimated time it will take to get from start to finish, its length, the elevation profile (see fig.\ref{komoot-route-details-img}, \ref{komoot-route-elevation-detail-img}) (uphill, downhill, highest and lowest points, estimated average speed) and the surfaces and their use in proportion to the route's length (see fig.\ref{komoot-route-surface-overview-img}).
 All this information is delivered in easy-to-understand charts as well as interactive mappings -- using a slider, the user can see which stat applies to which part of the route.
+
+\begin{figure}[h!]
+    \centering
+        \tmpframe{\includegraphics[width=0.4\textwidth]{Images/komoot-nav.png}}
+        \caption{Route planning in the komoot app. \cite{komoot-nav-img}}
+        \label{komoot-nav-img}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+        \tmpframe{\includegraphics[width=0.8\textwidth]{Images/komoot-route-details.png}}
+        \caption{Route elevation profile. \cite{komoot-route-details-img}}
+        \label{komoot-route-details-img}
+\end{figure}
 
 \subsubsection*{User-friendliness}
 The mobile app uses a bottom tab bar for navigation, however, the way the tabs are designed is not entirely user-friendly.
@@ -89,7 +82,24 @@ The system is not entirely open-source, as a few of their repositories are publi
 While being rich with features, komoot does not base its functionality on objective data -- it is the users themselves who rate and recommend the specific routes,
 an approach in its nature prone to error and with only limited ways of eliminating the human factor.
 Otherwise it is an excellent application for navigation.
+
+
+\begin{figure}[h!]%
+    \centering
+        \subfig
+        \tmpframe{\includegraphics[width=0.4\textwidth]{Images/komoot-route-elevation-detail.jpg}}
+        \caption{Overview of the route's elevation. \cite{komoot-route-elevation-detail-img}}
+        \label{komoot-route-elevation-detail-img}
+\end{figure}
+\begin{figure}
+    \centering
+        \tmpframe{\includegraphics[width=0.4\textwidth]{Images/komoot-route-surface-detail.jpg}}
+        \caption{Overview of the route's surface. \cite{komoot-route-surface-overview-img}}
+        \label{komoot-route-surface-overview-img}
+\end{figure}
+
 %==============================================================================================
+\pagebreak
 \subsection{endomondo}
 
 Under Armour's endomondo application serves as a personal trainer for distance-based sports, such as running, cycling, or hiking.
@@ -113,7 +123,6 @@ The free version has basic functionality, which is so limited that some have opt
 It is supported by not too obtrusive ads on the bottom of the screen.
 
 The premium version is ad-free, brings a number of necessary features such as heart rate zones, training plans, and others, and is based on a monthly subscription.
-
 \subsubsection*{Community}
 Endomondo's main focus in keeping their users on the platform is motivation, which is also demonstrated by the application's slogan -- ``Free your endorphines''.
 One of their features is a real-time audio motivator, which makes comments on how well the user is doing compared to previous workouts,
@@ -134,28 +143,36 @@ There are many applications that support this feature -- after all, it is just f
 The navigation in the mobile application is realized with a bottom tab bar, whose design is nicely done.
 The `More' tab hides a lot of functionality, effectively serving as an easy-to-reach hamburger menu.
 
-Given the fact that that endomondo does not support planning of routes and merely follows where the user is headed, the `Workout' tab which contains a map is less crowded than in a navigation app.
-The main settings can immediately be found in the top-right corner of the main screen, or under the `More' tab, lost in between ten other options.
+Given the fact that that endomondo does not support planning of routes and merely follows where the user is headed, the `Workout' tab which contains a map is less crowded than in a navigation app (fig.\ref{endomondo-home-img}).
+
+\begin{figure}[h!]
+    \centering
+        \tmpframe{\includegraphics[width=0.5\textwidth]{Images/endomondo_home.jpg}}
+        \caption{endomondo's main screen \cite{endomondo-home-img}}
+        \label{endomondo-home-img}
+\end{figure}
+
+The main settings can immediately be found in the top-right corner of the main screen, or under the `More' tab, lost in between ten other options (fig.\ref{endomondo-more-tab}).
 The application is easy to navigate and is fully made in, if somewhat blocky-feeling, material design.
 
-\begin{figure}[h]
-    \includegraphics[width=\textwidth]{Images/endomondo_home.jpg}
-    \caption{endomondo's main screen\cite{endomondo-home-img}}
+
+\begin{figure}[htb!]
+    \centering
+        \tmpframe{\includegraphics[width=0.4\textwidth]{Images/endomondo-more-tab.jpg}}
+        \caption{endomondo's `More' tab, with main settings lost in other options \cite{endomondo-more-tab}}
+        \label{endomondo-more-tab}
 \end{figure}
 
-\begin{figure}[h]
-    \includegraphics[width=\textwidth]{Images/endomondo-more-tab.jpg}
-    \caption{endomondo's `More' tab, with main settings lost in other options\cite{endomondo-more-tab}}
+\begin{figure}[htb!]
+    \centering
+        \tmpframe{\includegraphics[width=0.4\textwidth]{Images/endomondo-bike-stats.png}}
+        \caption{Statistics of a biking trip on endomondo \cite{endomondo-bike-stats-img}}
 \end{figure}
 
-\begin{figure}[h]
-    \includegraphics[width=\textwidth]{Images/endomondo-history-example.png}
-    \caption{endomondo history example from the web application\cite{endomondo-history-img}}
-\end{figure}
-
-\begin{figure}[h]
-    \includegraphics[width=\textwidth]{Images/endomondo-bike-stats.png}
-    \caption{Statistics of a biking trip on endomondo\cite{endomondo-bike-stats-img}}
+\begin{figure}[htb!]
+    \centering
+        \tmpframe{\includegraphics[width=\textwidth]{Images/endomondo-history-example.png}}
+        \caption{endomondo history example from the web application \cite{endomondo-history-img}}
 \end{figure}
 
 \subsubsection*{Cross-platform}
@@ -163,11 +180,13 @@ All the features are available for iOS 9 and newer and Android 4.1 and newer.
 Endomondo also used to be available on Blackberry and Windows phones.
 Some features are only available in the web application.
 \subsubsection*{Propriety}
-The whole endomondo application only has a single public repository on github, which is a fork of tapiriik -- a tool for data synchronization between different fitness applications, such as Endomondo, Garmin Connect, Strava, Runkeeper, and others.\cite{endomondo-tapiriik}
+The whole endomondo application only has a single public repository on github, which is a fork of tapiriik -- a tool for data synchronization between different fitness applications, such as Endomondo, Garmin Connect, Strava, Runkeeper, and others. \cite{endomondo-tapiriik}
 Otherwise, the whole application is completely proprietary.
 \subsubsection*{Overall evaluation}
 The endomondo app is good at what it is meant to do, that is, motivate the user and track their progress.
 %==============================================================================================
+\pagebreak
+\pagebreak
 \subsection{Strava}
 Strava is a social network for athletes that offers a large number of features mainly focused on tracking and analysis of users' activities, sharing, and competing. \cite{strava}
 The target sports of the platform are running and cycling, but it supports plenty of other activities.
@@ -191,13 +210,27 @@ These clubs give the user the opportunity to keep track of the members' activity
 
 For increased safety while outside, Strava Beacon is a premium feature that allows a user's friend to see their real-time location in case of an emergency.
 
-Another community-building perk is the feed of challenges, which help motivate the users with leaderboards and competitiveness.
+Another community-building perk is the feed of challenges (fig.\ref{strava-challenges}), which help motivate the users with leaderboards and competitiveness.
+
+\begin{figure}[h]
+    \centering
+    \tmpframe{\includegraphics[width=0.5\textwidth]{Images/strava-challenges.jpg}}
+    \caption{Challenges feed on Strava \cite{strava-challenges}}
+    \label{strava-challenges}
+\end{figure}
+
 \subsubsection*{Extra features}
-One of the most popular premium features is called Segments, where users can compare their times on specific portions of road or trail using leaderboards.
+One of the most popular premium features is called Segments (fig.\ref{strava-segments-img}), where users can compare their times on specific portions of road or trail using leaderboards.
 This is supported by heatmaps of use frequency of specific routes.
-Judging by their density on the provided map, Segments seem to be popular mainly with people in the United States, but there are also some in Europe and other parts of the world.
 
 The premium version of the platform offers a lot of features that are somewhat less connected to fitness but make it successful as a social network.
+
+\begin{figure}[htb!]
+    \centering
+        \tmpframe{\includegraphics[width=0.5\textwidth]{Images/strava-segments.jpg}}
+        \caption{Strava segments near the user's location \cite{strava-segments-img}}
+        \label{strava-segments-img}
+\end{figure}
 
 \subsubsection*{User-friendliness}
 The mobile app uses a tab bar for navigation, with nicely thought out tabs - `Feed' tab for posts from the community, `Explore' tab for challenges, clubs, and segments,
@@ -210,9 +243,12 @@ One thing that I missed was the option to create a route on the phone -- this ca
 Another unusual design decision was putting the `Find friends' button only on some pages.
 
 \begin{figure}[h]
-    \includegraphics[width=\textwidth]{Images/strava-morning-run-stats.jpg}
-    \caption{Statistics of a run on strava\cite{strava-run-stats-img}}
+    \centering
+    \tmpframe{\includegraphics[width=0.5\textwidth]{Images/strava-morning-run-stats.jpg}}
+    \caption{Statistics of a run on Strava \cite{strava-run-stats-img}}
+    \label{strava-run-stats-img}
 \end{figure}
+
 \subsubsection*{Cross-platform}
 The mobile app Strava is available both on Android and iOS, as well as providing a web application.
 It supports a variety of smart watches, power sensors, and other devices.
@@ -229,12 +265,13 @@ Here I will analyse the Garmin Explore application, which is targeted at hikers,
 \subsubsection*{Use of IoT possibilities}
 Most fitness-focused Garmin watches do have a heart rate sensor and all of them include a step counter, however, this data is never compared with that of other users, keeping focus on the user's activity history with no prediction.
 \subsubsection*{User fitness assessment}
-Some of the heart-rate-monitor enabled watches allow a user to set the zones in which they would like to keep their heart rate depending on the activity they choose to do. The standard zones are:
-
+Some of the heart-rate-monitor enabled watches allow a user to set the zones (see chapter on fitness assessment) in which they would like to keep their heart rate depending on the activity they choose to do.
 
 \begin{figure}[h]
-    \includegraphics[width=\textwidth]{Images/garmin-connect-myday-screen.png}
-    \caption{My day - Garmin Connect's home screen displays statistics of the user's recent activity\cite{garmin-my-day-img}}
+    \centering
+        \tmpframe{\includegraphics[width=\textwidth]{Images/garmin-connect-myday-screen.png}}
+        \caption{My day - Garmin Connect's home screen displays statistics of the user's recent activity\cite{garmin-my-day-img}}
+        \label{garmin-my-day-img}
 \end{figure}
 
 \subsubsection*{Availability}
