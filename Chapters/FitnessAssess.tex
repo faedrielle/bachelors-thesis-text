@@ -1,4 +1,4 @@
-A physical fitness test usually evaluates multiple components of one's health, including cardiovascular endurance, muscular strength, muscular endurance, flexibility and body composition.
+ physical fitness test usually evaluates multiple components of one's health, including cardiovascular endurance, muscular strength, muscular endurance, flexibility and body composition.
 
 In this chapter I will focus on familiarizing the reader with cardiovascular endurance testing, as it has the largest effect on hiking.
 There is a number of indicators that one can measure (such as the lactate threshold - a non-linear increase in blood lactate concentration\cite{lactate-threshold}), 
@@ -21,7 +21,7 @@ This is limited by the ability of the cardiorespiratory system to deliver oxygen
     \caption{With increasing speed of the runner, oxygen consumption increases linearly and plateaus around 18.5 kilometres per hour - the VO2 max. \cite{vo2max-speed-img}}
 \end{figure}
 
-\subsection{How to measure Vo2 max}
+\subsection*{How to measure Vo2 max}
 
 \subsubsection*{Laboratory test}
 
@@ -145,41 +145,44 @@ while being marketed as a highly precise metric that shows you how your training
 \section{Heart rate zones}
 
 Everybody has a resting heart rate (for example, right after waking up from a good night's sleep), and a maximum heart rate (the highest number of beats per minute achievable).
-The range between HR min and HR max is commonly divided into zones, based on the effects the heart rate induces in a person:
+The range between HR min and HR max is commonly divided into five zones, based on the effort necessary and the effects the heart rate induces in a person:
 \begin{itemize}
-    \item Zone 1 (Warm Up) --
-    Perceived exertion: Relaxed, easy pace, rhythmic breathing.
-    Benefits: Beginning-level aerobic training, reduces stress.
-    \item Zone 2 (Easy) --
-    Perceived exertion: Comfortable pace, slightly deeper breathing, conversation possible.
-    Benefits: Basic cardiovascular training, good recovery pace.
-    \item Zone 3 (Aerobic) --
-    Perceived exertion: Moderate pace, more difficult to hold conversation.
-    Benefits: Improved aerobic capacity, optimal cardiovascular training.
-    \item Zone 4 (Threshold) --
-    Perceived exertion: Fast pace and a bit uncomfortable, breathing forceful.
-    Benefits: Improved anaerobic capacity and threshold, improved speed.
+    \item Zone 1 (Warm up and very light exercise) --
+    The trainee is relaxed at an easy pace and breathes rhytmically. Keeping one's heart rate in this zone helps with recovery from previous activities.
+    \item Zone 2 (Easy, light exercise) --
+    The trainee exercises at a comfortable pace, is able to hold a conversation and breathes slightly deeper. This zone is good for endurance practice.
+    \item Zone 3 (Aerobic, moderate exercise) --
+    At a moderate pace, it is more difficult to hold a conversation. Training in this zone helps improve aerobic capacity.
+    \item Zone 4 (Threshold, hard exercise) --
+    Training at a fast pace is somewhat uncomfortable, the trainee breathes forcefully. This zone is good for improving speed.
     \item Zone 5 (Maximum) --
-    Perceived exertion: Sprinting pace, unsustainable for long period of time, labored breathing.
-    Benefits: Anaerobic and muscular endurance, increased power.\cite{garmin-heart-zones}
+    The trainee is at a sprinting pace, which is unsustainable for long period of time, and their breathing is laboured.
+    This zone helps increase power in the trainee's body.\cite{garmin-heart-zones}\cite{polar-heart-zones}
 \end{itemize}
-\todo[color=green]{reword into sentences}
-
 
 Calculating HR min is an easy enough task - just measure your heart rate right after enjoying some good sleep; HR max is trickier.
 
 \subsection*{Running methods to calculate HR max}
-There are some methods to estimate HR max by interval running.\todo{add some}
+There are some methods to get HR max by running, such as running towards a hill at a high intensity and then ascending the hill at as high intensity as possible,
+or, on flat ground, running 400 metres at high intensity and then increasing the intensity for another 400 metres.
+These tests are considered stress tests, and individuals who are not highly active are not advised to take them. \cite{hrmax-running-tests}
+Another method is based on interval running:
+two intervals, four minutes each, in which the trainee is short of breath, interspersed by three minutes of active rest, and finished by a third interval, where two minutes in the trainee increases their speed as much as they can and run for as long as they can.
+HR max is the maximum heart rate achieved.\cite{hrmax-running-tests-intervals}
 
 \subsection*{Age-based methods to calculate HR max}
-As the running methods are generally too complex to do "on the spot", there have been attempts to calculate HR max based on readily available data.
+As the running methods are generally too difficult to do `on the spot', there have been attempts to calculate HR max based on readily available data.
 
 The most commonly used formula to get one's maximal heart rate, $HRmax=220-age$ also known as the Fox formula, has been time and time again found largely inaccurate.
 Originally intended as a rough formulation, with cross-sectional data from participants who are by no means representatives of a population\cite{220-hrmax-new-formula} and based on unoriginal research\cite{220-hrmax-disproved},
 a number of researchers have tried to find a similarly simple but more accurate formulas, most of them claiming to have found the right one.
 One of the popularly used is the cross-sectional research of Tanaka et al., who formulated the equation $208-0.7\times age$.
 This formula was later validated by Gellish et al. in 2007 by conducting an analysis of longitudinal data from participants from various groups and developing a similar formula $207-0.7\times age$,
-however, both Fox and Tanaka were disproved by Sarzynski et al. in 2014 as not precise enough based on standard error of estimate (12.4 and 11.4 bpm respectively )of the two formulas.\cite{hrmax-age-disproved}
+however, both Fox and Tanaka were disproved by Sarzynski et al. in 2014 as not precise enough based on standard error of estimate (12.4 and 11.4 bpm respectively) of the two formulas. \cite{hrmax-age-disproved}
 In that study, Sarzynski stresses \textit{the importance of finding and validating other measures to be used in exercise prescriptions for the determination of intensity of exercise, the estimation of fitness levels, and as a criterion for achieving maximal exertion.}
 
-The HUNT fitness study carried out on over three thousand people by Nes et al. found a more accurate formula $211 − 0.64\times age$, with the standard error of estimate of 10.8 bpm, but couldn't find evidence of interaction with gender, physical activity, VO2 max or BMI.\cite{hrmax-Nes-HUNT}
+The HUNT fitness study carried out on over three thousand people by Nes et al. found a more accurate formula $211-0.64\times age$, with the standard error of estimate of 10.8 bpm, but couldn't find evidence of interaction with gender, physical activity, VO2 max or BMI. \cite{hrmax-Nes-HUNT}
+
+
+It seems that computational models for peoples' fitness leave a lot to be desired,
+but this can all be remedied with further research.

@@ -1,13 +1,13 @@
 There's a plethora of applications taking advantage of wearable tech, not all of them using the available bio sensors, ranging from basic real-time heart rate monitoring to progress tracking, to calorie measuring, and to social network sized fitness communities.
 
-In this chapter I will research a few such applications, compare and rate them based on following criteria. \todo{add weight to individual points}
+In this chapter I will research a few such applications and judge them based on following criteria:
 \begin{itemize}
     \item Use of IoT possibilities -- use of available sensors, data collection from the community,
     \item User fitness assessment -- how the user's fitness is assessed (attempt self-assessment, fill out a questionnaire, or take a physical test),
-    \item Community -- built-in sharing options, possibility for interaction between users,
-    \item Extra features -- interesting perks that make the app stand out among others,
-    \item User-friendliness -- navigation around the mobile application - finding the general settings, creating and clearing a route, general user experience; the applications were tested on an Android phone,
-    \item Availability -- is the application or its parts free, paid or are there microtransactions,
+    \item Community -- support of interaction between users,
+    \item Extra features -- interesting perks that make the platform stand out among others,
+    \item User-friendliness -- navigation around the mobile application - finding the general settings, creating and clearing a route, general user experience (the applications were tested on an Android phone),
+    \item Availability -- the platform's economical model and its suitability,
     \item Cross-platform -- major operating systems supporting the mobile application and sensors, if any are used,
     \item Propriety -- whether the solution is open-source, closed-source or else.
 \end{itemize}
@@ -66,14 +66,14 @@ If a user decides to skip all planning and just go into the world, their route c
     \item edit the route according to one's liking.
 \end{enumerate}
 
-Thanks to the maps provided by the OpenStreetMap, users are able to pick a starting point, a destination, as well as any number of waypoints in between for their route.
+Users can pick a starting point, a destination, as well as any number of waypoints in between for their route.
 Once the route is chosen, the user can go through the route's stats - the estimated time it will take to get from start to finish, its length, the elevation profile (uphill, downhill, highest and lowest points, estimated average speed) and the surfaces and their use in proportion to the route's length.
 All this information is delivered in easy-to-understand charts as well as interactive mappings -- using a slider, the user can see which stat applies to which part of the route.
 
 \subsubsection*{User-friendliness}
 The mobile app uses a bottom tab bar for navigation, however, the way the tabs are designed is not entirely user-friendly.
 The `Plan' and `Record' tabs are clear enough, but the `Profile' tab contains a lot of information that does not seem entirely connected to the user's profile, such as people to follow and the app's settings.
-The last tab, tltled `More', only contains promotions for komoot offline maps and komoot premium, which is something a user does not expect under this tab.
+The last tab, titled `More', only contains promotions for komoot offline maps and komoot premium, which is something a user does not expect under this tab.
 The navigation through the mobile app takes some time to get used to -- it took me a while to find the Settings after I did not see them in the `More' menu on the bottom tab bar.
 
 Once I created a route, the information provided was well-delivered and easy to read, however, there was no obvious way of completely cancelling the chosen route and picking another one.
@@ -255,4 +255,9 @@ These apps are mostly concerned with map handling, navigation and sound codecs, 
 While some of this code may be used in the Explore or Connect applications, these repositories don't contain their core functionality.
 
 \subsubsection*{Overall evaluation}
-As a fitness tracker, Garmin Connect is \todo{finish}
+As a fitness tracker, Garmin Connect is highly popular and focuses mostly on the users' previous activities.
+
+\subsection{Summary}
+All of the studied platforms are used by a wide community of users, are either mostly or completely closed-source, base their maps off the OpenStreetMap, and have their own ways (or lack thereof) of integrating IoT principles in their design.
+
+However, another thing they have in common, is that they do not put emphasis on fully customizing their estimations to the user.
