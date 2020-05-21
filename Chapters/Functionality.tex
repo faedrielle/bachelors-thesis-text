@@ -36,7 +36,7 @@ The application should monitor a user's heart rate unobtrusively and reliably.
 
 The user needs a method for getting their data to the mobile application and then to the backend, do it comfortably, preferably without any need for direct user---computer interaction.
 
-\subsection*{E01-US01 -- Choose and integrate a wearable}
+\subsubsection*{E01-US01 -- Choose and integrate a wearable}
 As an APP user, I want my heart rate-enabled wearable to work with the APP, so that I don't have to buy a new one.
 
 Based on the analysis of existing applications, the most often used type of wearable tech are smartwatches.
@@ -60,7 +60,7 @@ This is why I recommend supporting mostly devices which have a large capacity in
 
 For my PoC in this thesis, I chose the XXXXXXXXX.\todo{add what and why}
 
-\subsection*{E01-US02 -- Manage devices paired with the APP}
+\subsubsection*{E01-US02 -- Manage devices paired with the APP}
 As an APP user, I want to pair and unpair my wearables with the APP, so that the APP can use the data of all devices that I currently own.
 
 The app should provide the user with the list of the phone's paired devices, so that they can choose their fitness gadgets to use on their next hike.
@@ -74,7 +74,7 @@ so that the user doesn't get confused by the presence or pairability of their Bl
     \item The user can unpair any number of compatible wearables down to zero.
 \end{itemize}
 
-\subsection*{E01-US03 -- Activate a device}
+\subsubsection*{E01-US03 -- Activate a device}
 As an APP user, I want to mark a wearable I'm using as active, so that only its data is relevant to the statistics.
 
 The user should be able to activate a device they want to use for monitoring of current activity or activity in the near future.
@@ -103,7 +103,7 @@ This self-assessed value should be corrected as more data is available about the
 As far as objective assessment, I see plenty of potential for the use of machine learning and neural networks.
 The networks can learn from the data collected from a good number of users over a longer period, and then categorize the new users into fitness groups based on this data, which will then be used to predict the users' future hikes.
 
-\subsection*{E02-US01 -- Implement support for VO2 max tests}
+\subsubsection*{E02-US01 -- Implement support for VO2 max tests}
 As an APP user, I want to be able to take a guided test of my fitness in the APP, so that I don't have to look for tests elsewhere.
 
 The APP should implement a guide to multiple tests of VO2 max, with instructions on what they should do, and signals to direct the user while taking the test.
@@ -123,7 +123,7 @@ In order to calculate VO2 max, the APP can use Mänttäri's formulas.
     \item During the test, the user gets directions on their smartwatch.
 \end{itemize}
 
-\subsection*{E02-US02 -- Implement support for HR max and HR min tests}
+\subsubsection*{E02-US02 -- Implement support for HR max and HR min tests}
 As an APP user, I want to be able to take a guided test to find my heart rate zones in the APP, so that I don't have to look for tests elsewhere and get as accurate heart rate zones as possible.
 
 The implementation should be similar to VO2 max tests; if possible, both metrics should be measured by a single test to reduce the time a user has to spend setting up the APP.
@@ -144,7 +144,7 @@ This is why they should be allowed to input the data in other ways.
 If a public universal database with all people's medical data existed, it would make sense to get the necessary information directly via an API.
 However, as no such thing exists (and for good reasons), we will let the user enter their biometric data manually.
 
-\subsection*{E03-US01 -- Allow manual input of basic biometric values}
+\subsubsection*{E03-US01 -- Allow manual input of basic biometric values}
 As an APP user, I want to provide the APP with my basic metrics, so that the results are relevant to me.
 
 If the user has a smart scale, it could be integrated to get the most recent values, however, that seems like a bit of an overkill, considering that it's just one number - the weight.
@@ -159,7 +159,7 @@ Yet again, it is reasonable to consider whether a user who doesn't have an issue
     \item User can enter their basic metrics - height, weight, age, sex - manually.
 \end{itemize}
 
-\subsection*{E03-US02 -- Allow manual input of advanced biometric values}
+\subsubsection*{E03-US02 -- Allow manual input of advanced biometric values}
 As an APP user who has recently done lab fitness tests, I want the APP to use these values instead of taking the APP's tests, so that I don't have to take fitness tests that are most probably less accurate than what I know.
 
 A user should be able to manually enter the VO2 max, resting heart rate and maximum heart rate, as well as the severity of the effect a potential condition might have on the individual's fitness.
@@ -176,7 +176,7 @@ The APP should ask whether the user has such a condition and if there is a maxim
 
 \subsection*{E04 -- Routes and maps}
 
-\subsection*{E04-US01 -- Integrate a map}
+\subsubsection*{E04-US01 -- Integrate a map}
 As an APP user, I want to use a map to visualize my hikes, so that I can follow them easily.
 
 Since the APP is meant to be used as a hike planner, the user needs an easy to follow aid to help them plan their routes.
@@ -193,7 +193,7 @@ Therefore it makes sense to choose the open-source OpenStreetMap\cite{OpenStreet
 
 It is important not to forget to credit the map's creator in their preferred way.
 
-\subsection*{E04-US02 -- Plan a route}
+\subsubsection*{E04-US02 -- Plan a route}
 As an APP user, I want to plan a route from point A to point B.
 
 Hikers often don't want the easiest, fastest, or shortest possible path from A to B -- they look for challenge and nice things to see.
@@ -201,6 +201,10 @@ This is why they might make extra effort to take their hike through a specific s
 Therefore, it should be possible to add such places to the route.
 
 Since there are often multiple ways to get from A to B even through the chosen waypoints, the user should be able to choose which one they want to take.
+
+Another option that is related to route planning is choosing whether or not to plan a round trip.
+Especially in hiking, when a lot of people come to the starting point by car, they want to return to the same point where they started.
+In order to keep the route interesting, the way back should be different than the way to the destination point, if possible.
 
 \textbf{Acceptance criteria:}
 \begin{itemize}
@@ -213,9 +217,10 @@ Since there are often multiple ways to get from A to B even through the chosen w
     \item If the last waypoint is removed, the previous waypoint becomes the last point.
     \item If multiple different routes are available, the user can compare their attributes.
     \item If multiple different routes are available, the user can only choose one of them.
+    \item Allow the user to do a round trip.
 \end{itemize}
 
-\subsection*{E04-US03 -- History of hikes taken}
+\subsubsection*{E04-US03 -- History of hikes taken}
 As an APP user, I want to see which routes I've hiked while using the APP, so that I can remind myself of the impressions of the hike.
 
 A user might want to remind themselves of a specific hike they went to -- if it's because of fond memories, or just to make sure who went with them, or when it happened.
@@ -231,7 +236,7 @@ Filters should include the date on which the hike was taken, the time it took to
     \item Show a filterable list of hikes taken by the user.
 \end{itemize}
 
-\subsection*{E04-US04 -- Saved routes}
+\subsubsection*{E04-US04 -- Saved routes}
 As an APP user, I want to save some routes, so that I can don't have to create the same route again when I want to retake it.
 
 Since the process of creating a route from scratch is somewhat lengthy, the user should be able to save it and find it later.
@@ -244,7 +249,7 @@ Since the process of creating a route from scratch is somewhat lengthy, the user
     \item User can choose a saved route and hike it again.
 \end{itemize}
 
-\subsection*{E04-US05 -- Display planned route details}
+\subsubsection*{E04-US05 -- Display planned route details}
 As an APP user, I want to see interesting information about a route that has been planned for me, so that I can make an informed decision whether or not to take it.
 
 When tapping a route, its details should be shown: its outline on a map, length, terrain in its segments, its elevation profile, colours of each official hiking route it uses, and interesting places to see along the route.
@@ -257,7 +262,7 @@ This should take into account the limitations of the user's fitness, which they 
     \item User can see customized biometric details of a planned route, including the amount of time the hike will take them, the relative difficulty of the route's segments, and expected heart rate zones.
 \end{itemize}
 
-\subsection*{E04-US06 -- Display old hike details}
+\subsubsection*{E04-US06 -- Display old hike details}
 As an APP user, I want to see interesting information about a route I've hiked, so that I can check it in a few days and show my friends.
 
 \textbf{Acceptance criteria:}
@@ -272,7 +277,7 @@ As an APP user, I want to see interesting information about a route I've hiked, 
 \subsection*{E05 -- User profile}
 The user needs a place to review and change their provided information, as well as a possibility to take the provided tests.
 
-\subsection*{E05-US01 -- Management of provided biometric information}
+\subsubsection*{E05-US01 -- Management of provided biometric information}
 As an APP user, I want to be able to change the information I've entered into the APP, so that the values are always up to date and my estimates remain accurate.
 
 \textbf{Acceptance criteria:}
@@ -282,7 +287,7 @@ As an APP user, I want to be able to change the information I've entered into th
     \item User can edit the advanced biometric data.
 \end{itemize}
 
-\subsection*{E05-US02 -- Profile picture management}
+\subsubsection*{E05-US02 -- Profile picture management}
 As an APP user, I want to be able to upload and delete my profile picture or use one from social media, so that my friends can recognize me in their friends list quickly.
 
 \textbf{Acceptance criteria:}
@@ -293,13 +298,16 @@ As an APP user, I want to be able to upload and delete my profile picture or use
     \item User can delete their uploaded profile picture, which is replaced by a placeholder.
 \end{itemize}
 
-\subsection*{E05-US03 -- Log in options}
+\subsubsection*{E05-US03 -- Log in options}
 As an APP user, I want the APP to recognize me on different devices, so that my data is still connected to me when I change my phone.
 
 People change their phones every few years, some even months, but want their new phone to have all the data as the old one.
 This can be done with manual backups.
 However, since our APP has a server where most of the data is stored anyways, the data should be linked to the person's account and not the phone.
 The user should be able to sign up with e-mail, as well as social media platforms so that multiple user groups are targetted.
+
+I considered allowing the user to use the APP without an account, at the risk of them losing all their data, but it would not only be a nuisance for the user --
+a lot of processing power would have to be reinvested into the same user, and the previous data would not be as useful as they could be.
 
 \textbf{Acceptance criteria:}
 \begin{itemize}
@@ -318,7 +326,7 @@ Here I was able to discern between two main use cases -- on the one hand, a user
 and on the other hand, they want to hike a specific route and want the right people to join in.
 There is a third use case, the mix of the previous two, where the hike host knows about some people they want at the hike (for example their spouse) and would just like people to join in if they want to.
 
-\subsection*{E06-US01 -- Adjust the calculations to friends' fitness}
+\subsubsection*{E06-US01 -- Adjust the calculations to friends' fitness}
 As an APP user, I want the estimations to be accurate even if I'm hiking with friends.
 
 In a diverse group of people, someone's fitness level will likely be lower than that of the others, which means that the whole hike will take longer than if this person wasn't in the group.
@@ -339,7 +347,7 @@ This is why it should provide the information carefully.
 
 %==========Invite friends to hikes======================================================================================
 
-\subsection*{E06-US02 -- Invite friends to hikes}
+\subsubsection*{E06-US02 -- Invite friends to hikes}
 As an APP user, I want to invite friends to my hikes, so that we all have access to the same track when hiking it and preparing for it.
 
 The invitation should include the proposed date of the hike and all the hike's details, including the time the hike will take if the user joins the group.
@@ -350,16 +358,15 @@ The invitation should include the proposed date of the hike and all the hike's d
     \item When user A invites user B to a hike, user B receives an invitation with the hike's details.
 \end{itemize}
 
-\subsection*{E06-US03 -- Refuse an invitation to hike with friends}
-As an APP user, I want to refuse both new and accepted invitations to hikes that I don't want to attend, so that the hike organiser knows I won't come and my invitation list isn't cluttered.
+\subsubsection*{E06-US03 -- Refuse an invitation to hike with friends}
+As an APP user, I want to refuse invitations to hikes that I don't want to attend, so that the hike organiser knows I won't come and my invitation list isn't cluttered.
 
 \textbf{Acceptance criteria:}
 \begin{itemize}
     \item When user A receives an invitation from user B, user A can refuse the invitation.
-    \item When user A accepts an invitation from user B, user A can let user B know that they have changed their mind and won't attend. The total time and the attendees' biometric estimates should be recalculated.
 \end{itemize}
 
-\subsection*{E06-US04 -- Accept an invitation to hike with friends}
+\subsubsection*{E06-US04 -- Accept an invitation to hike with friends}
 As an APP user, I want to accept invitations to hikes that I want to attend, so that I get updates and plan around the event.
 
 \textbf{Acceptance criteria:}
@@ -367,7 +374,7 @@ As an APP user, I want to accept invitations to hikes that I want to attend, so 
     \item When user A receives an invitation from user B, user A can accept it. From then on, user A is an active participant of the hike.
 \end{itemize}
 
-\subsection*{E06-US05 -- Take back an invitation}
+\subsubsection*{E06-US05 -- Take back an invitation}
 As an APP user, I want to take back an invitation I sent to my friend unintentionally, so that I can fix my mistake.
 
 \textbf{Acceptance criteria:}
@@ -377,7 +384,7 @@ As an APP user, I want to take back an invitation I sent to my friend unintentio
 
 %=============Friends and friendship request management================================================
 
-\subsection*{E06-US06 -- Add friends}
+\subsubsection*{E06-US06 -- Add friends}
 As an APP user, I want to add new friends, so that I can invite them to hikes.
 
 The only people that can be added, need to be users of the system.
@@ -391,7 +398,7 @@ A nice-to-have unique way would be using the phones' proximity if the two people
     \item If the request is accepted, user A can invite user B to hikes and vice versa.
 \end{itemize}
 
-\subsection*{E06-US07 -- Remove friends}
+\subsubsection*{E06-US07 -- Remove friends}
 As an APP user, I want to remove people I no longer meet with from friends, so that they can't invite me to hikes anymore.
 
 \textbf{Acceptance criteria:}
@@ -401,7 +408,7 @@ As an APP user, I want to remove people I no longer meet with from friends, so t
     \item If user B is removed, the hikes (and related data) user A and user B took together remain in their respective histories.
 \end{itemize}
 
-\subsection*{E06-US08 -- Accept a friendship request}
+\subsubsection*{E06-US08 -- Accept a friendship request}
 As an APP user, I want to accept a friendship request that someone sent me, so that we can invite each other on hikes.
 
 \textbf{Acceptance criteria:}
@@ -412,7 +419,7 @@ As an APP user, I want to accept a friendship request that someone sent me, so t
 \end{itemize}
 
 
-\subsection*{E06-US9 -- Dismiss a friendship request}
+\subsubsection*{E06-US9 -- Dismiss a friendship request}
 As an APP user, I want to dismiss a friendship request when I don't know the sender or don't want to hike with them, so that my request list isn't cluttered.
 
 \textbf{Acceptance criteria:} 
@@ -425,7 +432,7 @@ As an APP user, I want to dismiss a friendship request when I don't know the sen
 
 %=======Joinable hikes=======================================================================================================
 
-\subsection*{E06-US10 -- Joinable hikes}
+\subsubsection*{E06-US10 -- Joinable hikes}
 As an APP user, I want to let my friends join my hikes, so that if I don't know who exactly I want there, my friends can decide for themselves if they want to come and I don't have to text everybody myself.
 
 When planning a hike, not always do we know who might want to come, and sometimes we really want to try out a specific route.
@@ -450,7 +457,26 @@ Another point to consider is the capacity of such a hiking trip -- the hike's ho
     \item When a hike is marked as `not joinable', all pending joining applications should be dismissed.
 \end{itemize}
 
+\subsubsection*{E06-US11 -- Cancelling a hike}
+As an APP user, I want to let my friends know that I won't be able to go to the hike, so that their metrics are accurate when I'm not there.
 
+When different plans come up, a user will want to cancel their participation on a hike.
+This can happen both to an invited attendee and the hike's host.
+This is why it should be possible to appoint a new host from the invited friends if the original host needs to cancel -- there should always be a host.
+
+\textbf{Acceptance criteria:}
+\begin{itemize}
+    \item When user A accepts an invitation from user B, user A can let user B know that they have changed their mind and won't attend. The total time and the attendees' biometric estimates should be recalculated.
+    \item A hike's host can cancel, but they have to appoint a new host.
+\end{itemize}
+
+\subsubsection*{E06-US12 -- Hike active on all participants' phones}
+As a guest on a hike, I want to be able to navigate, so that if the host's phone battery dies, there's someone to keep track of the route.
+
+\textbf{Acceptance criteria:}
+\begin{itemize}
+    \item When a hike is started, it is started on the phones of all attendees.
+\end{itemize}
 
 %=========Considered features================================================================================================
 
