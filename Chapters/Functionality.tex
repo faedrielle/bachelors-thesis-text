@@ -478,6 +478,32 @@ As a guest on a hike, I want to be able to navigate, so that if the host's phone
     \item When a hike is started, it is started on the phones of all attendees.
 \end{itemize}
 
+\subsection*{E07 -- Notifications}
+Everything important that happens on the APP should have notifications.
+
+\subsubsection*{E07-US01 -- Notifications for friends tab}
+As an APP user, I want to receive notifications about friend requests.
+
+\textbf{Acceptance criteria:}
+\begin{itemize}
+    \item If user A sends user B a friendship request, user B receives a notification.
+    \item If user A sends user B a friendship request and user B accepts, user A receives a notification.
+\end{itemize}
+
+\subsubsection*{E07-US02 -- Notifications for plans tab}
+As an APP user, I want to receive notifications about my planned hikes.
+
+The hike host should receive notifications about activity of this hike: join requests, accepted and refused invitations.
+
+A hike guest should receive notifications about activity of the hike: change in attendance, change of date.
+
+\textbf{Acceptance criteria:}
+\begin{itemize}
+    \item If user A requests to join user B's hike, user B receives a notification.
+    \item If user A sends user B a join request and user B accepts, user A and user C (other hike guest) receive a notification.
+    \item If user A as the host of the hike changes the date of the hike, all attendants except for the host should receive a notification.
+\end{itemize}
+
 %=========Considered features================================================================================================
 
 \subsection*{Considered features}
