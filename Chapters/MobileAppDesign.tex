@@ -5,27 +5,41 @@ Since it is a mobile application, the range of options was slimmed down to two -
 given their prevalence on the market (Android on the first place with 70.68\% of the market share, iOS second with 28.79\% as of April 2020). \cite{market-share-mobile-os}
 It is partially due to Android's crushing lead on iOS devices, but also because of my personal experience with the more popular OS, that I decided to design the app for Android.
 
-One of the most important decisions to make when designing an application is the navigation in it, and from there there's only a small step to information architecture -- the \textit{science of organizing and structuring content of the [\dots] mobile applications} \cite{information-architecture}.
+One of the most important decisions to make when designing an application is the navigation in it, and from there there's only a small step to information architecture (IA) -- the \textit{science of organizing and structuring content of the [\dots] mobile applications} \cite{information-architecture}.
+The IA of an application helps the designer decide which concepts in the application are high-level and discrete enough
+to be used as an `umbrella terms' for navigating to other, deeper concepts, while feeling intuitive to the user.
+
 However, when reading up on design guidelines for either of the systems, I realised that Android's instructions seem outdated.
-Backed by plenty of discussions online as well as my own user experience with the native applications, the typical hamburger menu has gone out of style.
+Backed by plenty of discussions online as well as my own user experience with the native applications, the typical hamburger menu ☰ has gone out of style.
 
 One of the reasons is the increasing size of handheld devices.
 A hamburger menu (or `navigation drawer') located in the top left corner is nearly inaccessible for the majority of users, who are right-handed and use their thumb to operate the device. \cite{thumb-zone-article} 
 \todo{insert pic of thumb zone on small to large phones}
 
-Another reason is the fact that the hamburger menu hides where the user can go from a place within the application.
-Some UX designers \todo{more on the design decisions i made}
+Another reason is the fact that the hamburger menu decreases discoverability of features, as they are hidden by default. \cite{hamburger-discoverabillity}
+
+Lastly, using the hamburger menu often tempts the designer to just put everything there, without giving too much consideration to the use of the features.
+
+One of the most popular alternatives is the tab bar -- or `bottom navigation' in Android documentation.
+This type of navigation is mainly implemented by Apple's designers, but is fast spreading to Android-powered devices.
+It's a bar on the bottom of the screen containing three to five labelled icons representing \textit{tabs} where each leads to a different location in the app.
+It enforces the idea that a user should always know where in the application they are, what they can do there and where they can go because it's always on the screen (except when the keyboard is being used).
+Another one of its advantages is the possibility of inobtrusive notifications using icon badges -- little red circles in the top right corner of the icon, often containing a number to show the number of notifications.
+Other navigation options include dropdown menus, scrollable menus, single page dot navigation, and others. \cite{hamburger-alternatives}
+
+I chose the tab bar with five tabs: `Plans', `Routes', `Map', `Friends', and `Profile'.
+However, when installing the APP, the user needs to set the APP up.
 
 \section{Set up screens}
-The welcome screen contains all the options for signing up, with a button to switch to the sign in screen if the user already has an account.
-Signing up with e-mail creates a new account for the user based on their e-mail~(fig.\ref{fig:sign-up-email}), while using a social media account takes the user to a sign in screen of the specific social media.
+The welcome screen contains all the options for signing up, with a button to switch to the sign-in screen if the user already has an account.
+Signing up with e-mail creates a new account for the user based on their e-mail~(fig.\ref{fig:sign-up-email}), while using a social network account takes the user to a sign-in screen of the specific social network.
 Similarly, the user can sign in to their existing account~(fig.\ref{fig:sign-in-email}).
 
 \begin{figure}[h!]
     \centering
     \tmpframe{\includegraphics[width=0.4\textwidth]{Images/appScreens/signUp1.pdf}}\hfill
     \tmpframe{\includegraphics[width=0.4\textwidth]{Images/appScreens/signUp2.pdf}}
-    \caption{Welcome screen with sign up options and e-mail sign up screen}
+    \caption{Welcome screen with sign-up options and e-mail sign-up screen}
     \label{fig:sign-up-email}
 \end{figure}
 
@@ -33,7 +47,7 @@ Similarly, the user can sign in to their existing account~(fig.\ref{fig:sign-in-
     \centering
     \tmpframe{\includegraphics[width=0.4\textwidth]{Images/appScreens/signIn1.pdf}}\hfill
     \tmpframe{\includegraphics[width=0.4\textwidth]{Images/appScreens/signIn2.pdf}}
-    \caption{Welcome screen with sign in options and e-mail sign in screen}
+    \caption{Welcome screen with sign-in options and e-mail sign-in screen}
     \label{fig:sign-in-email}
 \end{figure}
 
@@ -103,7 +117,7 @@ Tapping the `Activate' button will deactivate the currently active device.
 \end{figure}
 
 \section{Map tab}
-The main tab of the application is the `Map' tab~(fig.\ref{fig:map}).
+The default tab on which the application opens is the `Map' tab~(fig.\ref{fig:map}).
 This is where the user can look at the integrated map, as well as search for specific places~(fig.\ref{fig:map-searchPlace}) and add them as waypoints to the planned route.
 The waypoint will be added to the route as the `next' waypoint.
 
@@ -134,7 +148,7 @@ The planning process consists of three steps:
 
 In the `Waypoints' step~fig.\ref{fig:plan-waypoints}), the user picks where they want to start their route, the destination, and all the points through which they want to pass.
 Each of the points can be picked directly from the map with a long press, or by searching for a place~(fig.\ref{fig:map-searchPlace}).
-Current location can also be used as a starting point.
+The current location can also be used as a starting point.
 The intermediate points can be added using the plus button, and all the waypoints can be rearranged by drag'n'dropping each line by the menu icon on the left.
 The user can also remove individual waypoints using the X icon on the right: when removing the starting or destination point, only the text is removed, since every route needs two points.
 
@@ -198,7 +212,7 @@ This screen also contains a checkbox to allow friends join the hike -- whether t
 
 Once the planning is finished, we return to the basic `Map' screen, with a snack bar notification telling the user where they can find the planned hike and how many people were invited~(fig.\ref{fig:plan-end}).
 
-The whole planning can be stopped at any point with the `Cancel' button, which will trigger a confirmation dialog, as the user is about to delete all their progress, and after confirming, we return to the `Map' tab.
+The whole planning can be stopped at any point with the `Cancel' button, which will trigger a confirmation dialogue, as the user is about to delete all their progress, and after confirming, we return to the `Map' tab.
 
 \begin{figure}[h!]
     \centering
@@ -220,7 +234,7 @@ who is coming, how long it is currently planned to be plus how much longer it wi
 
 If the hike is joinable, there is an `Ask to join' button; if not, the user can only go back.
 
-Again, there are the options to save the route, and share either the route or the hike, which is chosen in a dropdown dialog.
+Again, there are the options to save the route, and share either the route or the hike, which is chosen in a dropdown dialogue.
 
 \begin{figure}[h!]
     \centering
@@ -280,7 +294,7 @@ Finally, the last tab is the `Friends' tab.
 It contains a view of all the user's friends, as well as any pending friendship requests.
 The detail of a user's profile is similar to the user who is signed in, but contains only basic information.
 The profile is shareable, and the friend can also be removed from the user's friends list.
-This is confirmed by a confirmation dialog, warning the user about the fact that they will be removed from one another's plans.
+This is confirmed by a confirmation dialogue, warning the user about the fact that they will be removed from one another's plans.
 
 \begin{figure}[h!]
     \centering
@@ -289,4 +303,18 @@ This is confirmed by a confirmation dialog, warning the user about the fact that
     \tmpframe{\includegraphics[width=0.3\textwidth]{Images/appScreens/friends-detail.pdf}}
     \caption{Friends tab, finding new friends and the user profile of a friend.}
     \label{fig:routes}
+\end{figure}
+
+\section{Navigation mode}
+The application allows a user to navigate a planned route using a map and written directions (fig.\ref{fig:navigation}).
+Once a hike is started, the view is switched to the `Map' tab.
+The route is visualized on the map in colours of respective hiking trails and the user's position is highlighted.
+There's also an overview of the difficulty of the current part of the route, and the user is notified if they are lagging behind the plan.
+If the user wants to see something else than the navigation mode, they can use the close button on the top right, or just switch between tabs.
+The navigation mode stays alive and accessible through a permanent notification.
+
+\begin{figure}[h!]
+    \centering
+    \tmpframe{\includegraphics[width=0.4\textwidth]{Images/appScreens/navigation.pdf}}
+    \label{fig:navigation}
 \end{figure}

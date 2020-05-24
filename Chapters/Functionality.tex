@@ -268,9 +268,34 @@ As an APP user, I want to see interesting information about a route I've hiked, 
 \textbf{Acceptance criteria:}
 \begin{itemize}
     \item User can see all the basic info as on a planned route.
-    \item User can see the originally estimated values of biometric indicators and the real values.
+    \item User can see the originally estimated values of biometric indicators and real values.
     \item User can see a graph of their heart rate during the hike.
 \end{itemize}
+
+\subsubsection*{E04-US07 -- Hike a route}
+As an APP user, I want to hike the route that I planned before.
+
+Navigation is a core feature of this APP since the planned hike is almost useless if the user cannot follow it in the APP.
+But since it is not the only important feature, it should also be possible to temporarily escape the navigation mode, so that the user can do other things in the APP.
+
+\textbf{Acceptance criteria:}
+\begin{itemize}
+    \item User can start a planned hike on the day it was planned for.
+    \item User can follow the directions of the APP to stay on track.
+    \item Once the destination is reached, navigation mode is automatically turned off.
+    \item The navigation mode can be temporarily put in the background to use other parts of the APP.
+    \item Information about current segment is shown -- the slope, the user's heart rate zone.
+    \item While hiking, the user can see if they're following the plan -- whether they're on time, or should go faster.
+\end{itemize}}
+
+\subsubsection*{E04-US08 -- Change the hike date}
+As an APP user, I want to replan my existing planned hike to a different day, so that if the weather is bad, I don't have to cancel it and plan all of it again.
+
+\textbf{Acceptance criteria:}
+\begin{itemize}
+    \item User can change the date of a planned hike they're the host of.
+\end{itemize}}
+
 
 %================================================================================================================================
 
@@ -497,11 +522,23 @@ The hike host should receive notifications about activity of this hike: join req
 
 A hike guest should receive notifications about activity of the hike: change in attendance, change of date.
 
+Everybody who attends the hike should get a notification about the hike's planned date coming up soon (for example, in a week, and on the next day).
+
 \textbf{Acceptance criteria:}
 \begin{itemize}
     \item If user A requests to join user B's hike, user B receives a notification.
     \item If user A sends user B a join request and user B accepts, user A and user C (other hike guest) receive a notification.
     \item If user A as the host of the hike changes the date of the hike, all attendants except for the host should receive a notification.
+    \item If user A's hike is planned to seven days from now, every attendee reveives a notification.
+    \item If user A's hike is planned next day from now, every attendee reveives a notification.
+\end{itemize}
+
+\subsubsection*{E07-US03 -- Notifications for navigation}
+As an APP user, I want to know if I am lagging behind the plan, so that I can be sure I will reach the destination on time.
+
+\textbf{Acceptance criteria:}
+\begin{itemize}
+    \item If user A is hiking a planned hike and they are not going fast enough to follow the plan, they are notified.
 \end{itemize}
 
 %=========Considered features================================================================================================
@@ -514,4 +551,6 @@ However, letting people see their friends' previous hikes and letting them react
 Some other features that would be interesting to see in the application are an integration with geocaching\cite{geocaching} for gamification,
 showing the weather forecast for the planned day in the details of the hike,
 user groups for users who always hike together, so that they would not have to search for their friends every time,
-multiple hike hosts, so that there are multiple people who can oversee the hike's activity.
+multiple hike hosts, so that there are multiple people who can oversee the hike's activity,
+collecting data of a non-planned, spontaneous hike,
+and cancelling the hike once it has started, so that if the user decides they don't actually want to go, the APP doesn't force them.
