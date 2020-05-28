@@ -12,13 +12,13 @@ An epic is usually comprised of description and multiple user stories, which cov
 Once all the stories are delivered, the whole epic is considered finished.
 Epics are sometimes formulated using the same format as user stories.
 
-User stories (US) are short, simple descriptions of a feature told from the perspective of the person who desires the new functionality, usually a user of the system.\cite{user-story-definition}
+User stories (US) are short, simple descriptions of a feature told from the perspective of the person who desires the new functionality, usually a user of the system~\cite{user-story-definition}.
 They are not system specifications or functional requirements.
 Rather, they are the beginning of a conversation that can lead to such specifications or requirements.
 However, they provide context and scope of the requested feature.
 Often they are written in simple, non-technical language, as most systems don't have tech-savvy users.
 The typical template for a user story is:
-\textit{As a < type of user >, I want < some goal > so that < some reason >.}\cite{user-story-definition}
+\textit{As a < type of user >, I want < some goal >, so that < some reason >}~\cite{user-story-definition}, where the reason part is optional but recommended.
 Another important component of a US are \textit{acceptance criteria}, which define the functionality which needs to be working for the story to be finished, often including not only the happy path, but a sad path as well.
 In general, acceptance criteria should be testable, which is why they are often used as starting points by testers, to get a better idea of what has been done, and provide them with some inspiration.
 
@@ -92,9 +92,9 @@ At the time of writing, however, Garmin seems like the most popular option, in s
 It will be more difficult to integrate some devices.
 Some vendors don't disclose their devices' API, or the API's documentation is only available for use exclusively by partners of the given vendor,
 some don't get paired with the phone itself and communicate with a proprietary app using server-based pairing instead (such as the Xiaomi Mi Band 4 I initially intended to use in the PoC) and there is no easy or straightforward way to get the data.
-For example, getting data from the Mi Band 4 would require root access to the user's phone\cite{miband4-server-based}, which is just not an option for a normal user.
+For example, getting data from the Mi Band 4 would require root access to the user's phone~\cite{miband4-server-based}, which is just not an option for a normal user.
 Therefore I recommend limiting the supported devices to those that do not use server-based pairing, as this would cover most of the currently available gadgets,
-or take advantage of (and contribute to) existing open-source software for wearables integration, such as Gadgetbridge\cite{Gadgetbridge}.
+or take advantage of (and contribute to) existing open-source software for wearables integration, such as Gadgetbridge~\cite{Gadgetbridge}.
 By building on existing integrations it will be easier to spread across the market.
 
 In addition to these restrictions, continuous heart rate monitoring causes an extreme drain of the watch's battery, which is fine for short activities (sprints, swimming, cardio workouts), but can be a considerable issue while hiking.
@@ -226,8 +226,8 @@ The whole APP should be focused around the hikes a user takes and around their d
 \end{quote}
 
 There isn't a large variety of maps available for use by developers.
-While Google Maps would probably be a popular choice, Google decided to put their maps behind a paywall\cite{google-maps-paywall} in 2018.
-Therefore it makes sense to choose the open-source OpenStreetMap\cite{OpenStreetMap} and use one of its derivatives with a public API for route planning (such as OpenRouteService\cite{OpenRouteService}).
+While Google Maps would probably be a popular choice, Google decided to put their maps behind a paywall~\cite{google-maps-paywall} in 2018.
+Therefore it makes sense to choose the open-source OpenStreetMap~\cite{OpenStreetMap} and use one of its derivatives with a public API for route planning (such as OpenRouteService~\cite{OpenRouteService}).
 
 It is important not to forget to credit the map's creator in their preferred way.
 
@@ -236,7 +236,7 @@ It is important not to forget to credit the map's creator in their preferred way
 As an APP user, I want to plan a route from point A to point B.
 \end{quote}
 
-Hikers often don't want the easiest, fastest, or shortest possible path from A to B -- they look for challenge and nice things to see.
+Hikers often don't want the easiest, fastest, or shortest possible path from A to B -- they look for a challenge and nice things to see.
 This is why they might make extra effort to take their hike through a specific spot, which might not be on the ideal route.
 Therefore, it should be possible to add such places to the route.
 
@@ -688,9 +688,10 @@ One feature that could help make the platform into a social network is messaging
 I decided against it because everybody is already using their messaging apps of choice to communicate and it would be distracting the user from planning their hikes.
 However, letting people see their friends' previous hikes and letting them react to all that is happening could be a good community feature.
 
-Some other features that would be interesting to see in the application are an integration with geocaching\cite{geocaching} for gamification,
+Some other features that would be interesting to see in the application are integration with geocaching~\cite{geocaching} for gamification,
 showing the weather forecast for the planned day in the details of the hike,
 user groups for users who always hike together, so that they would not have to search for their friends every time,
 multiple hike hosts, so that there are multiple people who can oversee the hike's activity,
 collecting data of a non-planned, spontaneous hike,
-and cancelling the hike once it has started, so that if the user decides they don't actually want to go, the APP doesn't force them.
+cancelling the hike once it has started, so that if the user decides they don't actually want to go, the APP doesn't force them,
+and pausing the hike so that the attendees can have a lunch break.
