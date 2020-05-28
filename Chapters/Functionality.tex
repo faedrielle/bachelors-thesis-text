@@ -1,6 +1,3 @@
-\linebreak
-Based on the analysis of existing solutions, I will now describe the most important features that should be provided by my software.
-
 I decided to construe the user-focused features as one would in a real-life agile project,
 as this is in my experience more straightforward and easier to alter when necessary than flooding the reader -- for example, a developer -- with a long list of elaborate use cases right away.
 The discussions that take place before reaching a specific decision should be well documented -- brief enough and detailed enough at the same time to provide good value after a quick read.
@@ -25,6 +22,9 @@ The typical template for a user story is:
 Another important component of a US are \textit{acceptance criteria}, which define the functionality which needs to be working for the story to be finished, often including not only the happy path, but a sad path as well.
 In general, acceptance criteria should be testable, which is why they are often used as starting points by testers, to get a better idea of what has been done, and provide them with some inspiration.
 
+\section{Features}
+Based on the analysis of existing solutions, I will now describe the most important features that should be provided by my software.
+
 The main focus of this chapter will be to document my internal analytical discussions.
 I will always start with a high-level description of the requested feature formulated as an epic or a user story and elaborate on its details incrementally, summing all of this up in acceptance criteria.
 Some stories will also contain hints toward completion for the potential developer, which will be based on research done in previous parts of this thesis.
@@ -36,7 +36,34 @@ The application should monitor a user's heart rate unobtrusively and reliably.
 
 The user needs a method for getting their data to the mobile application and then to the backend, do it comfortably, preferably without any need for direct user---computer interaction.
 
-\subsubsection*{E01-US01 -- Choose and integrate a wearable}
+\subsubsection*{E01-US01 -- Manage devices paired with the APP}
+As an APP user, I want to pair and unpair my wearables with the APP, so that the APP can use the data of all devices that I currently own.
+
+The app should provide the user with the list of the phone's paired devices, so that they can choose their fitness gadgets to use on their next hike.
+However, since the APP can only support some wearable vendors, the ones that aren't compatible shouldn't be pairable.
+Also, if this is programmatically possible, non-wearables shouldn't be displayed in the list, or at least shouldn't be pairable,
+so that the user doesn't get confused by the presence or pairability of their Bluetooth speaker.
+
+\textbf{Acceptance criteria:}
+\begin{itemize}
+    \item The user can pair any number of compatible wearables.
+    \item The user can unpair any number of compatible wearables down to zero.
+\end{itemize}
+
+\subsubsection*{E01-US02 -- Activate a device}
+As an APP user, I want to mark a wearable I'm using as active, so that only its data is relevant to the statistics.
+
+The user should be able to activate a device they want to use for monitoring of current activity or activity in the near future.
+
+\textbf{Acceptance criteria:}
+\begin{itemize}
+    \item The user can mark a device as active.
+    \item When a device is active, the platform can receive data from it.
+    \item The user can mark a device as inactive.
+    \item Only one device at a time is active; if activating a new one, the old device must be deactivated.
+\end{itemize}    
+
+\subsubsection*{E01-US03 -- Choose and integrate a wearable}
 As an APP user, I want my heart rate-enabled wearable to work with the APP, so that I don't have to buy a new one.
 
 Based on the analysis of existing applications, the most often used type of wearable tech are smartwatches.
@@ -59,33 +86,6 @@ In addition to these restrictions, continuous heart rate monitoring causes an ex
 This is why I recommend supporting mostly devices which have a large capacity in this regard.
 
 For my PoC in this thesis, I chose the XXXXXXXXX.\todo{add what and why}
-
-\subsubsection*{E01-US02 -- Manage devices paired with the APP}
-As an APP user, I want to pair and unpair my wearables with the APP, so that the APP can use the data of all devices that I currently own.
-
-The app should provide the user with the list of the phone's paired devices, so that they can choose their fitness gadgets to use on their next hike.
-However, since the APP can only support some wearable vendors, the ones that aren't compatible shouldn't be pairable.
-Also, if this is programmatically possible, non-wearables shouldn't be displayed in the list, or at least shouldn't be pairable,
-so that the user doesn't get confused by the presence or pairability of their Bluetooth speaker.
-
-\textbf{Acceptance criteria:}
-\begin{itemize}
-    \item The user can pair any number of compatible wearables.
-    \item The user can unpair any number of compatible wearables down to zero.
-\end{itemize}
-
-\subsubsection*{E01-US03 -- Activate a device}
-As an APP user, I want to mark a wearable I'm using as active, so that only its data is relevant to the statistics.
-
-The user should be able to activate a device they want to use for monitoring of current activity or activity in the near future.
-
-\textbf{Acceptance criteria:}
-\begin{itemize}
-    \item The user can mark a device as active.
-    \item When a device is active, the platform can receive data from it.
-    \item The user can mark a device as inactive.
-    \item Only one device at a time is active; if activating a new one, the old device must be deactivated.
-\end{itemize}    
 
 %================================================================================================================================
 
