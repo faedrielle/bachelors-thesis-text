@@ -93,7 +93,9 @@ It will be more difficult to integrate some devices.
 Some vendors don't disclose their devices' API, or the API's documentation is only available for use exclusively by partners of the given vendor,
 some don't get paired with the phone itself and communicate with a proprietary app using server-based pairing instead (such as the Xiaomi Mi Band 4 I initially intended to use in the PoC) and there is no easy or straightforward way to get the data.
 For example, getting data from the Mi Band 4 would require root access to the user's phone\cite{miband4-server-based}, which is just not an option for a normal user.
-Therefore I recommend limiting the supported devices to those that do not use server-based pairing, as this would cover most of the currently available gadgets.
+Therefore I recommend limiting the supported devices to those that do not use server-based pairing, as this would cover most of the currently available gadgets,
+or take advantage of (and contribute to) existing open-source software for wearables integration, such as Gadgetbridge\cite{Gadgetbridge}.
+By building on existing integrations it will be easier to spread across the market.
 
 In addition to these restrictions, continuous heart rate monitoring causes an extreme drain of the watch's battery, which is fine for short activities (sprints, swimming, cardio workouts), but can be a considerable issue while hiking.
 This is why I recommend supporting mostly devices which have a large capacity in this regard.
