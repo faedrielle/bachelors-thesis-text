@@ -1,4 +1,4 @@
-Thanks to the functionality of the platform described in the previous chapter, I was able to create a design for the user interface -- UI of the mobile application.
+Bassed on the desired functionality of the platform described in the previous chapter, I was able to create a design for the user interface -- UI of the mobile application.
 
 In the beginning of this UI design project, I first looked at what would be the platform the project should run on.
 Since it is a mobile application, the range of options was slimmed down to two -- either Android or iOS,
@@ -7,14 +7,20 @@ It is partially due to Android's crushing lead on iOS devices, but also because 
 
 One of the most important decisions to make when designing an application is the navigation in it, and from there there's only a small step to information architecture (IA) -- the \textit{science of organizing and structuring content of the [\dots] mobile applications}~\cite{information-architecture}.
 The IA of an application helps the designer decide which concepts in the application are high-level and discrete enough
-to be used as an `umbrella terms' for navigating to other, deeper concepts, while feeling intuitive to the user.
+to be used as `umbrella terms' for navigating to other, deeper concepts, while feeling intuitive to the user.
 
 However, when reading up on design guidelines for either of the systems, I realised that Android's instructions seem outdated.
-Backed by plenty of discussions online as well as my own user experience with the native applications, the typical hamburger menu ☰ has gone out of style.
+Backed by plenty of discussions online~\cite{hamburger-discoverabillity} as well as my own user experience with the native applications, the typical hamburger menu ☰ has gone out of style.
 
 One of the reasons is the increasing size of handheld devices.
 A hamburger menu (or `navigation drawer') located in the top left corner is nearly inaccessible for the majority of users, who are right-handed and use their thumb to operate the device~\cite{thumb-zone-article}.
-\todo{insert pic of thumb zone on small to large phones}
+
+\begin{figure}[h!]
+    \centering
+    \tmpframe{\includegraphics[width=\textwidth]{Images/thumb-zone.png}}\hfill
+    \caption{Thumb-zone mapping for left- and right-handed users~\cite{thumb-zone-img}}
+    \label{fig:sign-up-email}
+\end{figure}
 
 Another reason is the fact that the hamburger menu decreases discoverability of features, as they are hidden by default~\cite{hamburger-discoverabillity}.
 
@@ -26,6 +32,8 @@ It's a bar on the bottom of the screen containing three to five labelled icons r
 It enforces the idea that a user should always know where in the application they are, what they can do there and where they can go because it's always on the screen (except when the keyboard is being used).
 Another one of its advantages is the possibility of inobtrusive notifications using icon badges -- little red circles in the top right corner of the icon, often containing a number to show the number of notifications.
 Other navigation options include dropdown menus, scrollable menus, single page dot navigation, and others~\cite{hamburger-alternatives}.
+
+When describing the screens I will refer to the user stories (in brackets) which the discussed UI component covers.
 
 I chose the tab bar with five tabs: `Plans', `Routes', `Map', `Friends', and `Profile'.
 However, when installing the APP, the user needs to set the APP up.

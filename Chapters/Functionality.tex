@@ -22,7 +22,6 @@ The typical template for a user story is:
 Another important component of a US are \textit{acceptance criteria}, which define the functionality which needs to be working for the story to be finished, often including not only the happy path, but a sad path as well.
 In general, acceptance criteria should be testable, which is why they are often used as starting points by testers, to get a better idea of what has been done, and provide them with some inspiration.
 
-\section{Features}
 Based on the analysis of existing solutions, I will now describe the most important features that should be provided by my software.
 
 The main focus of this chapter will be to document my internal analytical discussions.
@@ -31,12 +30,12 @@ Some stories will also contain hints toward completion for the potential develop
 Since a part of this thesis will focus on implementing a proof of concept, some of the most imperative stories will also be fully processed and finished.
 
 %================================================================================================================================
-\subsection*{E01 -- Heart rate monitoring}
+\section{Heart rate monitoring}\label{epic:HRM}
 The application should monitor a user's heart rate unobtrusively and reliably.
 
 The user needs a method for getting their data to the mobile application and then to the backend, do it comfortably, preferably without any need for direct user---computer interaction.
 
-\subsubsection*{E01-US01 -- Manage devices paired with the APP}
+\subsection{Manage devices paired with the APP}\label{US:HRM-device-management}
 \begin{quote}
 As an APP user, I want to pair and unpair my wearables with the APP, so that the APP can use the data of all devices that I currently own.
 \end{quote}
@@ -53,7 +52,7 @@ so that the user doesn't get confused by the presence or pairability of their Bl
     \end{itemize}
 \end{quote}
 
-\subsubsection*{E01-US02 -- Activate a device}
+\subsection{Activate a device}\label{US:HRM-device-activate}
 
 \begin{quote}
 As an APP user, I want to mark a wearable I'm using as active, so that only its data is relevant to the statistics.
@@ -71,7 +70,7 @@ The user should be able to activate a device they want to use for monitoring of 
 \end{itemize}    
 \end{quote}
 
-\subsubsection*{E01-US03 -- Choose and integrate a wearable}
+\subsection{Choose and integrate a wearable}\label{US:HRM-device-integrate}
 \begin{quote}
 As an APP user, I want my heart rate-enabled wearable to work with the APP, so that I don't have to buy a new one.
 \end{quote}
@@ -104,7 +103,7 @@ For my PoC in this thesis, I chose the XXXXXXXXX.\todo{add what and why}
 
 %================================================================================================================================
 
-\subsection*{E02 -- Objective user fitness assessment}
+\section{Objective user fitness assessment}\label{epic:fit}
 \begin{quote}
 As an APP user, I want my fitness to be assessed, so that I can get relevant estimations of route difficulty.
 \end{quote}
@@ -120,7 +119,7 @@ This self-assessed value should be corrected as more data is available about the
 As far as objective assessment, I see plenty of potential for the use of machine learning and neural networks.
 The networks can learn from the data collected from a good number of users over a longer period, and then categorize the new users into fitness groups based on this data, which will then be used to predict the users' future hikes.
 
-\subsubsection*{E02-US01 -- Implement support for VO2 max tests}
+\subsection{Implement support for VO2 max tests}\label{US:fit-vo2max}
 \begin{quote}
 As an APP user, I want to be able to take a guided test of my fitness in the APP, so that I don't have to look for tests elsewhere.
 \end{quote}
@@ -144,7 +143,7 @@ In order to calculate VO2 max, the APP can use Mänttäri's formulas.
 \end{itemize}
 \end{quote}
 
-\subsubsection*{E02-US02 -- Implement support for HR max and HR min tests}
+\subsection{Implement support for HR max and HR min tests}\label{US:fit-HR}
 \begin{quote}
 As an APP user, I want to be able to take a guided test to find my heart rate zones in the APP, so that I don't have to look for tests elsewhere and get as accurate heart rate zones as possible.
 \end{quote}
@@ -162,7 +161,7 @@ The implementation should be similar to VO2 max tests; if possible, both metrics
 
 %================================================================================================================================
 
-\subsection*{E03 -- Manual input of biometric data}
+\section{Manual input of biometric data}\label{epic:manual}
 
 The users might not want to take an exhausting test at the time of setting up the APP.
 This is why they should be allowed to input the data in other ways.
@@ -170,7 +169,7 @@ This is why they should be allowed to input the data in other ways.
 If a public universal database with all people's medical data existed, it would make sense to get the necessary information directly via an API.
 However, as no such thing exists (and for good reasons), we will let the user enter their biometric data manually.
 
-\subsubsection*{E03-US01 -- Allow manual input of basic biometric values}
+\subsection{Allow manual input of basic biometric values}\label{US:manual-basic}
 \begin{quote}
 As an APP user, I want to provide the APP with my basic metrics, so that the results are relevant to me.
 \end{quote}
@@ -189,7 +188,7 @@ Yet again, it is reasonable to consider whether a user who doesn't have an issue
 \end{itemize}
 \end{quote}
 
-\subsubsection*{E03-US02 -- Allow manual input of advanced biometric values}
+\subsection{Allow manual input of advanced biometric values}\label{US:manual-advanced}
 \begin{quote}
 As an APP user who has recently done lab fitness tests, I want the APP to use these values instead of taking the APP's tests, so that I don't have to take fitness tests that are most probably less accurate than what I know.
 \end{quote}
@@ -208,9 +207,9 @@ The APP should ask whether the user has such a condition and if there is a maxim
 
 %================================================================================================================================
 
-\subsection*{E04 -- Routes and maps}
+\section{Routes and maps}\label{epic:map}
 
-\subsubsection*{E04-US01 -- Integrate a map}
+\subsection{Integrate a map}
 \begin{quote}
 As an APP user, I want to use a map to visualize my hikes, so that I can follow them easily.
 \end{quote}
@@ -231,7 +230,7 @@ Therefore it makes sense to choose the open-source OpenStreetMap~\cite{OpenStree
 
 It is important not to forget to credit the map's creator in their preferred way.
 
-\subsubsection*{E04-US02 -- Plan a route}
+\subsection{Plan a route}\label{US:map-plan}
 \begin{quote}
 As an APP user, I want to plan a route from point A to point B.
 \end{quote}
@@ -262,7 +261,7 @@ In order to keep the route interesting, the way back should be different than th
 \end{itemize}
 \end{quote}
 
-\subsubsection*{E04-US03 -- History of hikes taken}
+\subsection{History of hikes taken}\label{US:map-history}
 \begin{quote}
 As an APP user, I want to see which routes I've hiked while using the APP, so that I can remind myself of the impressions of the hike.
 \end{quote}
@@ -282,7 +281,7 @@ Filters should include the date on which the hike was taken, the time it took to
 \end{itemize}
 \end{quote}
 
-\subsubsection*{E04-US04 -- Saved routes}
+\subsection{Saved routes}\label{US:map-saved}
 \begin{quote}
 As an APP user, I want to save some routes, so that I can don't have to create the same route again when I want to retake it.
 \end{quote}
@@ -299,14 +298,14 @@ Since the process of creating a route from scratch is somewhat lengthy, the user
 \end{itemize}
 \end{quote}
 
-\subsubsection*{E04-US05 -- Display planned route details}
+\subsection{Display planned route details}\label{US:map-planned-details}
 \begin{quote}
 As an APP user, I want to see interesting information about a route that has been planned for me, so that I can make an informed decision whether or not to take it.
 \end{quote}
 
 When tapping a route, its details should be shown: its outline on a map, length, terrain in its segments, its elevation profile, colours of each official hiking route it uses, and interesting places to see along the route.
 This is also the place for information that is customized for the user's fitness -- such as how long it will probably take them to hike it, how difficult its segments will be for the user in terms of perceived exertion and expected heart rate zones.
-This should take into account the limitations of the user's fitness, which they may have entered according to E03-US02.
+This should take into account the limitations of the user's fitness, which they may have entered according to \ref{US:manual-advanced}.
 
 \paragraph*{Acceptance criteria}
 \begin{quote}
@@ -316,7 +315,7 @@ This should take into account the limitations of the user's fitness, which they 
 \end{itemize}
 \end{quote}
 
-\subsubsection*{E04-US06 -- Display old hike details}
+\subsection{Display old hike details}\label{US:map-old-details}
 \begin{quote}
 As an APP user, I want to see interesting information about a route I've hiked, so that I can check it in a few days and show my friends.
 \end{quote}
@@ -330,7 +329,7 @@ As an APP user, I want to see interesting information about a route I've hiked, 
 \end{itemize}
 \end{quote}
 
-\subsubsection*{E04-US07 -- Hike a route}
+\subsection{Hike a route}\label{US:map-hike}
 \begin{quote}
 As an APP user, I want to hike the route that I planned before.
 \end{quote}
@@ -350,7 +349,7 @@ But since it is not the only important feature, it should also be possible to te
 \end{itemize}
 \end{quote}
 
-\subsubsection*{E04-US08 -- Change the hike date}
+\subsection{Change the hike date}\label{US:map-hike-change}
 \begin{quote}
 As an APP user, I want to replan my existing planned hike to a different day, so that if the weather is bad, I don't have to cancel it and plan all of it again.
 \end{quote}
@@ -365,12 +364,12 @@ As an APP user, I want to replan my existing planned hike to a different day, so
 
 %================================================================================================================================
 
-\subsection*{E05 -- User profile}
+\section{User profile}\label{epic:user}
 \begin{quote}
 The user needs a place to review and change their provided information, as well as a possibility to take the provided tests.
 \end{quote}
 
-\subsubsection*{E05-US01 -- Management of provided biometric information}
+\subsection{Management of provided biometric information}\label{US:user-manage-info}
 \begin{quote}
 As an APP user, I want to be able to change the information I've entered into the APP, so that the values are always up to date and my estimates remain accurate.
 \end{quote}
@@ -384,7 +383,7 @@ As an APP user, I want to be able to change the information I've entered into th
 \end{itemize}
 \end{quote}
 
-\subsubsection*{E05-US02 -- Profile picture management}
+\subsection{Profile picture management}\label{US:user-manage-pic}
 \begin{quote}
 As an APP user, I want to be able to upload and delete my profile picture or use one from social media, so that my friends can recognize me in their friends list quickly.
 \end{quote}
@@ -399,7 +398,7 @@ As an APP user, I want to be able to upload and delete my profile picture or use
 \end{itemize}
 \end{quote}
 
-\subsubsection*{E05-US03 -- Log in options}
+\subsection{Log in options}\label{US:user-log-in}
 \begin{quote}
 As an APP user, I want the APP to recognize me on different devices, so that my data is still connected to me when I change my phone.
 \end{quote}
@@ -423,7 +422,7 @@ a lot of processing power would have to be reinvested into the same user, and th
 
 %================================================================================================================================
 
-\subsection*{E06 -- Hike with friends}
+\section{Hike with friends}\label{epic:friends}
 
 Since hiking is generally an activity for small groups of people, it makes sense to be able to create groups in which everybody will know the hike's details and will be able to navigate.
 
@@ -431,7 +430,7 @@ Here I was able to discern between two main use cases -- on the one hand, a user
 and on the other hand, they want to hike a specific route and want the right people to join in.
 There is a third use case, the mix of the previous two, where the hike host knows about some people they want at the hike (for example their spouse) and would just like people to join in if they want to.
 
-\subsubsection*{E06-US01 -- Adjust the calculations to friends' fitness}
+\subsection{Adjust the calculations to friends' fitness}\label{US:friends-fitness}
 \begin{quote}
 As an APP user, I want the estimations to be accurate even if I'm hiking with friends.
 \end{quote}
@@ -456,7 +455,7 @@ This is why it should provide the information carefully.
 
 %==========Invite friends to hikes======================================================================================
 
-\subsubsection*{E06-US02 -- Invite friends to hikes}
+\subsection{Invite friends to hikes}\label{US:friends-invite}
 \begin{quote}
 As an APP user, I want to invite friends to my hikes, so that we all have access to the same track when hiking it and preparing for it.
 \end{quote}
@@ -471,7 +470,7 @@ The invitation should include the proposed date of the hike and all the hike's d
 \end{itemize}
 \end{quote}
 
-\subsubsection*{E06-US03 -- Refuse an invitation to hike with friends}
+\subsection{Refuse an invitation to hike with friends}\label{US:friends-invite-refuse}
 \begin{quote}
 As an APP user, I want to refuse invitations to hikes that I don't want to attend, so that the hike organiser knows I won't come and my invitation list isn't cluttered.
 \end{quote}
@@ -483,7 +482,7 @@ As an APP user, I want to refuse invitations to hikes that I don't want to atten
 \end{itemize}
 \end{quote}
 
-\subsubsection*{E06-US04 -- Accept an invitation to hike with friends}
+\subsection{Accept an invitation to hike with friends}\label{US:friends-invite-accept}
 \begin{quote}
 As an APP user, I want to accept invitations to hikes that I want to attend, so that I get updates and plan around the event.
 \end{quote}
@@ -495,21 +494,9 @@ As an APP user, I want to accept invitations to hikes that I want to attend, so 
 \end{itemize}
 \end{quote}
 
-\subsubsection*{E06-US05 -- Take back an invitation}
-\begin{quote}
-As an APP user, I want to take back an invitation I sent to my friend unintentionally, so that I can fix my mistake.
-\end{quote}
-
-\paragraph*{Acceptance criteria}
-\begin{quote}
-\begin{itemize}
-    \item When user A sends an invitation to a hike to their friend, they should be able to take it back.
-\end{itemize}
-\end{quote}
-
 %=============Friends and friendship request management================================================
 
-\subsubsection*{E06-US06 -- Add friends}
+\subsection{Add friends}\label{US:friends-add}
 \begin{quote}
 As an APP user, I want to add new friends, so that I can invite them to hikes.
 \end{quote}
@@ -527,7 +514,7 @@ A nice-to-have unique way would be using the phones' proximity if the two people
 \end{itemize}
 \end{quote}
 
-\subsubsection*{E06-US07 -- Remove friends}
+\subsection{Remove friends}\label{US:friends-remove}
 \begin{quote}
 As an APP user, I want to remove people I no longer meet with from friends, so that they can't invite me to hikes anymore.
 \end{quote}
@@ -541,7 +528,7 @@ As an APP user, I want to remove people I no longer meet with from friends, so t
 \end{itemize}
 \end{quote}
 
-\subsubsection*{E06-US08 -- Accept a friendship request}
+\subsection{Accept a friendship request}\label{US:friends-accept}
 \begin{quote}
 As an APP user, I want to accept a friendship request that someone sent me, so that we can invite each other on hikes.
 \end{quote}
@@ -556,7 +543,7 @@ As an APP user, I want to accept a friendship request that someone sent me, so t
 \end{quote}
 
 
-\subsubsection*{E06-US9 -- Dismiss a friendship request}
+\subsection{Dismiss a friendship request}\label{US:friends-dismiss}
 \begin{quote}
 As an APP user, I want to dismiss a friendship request when I don't know the sender or don't want to hike with them, so that my request list isn't cluttered.
 \end{quote}
@@ -573,7 +560,7 @@ As an APP user, I want to dismiss a friendship request when I don't know the sen
 
 %=======Joinable hikes=======================================================================================================
 
-\subsubsection*{E06-US10 -- Joinable hikes}
+\subsection{Joinable hikes}\label{US:friends-join-hikes}
 \begin{quote}
 As an APP user, I want to let my friends join my hikes, so that if I don't know who exactly I want there, my friends can decide for themselves if they want to come and I don't have to text everybody myself.
 \end{quote}
@@ -602,7 +589,7 @@ Another point to consider is the capacity of such a hiking trip -- the hike's ho
 \end{itemize}
 \end{quote}
 
-\subsubsection*{E06-US11 -- Cancelling a hike}
+\subsection{Cancelling a hike}\label{US:friends-cancel-hike}
 \begin{quote}
 As an APP user, I want to let my friends know that I won't be able to go to the hike, so that their metrics are accurate when I'm not there.
 \end{quote}
@@ -619,7 +606,7 @@ This is why it should be possible to appoint a new host from the invited friends
 \end{itemize}
 \end{quote}
 
-\subsubsection*{E06-US12 -- Hike active on all participants' phones}
+\subsection{Hike active on all participants' phones}\label{US:friends-hike-active}
 \begin{quote}
 As a guest on a hike, I want to be able to navigate, so that if the host's phone battery dies, there's someone to keep track of the route.
 \end{quote}
@@ -631,10 +618,12 @@ As a guest on a hike, I want to be able to navigate, so that if the host's phone
 \end{itemize}
 \end{quote}
 
-\subsection*{E07 -- Notifications}
+%====================================================================================================================================
+
+\section{Notifications}\label{epic:notif}
 Everything important that happens on the APP should have notifications.
 
-\subsubsection*{E07-US01 -- Notifications for friends tab}
+\subsection{Notifications for friends tab}
 \begin{quote}
 As an APP user, I want to receive notifications about friend requests.
 \end{quote}
@@ -647,7 +636,7 @@ As an APP user, I want to receive notifications about friend requests.
 \end{itemize}
 \end{quote}
 
-\subsubsection*{E07-US02 -- Notifications for plans tab}
+\subsection{Notifications for planned hikes}\label{US:notif-plans}
 \begin{quote}
 As an APP user, I want to receive notifications about my planned hikes.
 \end{quote}
@@ -669,7 +658,7 @@ Everybody who attends the hike should get a notification about the hike's planne
 \end{itemize}
 \end{quote}
 
-\subsubsection*{E07-US03 -- Notifications for navigation}
+\subsection{Notifications for navigation}\label{epic:navig}
 \begin{quote}
 As an APP user, I want to know if I am lagging behind the plan, so that I can be sure I will reach the destination on time.
 \end{quote}
@@ -683,7 +672,7 @@ As an APP user, I want to know if I am lagging behind the plan, so that I can be
 
 %=========Considered features================================================================================================
 
-\subsection*{Considered features}
+\section{Considered features}
 One feature that could help make the platform into a social network is messaging.
 I decided against it because everybody is already using their messaging apps of choice to communicate and it would be distracting the user from planning their hikes.
 However, letting people see their friends' previous hikes and letting them react to all that is happening could be a good community feature.
