@@ -209,7 +209,7 @@ The APP should ask whether the user has such a condition and if there is a maxim
 
 \section{Routes and maps}\label{epic:map}
 
-\subsection{Integrate a map}
+\subsection{Integrate a map}\label{US:map-integrate}
 \begin{quote}
 As an APP user, I want to use a map to visualize my hikes, so that I can follow them easily.
 \end{quote}
@@ -298,6 +298,31 @@ Since the process of creating a route from scratch is somewhat lengthy, the user
 \end{itemize}
 \end{quote}
 
+\subsection{Share routes}\label{US:map-share-route}
+\begin{quote}
+    As an APP user, I want to link routes, so that I can discuss with my friends if we want to take it.
+\end{quote}
+
+A group of friends is likely already using some sort of messaging, so sharing a link to the route and its details can make discussions about where to go faster.
+
+\paragraph*{Acceptance criteria}
+\begin{quote}
+    \begin{itemize}
+        \item A user can get a link to a route.
+        \item When the link is opened, the route's details are shown.
+    \end{itemize}
+\end{quote}
+
+A group of friends is likely already using some sort of messaging, so sharing a link to the route and its details can make discussions about where to go faster.
+
+\paragraph*{Acceptance criteria}
+\begin{quote}
+    \begin{itemize}
+        \item A user can get a link to a route.
+        \item When the link is opened, the route's details are shown.
+    \end{itemize}
+\end{quote}
+
 \subsection{Display planned route details}\label{US:map-planned-details}
 \begin{quote}
 As an APP user, I want to see interesting information about a route that has been planned for me, so that I can make an informed decision whether or not to take it.
@@ -310,7 +335,7 @@ This should take into account the limitations of the user's fitness, which they 
 \paragraph*{Acceptance criteria}
 \begin{quote}
 \begin{itemize}
-    \item User can interactively see basic details of a planned route, including the route on a map, its length, terrain analysis, elevation profile, as well as interesting places on the route.
+    \item User can interactively see basic details of a planned route, including the route on a map, its length, terrain analysis, and elevation profile.
     \item User can see customized biometric details of a planned route, including the amount of time the hike will take them, the relative difficulty of the route's segments, and expected heart rate zones.
 \end{itemize}
 \end{quote}
@@ -557,6 +582,18 @@ As an APP user, I want to dismiss a friendship request when I don't know the sen
 \end{itemize}
 \end{quote}
 
+\subsection{Share a link to a profile}\label{US:friends-share}
+\begin{quote}
+    As an APP user, I want to share my and my friends' profiles, so that we can connect more easily.
+\end{quote}
+
+\paragraph*{Acceptance criteria}
+\begin{quote}
+    \begin{itemize}
+        \item User A can share a link to their own profile.
+        \item User A can share a link to their friends' profiles.
+    \end{itemize}
+\end{quote}
 
 %=======Joinable hikes=======================================================================================================
 
@@ -651,14 +688,14 @@ Everybody who attends the hike should get a notification about the hike's planne
 \begin{quote}
 \begin{itemize}
     \item If user A requests to join user B's hike, user B receives a notification.
-    \item If user A sends user B a join request and user B accepts, user A and user C (other hike guest) receive a notification.
+    \item If user A sends user B a join request and user B accepts, user A and user C (another hike guest) receive a notification.
     \item If user A as the host of the hike changes the date of the hike, all attendants except for the host should receive a notification.
     \item If user A's hike is planned to seven days from now, every attendee receives a notification.
     \item If user A's hike is planned next day from now, every attendee receives a notification.
 \end{itemize}
 \end{quote}
 
-\subsection{Notifications for navigation}\label{epic:navig}
+\subsection{Notifications for navigation}\label{US:notif-navig}
 \begin{quote}
 As an APP user, I want to know if I am lagging behind the plan, so that I can be sure I will reach the destination on time.
 \end{quote}

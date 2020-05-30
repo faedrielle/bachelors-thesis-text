@@ -39,7 +39,7 @@ I chose the tab bar with five tabs: `Plans', `Routes', `Map', `Friends', and `Pr
 However, when installing the APP, the user needs to set the APP up.
 
 \section{Set up screens}
-The welcome screen contains all the options for signing up, with a button to switch to the sign-in screen if the user already has an account.
+The welcome screen contains all the options for signing up, with a button to switch to the sign-in screen if the user already has an account (US~\ref{US:user-log-in}).
 Signing up with e-mail creates a new account for the user based on their e-mail~(fig.\ref{fig:sign-up-email}), while using a social network account takes the user to a sign-in screen of the specific social network.
 Similarly, the user can sign in to their existing account~(fig.\ref{fig:sign-in-email}).
 
@@ -59,9 +59,9 @@ Similarly, the user can sign in to their existing account~(fig.\ref{fig:sign-in-
     \label{fig:sign-in-email}
 \end{figure}
 
-After signing up and creating a new account, there is a sequence of screens asking for the user's personal data, such as height, weight, biological sex, birth date, and whether they know about a condition that means their heart rate should be limited, and if so, how much (on a scale of 1 to 5).
-Another screen asks the user to pair a watch with the APP, showing a list of Bluetooth devices paired with the phone.
-The last one asks the user to take a fitness test, so that their fitness can be assessed.
+After signing up and creating a new account, there is a sequence of screens asking for the user's personal data, such as height, weight, biological sex, birth date, and whether they know about a condition that means their heart rate should be limited, and if so, how much (on a scale of 1 to 5) (US~\ref{US:manual-advanced}, \ref{US:manual-basic}).
+Another screen asks the user to pair a watch with the APP, showing a list of Bluetooth devices paired with the phone (US~\ref{US:HRM-device-management}).
+The last one asks the user to take a fitness test, so that their fitness can be assessed (epic~\ref{epic:fit}).
 This step can be skipped, but there's a warning about the inaccuracy of methods based on readily available data compared to taking a fitness test.
 At the same time, the user is assured that the test can be taken later.
 
@@ -69,7 +69,7 @@ If the user decides to take the test, they are rerouted to the screen with fitne
 Again, it is possible to quit this screen.
 
 \section{Profile tab}
-After setup, the APP opens on the `Profile' tab, displaying all entered and calculated information on cards, as well as the option to log out, and the currently active device~(fig.\ref{fig:profile1}).
+After setup, the APP opens on the `Profile' tab, displaying all entered and calculated information on cards, as well as the option to log out, and the currently active device~(fig.\ref{fig:profile1}; US~\ref{US:user-manage-info}, \ref{US:user-log-in}, \ref{US:HRM-device-activate}).
 
 \begin{figure}[h!]
     \centering
@@ -90,7 +90,7 @@ The pictures are placeholders for charts of development of the metric over time.
     \label{fig:fitnessInfo}
 \end{figure}
 
-On the `Fitness tests' screen, the user can choose between multiple tests, each of which has a tag saying what it tests~(fig.\ref{fig:fitnessTests}).
+On the `Fitness tests' screen, the user can choose between multiple tests, each of which has a tag saying what it tests(fig.\ref{fig:fitnessTests}; epic~\ref{epic:fit}).
 As an example, the `6 Minute Walking Test' screen has directions on what the user should do, and after the test, there is a screen with results~(fig.\ref{fig:6mwt}).
 Again, the pictures will contain the charts of the metric's values over the course of the test.
 
@@ -110,10 +110,10 @@ Again, the pictures will contain the charts of the metric's values over the cour
 \end{figure}
 
 When we come back to the `Profile' screen (fig.\ref{fig:profile1}), we can also manually edit all the information the user has provided.
-The profile picture, basic data like height etc., as well as the fitness information.
+The profile picture, basic data like height etc., as well as the fitness information (US~\ref{epic:manual}, \ref{US:user-manage-pic}).
 
 Another option from here is to see the devices by expanding the card with the active device.
-The `Devices' screen~(fig.\ref{fig:devices}) contains the active device which can be deactivated, as well as other paired devices, which can be either activated or unpaired.
+The `Devices' screen~(fig.\ref{fig:devices}) contains the active device which can be deactivated (US~\ref{US:HRM-device-activate}, \ref{US:HRM-device-management}), as well as other paired devices, which can be either activated or unpaired.
 The user can also pair a new device with the app (opening a list of devices paired with the phone).
 Tapping the `Activate' button will deactivate the currently active device.
 
@@ -126,7 +126,7 @@ Tapping the `Activate' button will deactivate the currently active device.
 
 \section{Map tab}
 The default tab on which the application opens is the `Map' tab~(fig.\ref{fig:map}).
-This is where the user can look at the integrated map, as well as search for specific places~(fig.\ref{fig:map-searchPlace}) and add them as waypoints to the planned route.
+This is where the user can look at the integrated map (US~\ref{US:map-integrate}), as well as search for specific places~(fig.\ref{fig:map-searchPlace}) and add them as waypoints to the planned route (US~\ref{US:map-plan}).
 The waypoint will be added to the route as the `next' waypoint.
 
 \begin{figure}[h!]
@@ -172,10 +172,11 @@ Another option is to choose a return trip, where the platform should offer route
 
 When the user is satisfied with the waypoints, they tap the `Find a route' button.
 In this step the planning UI pulls up higher, covering a larger part of the map, while the visible part of the map contains all the route options on an appropriately zoomed-in map.
-The chosen option is highlighted, while the others are less opaque.
+The options are colour-coded based on their difficulty.
+The chosen option is highlighted, while the others are visible but translucent.
 The options can be switched between by tapping on the map.
 
-The middle of the planning UI now contains the details of the chosen route -- the time it will get the user to hike it if they go alone, its elevation, length, prevalent surface type, and a difficulty chart.
+The middle of the planning UI now contains the details of the chosen route -- the time it will get the user to hike it if they go alone, its elevation, length, prevalent surface type, and a difficulty chart (US~\ref{US:map-planned-details}).
 
 The bottom part of the planning UI has information on individual segments of the route.
 The picture is a placeholder for the route's elevation profile, which has two interactive sliders to pick the segment whose details the user wants to know.
@@ -183,7 +184,7 @@ These details include its elevation, surface, and a difficulty chart.
 
 The route can be saved and unsaved by tapping the bookmark icon, and shared via link by tapping the share icon.
 
-If the user wants to just start the hike without planning for a different day or inviting friends, they can press the `GO' button and the APP navigates him,
+If the user wants to just start the hike without planning for a different day or inviting friends, they can press the `GO' button and the APP navigates them,
 or they can continue to the next step: Plan a hike.
 
 \begin{figure}[h!]
@@ -194,8 +195,7 @@ or they can continue to the next step: Plan a hike.
     \label{fig:plan-pick-route}
 \end{figure}
 
-The last step is planning a hike.
-This means choosing the date with a date picker, and the people to join the user~(fig.\ref{fig:plan-plan-hike}).
+Planning a hike means choosing the date with a date picker (US~\ref{US:map-hike-change}), and the people to join the user~(fig.\ref{fig:plan-plan-hike}; US~\ref{US:friends-invite}).
 These can be searched for among the user's friends, using the `invite people' button~(fig.\ref{fig:plan-invite-friends}).
 While searching for friends, their avatars are added to the summary on the bottom and the counter is incremented.
 
@@ -214,7 +214,7 @@ While searching for friends, their avatars are added to the summary on the botto
     \label{fig:plan-invite-friends}
 \end{figure}
 
-Once the friends are chosen, the user can see a summary of the hike, with the difficulty chart adjusted to the group's common fitness (fig.\ref{fig:plan-end}), the number of people who are coming or invited, and how long it is going to take them.
+Once the friends are chosen, the user can see a summary of the hike, with the difficulty chart adjusted to the group's common fitness (fig.\ref{fig:plan-end}; US~\ref{US:friends-fitness}), the number of people who are coming or invited, and how long it is going to take them.
 
 This screen also contains a checkbox to allow friends join the hike -- whether the hike should be marked as joinable when it is shared to the friends' feed of `All plans'~(fig.\ref{fig:plan-all-plans}).
 
@@ -232,17 +232,17 @@ The whole planning can be stopped at any point with the `Cancel' button, which w
 
 \section{Plans tab}
 The `Plans' tab is divided into three sections -- `All plans', `My plans' and `History'.
-The default `All plans' section~(fig.\ref{fig:plan-all-plans}) is a filterable feed of the users' and their friends' upcoming plans.
-This is also where the user's invitations to friends' hikes are displayed; these can be either dismissed or accepted.
+The default `All plans' section~(fig.\ref{fig:plan-all-plans}) is a filterable feed of the users' and their friends' upcoming plans (US~\ref{US:friends-join-hikes}).
+This is also where the user's invitations to friends' hikes are displayed; these can be either dismissed or accepted (US~\ref{US:friends-invite-accept}}, \ref{US:friends-invite-refuse}).
 
 A collapsed hike card contains basic information, the route on a map (represented by the picture placeholder) such as who hosts it, when it is happening and how long it will take, whether it is joinable and how difficult it would be for the user.
 
 When tapping on the card, the card expands to show more of the hike's details: 
 who is coming, how long it is currently planned to be plus how much longer it will take if the user joins, and all of its information recalculated to the user's fitness.
 
-If the hike is joinable, there is an `Ask to join' button; if not, the user can only go back.
+If the hike is joinable, there is an `Ask to join' button (US~\ref{US:friends-join-hikes}); if not, the user can only go back.
 
-Again, there are the options to save the route, and share either the route or the hike, which is chosen in a dropdown dialogue.
+Again, there are the options to save (US~\ref{US:map-saved}) or share the route (US~\ref{US:map-share-route}).
 
 \begin{figure}[h!]
     \centering
@@ -255,12 +255,12 @@ Again, there are the options to save the route, and share either the route or th
 The `My plans' section~(fig.\ref{fig:plan-my-plans}) contains the hikes that the user has planned or joined.
 The detail of a hike planned by the user is different, compared to looking at hikes planned by other people,
 since there have to be options to administer the hike.
-Requests to join are shown in this detail; by tapping at the `People' section the user can manage the people connected to the hike, as well as allow or disallow people to join the hike.
-The route can be cancelled by the red trash icon, and the user can also let others know that they can't go.
+Requests to join are shown in this detail; by tapping at the `People' section the user can manage the people connected to the hike, as well as allow or disallow people to join the hike (US~\ref{US:friends-join-hikes}).
+The route can be cancelled by the red trash icon, and the user can also let others know that they can't go (US~\ref{US:friends-cancel-hike}).
 If the user is the host of the hike, they have to appoint a new host from the people who have accepted the invitation.
 
 The `Start' button will become active on the day of the hike.
-When it is pressed, the route will be activated on the phones of all the attendants, allowing to switch to navigation mode.
+When it is pressed, the route will be activated on the phones of all the attendants, allowing to switch to navigation mode (US~\ref{US:friends-hike-active}).
 
 Tapping on the `Route' section will show the route's details, just like in fig.\ref{fig:plan-pick-route}.
 
@@ -273,7 +273,7 @@ Tapping on the `Route' section will show the route's details, just like in fig.\
     \label{fig:plan-my-plans}
 \end{figure}
 
-The `history' section~(fig.\ref{fig:plan-history}) of the `Plans' tab is the same as the `My plans' section, except all the hikes are in the past.
+The `history' section~(fig.\ref{fig:plan-history}) of the `Plans' tab is the same as the `My plans' section, except all the hikes are in the past (US~\ref{US:map-history}).
 Each hikes' map contains the planned route, and the real route in case the user didn't precisely follow the plan.
 This hike can be repeated by pressing the `Plan a hike' button and choosing whether to use the originally planned or the actually taken route.
 Then the user is again taken to the planning UI.
@@ -286,7 +286,7 @@ Then the user is again taken to the planning UI.
 \end{figure}
 
 \section{Routes tab}
-The `Routes' tab~(fig.\ref{fig:routes}) contains a filterable list of saved routes.
+The `Routes' tab~(fig.\ref{fig:routes}) contains a filterable list of saved routes (US~\ref{US:map-saved}).
 The only difference between a hike card and a route card is the fact that routes are not planned, so they don't include a host, people who are going, or the date they are planned for.
 
 \begin{figure}[h!]
@@ -299,10 +299,12 @@ The only difference between a hike card and a route card is the fact that routes
 
 \section{Friends tab}
 Finally, the last tab is the `Friends' tab.
-It contains a view of all the user's friends, as well as any pending friendship requests.
+It contains a view of all the user's friends, as well as any pending friendship requests (US~\ref{US:friends-accept}, \ref{US:friends-dismiss}).
 The detail of a user's profile is similar to the user who is signed in, but contains only basic information.
-The profile is shareable, and the friend can also be removed from the user's friends list.
+The profile is shareable (US~\ref{US:friends-share}), and the friend can also be removed from the user's friends list (US~\ref{US:friends-remove}).
 This is confirmed by a confirmation dialogue, warning the user about the fact that they will be removed from one another's plans.
+
+Using the add button, the user can also add new friends using a link or social media (fig.\ref{fig:friends}; US~\ref{US:friends-add}).
 
 \begin{figure}[h!]
     \centering
@@ -310,11 +312,11 @@ This is confirmed by a confirmation dialogue, warning the user about the fact th
     \tmpframe{\includegraphics[width=0.3\textwidth]{Images/appScreens/friends-find.pdf}}\hfill
     \tmpframe{\includegraphics[width=0.3\textwidth]{Images/appScreens/friends-detail.pdf}}
     \caption{Friends tab, finding new friends and the user profile of a friend.}
-    \label{fig:routes}
+    \label{fig:friends}
 \end{figure}
 
 \section{Navigation mode}
-The application allows a user to navigate a planned route using a map and written directions (fig.\ref{fig:navigation}).
+The application allows a user to navigate a planned route using a map and written directions (fig.\ref{fig:navigation}; US~\ref{US:map-hike}).
 Once a hike is started, the view is switched to the `Map' tab.
 The route is visualized on the map in colours of respective hiking trails and the user's position is highlighted.
 There's also an overview of the difficulty of the current part of the route, and the user is notified if they are lagging behind the plan.
@@ -326,3 +328,8 @@ The navigation mode stays alive and accessible through a permanent notification.
     \tmpframe{\includegraphics[width=0.4\textwidth]{Images/appScreens/navigation.pdf}}
     \label{fig:navigation}
 \end{figure}
+
+\section{Notifications}
+Notifications are communicated to the user via icon badges on the bottom tab bar.
+
+Notifications are primarily sent to the system and are displayed on the notification bar.
