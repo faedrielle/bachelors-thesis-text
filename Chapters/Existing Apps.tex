@@ -78,12 +78,6 @@ The mobile application runs both on iPhones and Android phones.
 \subsubsection*{Propriety}
 The system is not entirely open-source, as a few of their repositories are public, but the core components remain proprietary~\cite{komoot-github}.
 
-\subsubsection*{Overall evaluation}
-While being rich with features, komoot does not base its functionality on objective data -- it is the users themselves who rate and recommend the specific routes,
-an approach in its nature prone to error and with only limited ways of eliminating the human factor.
-Otherwise it is an excellent application for navigation.
-
-
 \begin{figure}[h!]%
     \centering
         \subfig
@@ -182,8 +176,6 @@ Some features are only available in the web application.
 \subsubsection*{Propriety}
 The whole endomondo application only has a single public repository on github, which is a fork of tapiriik -- a tool for data synchronization between different fitness applications, such as Endomondo, Garmin Connect, Strava, Runkeeper, and others~\cite{endomondo-tapiriik}.
 Otherwise, the whole application is completely proprietary.
-\subsubsection*{Overall evaluation}
-The endomondo app is good at what it is meant to do, that is, motivate the user and track their progress.
 %==============================================================================================
 \pagebreak
 \pagebreak
@@ -222,7 +214,7 @@ Another community-building perk is the feed of challenges (fig.\ref{strava-chall
 \subsubsection*{Extra features}
 One of the most popular premium features is called Segments (fig.\ref{strava-segments-img}), where users can compare their times on specific portions of road or trail using leaderboards.
 This is supported by heatmaps of use frequency of specific routes.
-
+It also allows the user to input their pictures, gear, and perceived exertion to the activity session.
 The premium version of the platform offers a lot of features that are somewhat less connected to fitness but make it successful as a social network.
 
 \begin{figure}[htb!]
@@ -254,8 +246,6 @@ The mobile app Strava is available both on Android and iOS, as well as providing
 It supports a variety of smart watches, power sensors, and other devices.
 \subsubsection*{Propriety}
 The application is closed-source, but it offers a publicly available API for custom development.
-\subsubsection*{Overall evaluation}
-The platform is great at tracking and analysing data from previous activity, and at providing new ways for athletes to connect.
 %==============================================================================================
 \subsection{Garmin Explore and Garmin Connect}
 The vast ecosystem Garmin has created for their users is filled with an assortment of wearables, radars, smart lights, navigations, customized maps, and plenty more, providing features which are presented to the user via modular mobile apps.
@@ -264,8 +254,12 @@ Here I will analyse the Garmin Explore application, which is targeted at hikers,
 
 \subsubsection*{Use of IoT possibilities}
 Most fitness-focused Garmin watches do have a heart rate sensor and all of them include a step counter, however, this data is never compared with that of other users, keeping focus on the user's activity history with no prediction.
+The Garmin Connect app includes an ``Insights'' feature, which compares the user's simpler data, such as daily number of steps or hours of sleep, to that of all other users.
 \subsubsection*{User fitness assessment}
 Some of the heart-rate-monitor enabled watches allow a user to set the zones (see chapter on fitness assessment) in which they would like to keep their heart rate depending on the activity they choose to do.
+The Connect app also allows users to manually input their VO2 max, but doesn't test the user on it.
+
+As mentioned in the Fitness assessment chapter, they offer the Performace condition stat, which however, according to user feedback, isn't useful or accurate.
 
 \begin{figure}[h]
     \centering
@@ -279,8 +273,32 @@ In general, Garmin's pricing model relies on the user buying one of their high-e
 The company's smartwatches are considered premium quality, with a wide price range - target groups include \textit{potential Rolex buyers}~\cite{garmin-expensive} as well as ordinary users~\cite{garmin-watches-review}.
 \subsubsection*{Community}
 The Connect application handles the data from the point of view of a fitness tracker, with social features like groups, competitions, likes, comments, and badges of accomplishment~\cite{garmin-connect}.
-\subsubsection*{Extra features} -- 
+\subsubsection*{Extra features}
+The Explore application is very simple, mostly just containing the bare necessities such as the map, route planning, and a history of activities.
+It doesn't even contain navigation options; it is hard for me as a user to understand what its use is.
+It allows the user to group waypoints, tracks, routes and activities into collections for each trip.
+The Connect application, as a fitness tracker, gives insights into the user's fitness, allows to track the lifespan of the user's gear, their sleep quality, water intake, menstrual cycle (as this can affect the user's stamina), and other factorss.
 \subsubsection*{User-friendliness}
+The modularity of Garmin's apps allows for cleaner, easier-to-navigate interfaces.
+
+The Garmin Explore app uses a tab bar for navigation; and while the four tabs do not have any inscriptions, the icons manage to communicate fairly clearly what the user can find in them.
+In the Map tab, it took me a while to find the button for creating a new route or waypoint (top-left corner in fig.\ref{fig:garmin-map}), since it does not stand out from the other UI components.
+The actual track creation process feels natural, visual and light-weight, with fast waypoint creation and editing, however, I lacked the option to search for a place that I would want to use as a waypoint.
+A large disappointment for me as a user was the fact that I did not get a planned route -- only the polyline defined by the waypoints, which seems completely useless for navigation purposes.
+Once the route was saved and shown on the map, I could not figure out how to cancel it.
+
+\begin{figure}[h]
+    \centering
+        \tmpframe{\includegraphics[width=0.5\textwidth]{Images/Garmin-map-tab.jpg}}
+        \tmpframe{\includegraphics[width=0.5\textwidth]{Images/Garmin-route-create.jpg}}
+        \caption{Garmin's map tab~\cite{garmin-map-tab-img} and route creation screen~\cite{garmin-route-create}.}
+        \label{fig:garmin-map}
+\end{figure}
+
+Another interesting decision is the Library tab, which contains the user's past activities, saved waypoints, routes, and tracks.
+The difference between the (otherwise synonymic) words ``route'' and ``track'' is that a route is the generated polyline, whereas a track is a set of breadcrumbs of a past hike.
+
+The Connect app, as the main fitness app in the Garmin ecosystem, entails a larger number of features, resulting in a full tab bar as well as a hamburger menu, which I found a little confusing.
 
 \subsubsection*{Cross-platform}
 All of Garmin's applications can be installed both on Android and iPhone.
@@ -291,10 +309,23 @@ These apps are mostly concerned with map handling, navigation and sound codecs, 
 
 While some of this code may be used in the Explore or Connect applications, these repositories don't contain their core functionality.
 
-\subsubsection*{Overall evaluation}
-As a fitness tracker, Garmin Connect is highly popular and focuses mostly on the users' previous activities.
-
 \subsection{Summary}
 All of the studied platforms are used by a wide community of users, are either mostly or completely closed-source, base their maps off the OpenStreetMap, and have their own ways (or lack thereof) of integrating IoT principles in their design.
 
-However, another thing they have in common, is that they do not put emphasis on fully customizing their estimations to the user.
+Komoot is a great app for navigation; its flexible way of route planning gives the user a good idea of what they can expect on their trip,
+and includes navigation.
+However, the information provided is not tailored to the user's actual fitness level.
+
+Endomondo tracks the user's progress and motivates them.
+Since there is no route planning, it doesn't estimate the difficulty of outdoor tracks -- instead it serves as a personal trainer.
+
+Strava is great at tracking and analysing data from previous activity, and at providing new ways for athletes to connect and motivate each other.
+It gives the user a good insight into their data, and allows comparison between users on pre-defined segments.
+But again, there are no estimations done or tests to be taken.
+
+Garmin Connect is a great fitness tracker, but the Explore app is not useful for route planning or navigation.
+
+None of the apps fully customize their assessment of the user's fitness to estimate how they will do on their future hikes, which is a core feature of my application.
+
+There is an abundance of community features in all of these apps; it is reasonable to consider how many of them are enough to keep the users entertained and how many become overwhelming.
+
