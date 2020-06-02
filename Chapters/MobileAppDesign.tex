@@ -1,4 +1,4 @@
-Bassed on the desired functionality of the platform described in the previous chapter, I was able to create a design for the user interface -- UI of the mobile application.
+Based on the desired functionality of the platform described in the previous chapter, I was able to create a design for the user interface -- UI of the mobile application.
 
 In the beginning of this UI design project, I first looked at what would be the platform the project should run on.
 Since it is a mobile application, the range of options was slimmed down to two -- either Android or iOS,
@@ -7,13 +7,13 @@ It is partially due to Android's crushing lead on iOS devices, but also because 
 
 One of the most important decisions to make when designing an application is the navigation in it, and from there there's only a small step to information architecture (IA) -- the \textit{science of organizing and structuring content of the [\dots] mobile applications}~\cite{information-architecture}.
 The IA of an application helps the designer decide which concepts in the application are high-level and discrete enough
-to be used as `umbrella terms' for navigating to other, deeper concepts, while feeling intuitive to the user.
+to be used as ``umbrella terms'' for navigating to other, deeper concepts, while feeling intuitive to the user.
 
 However, when reading up on design guidelines for either of the systems, I realised that Android's instructions seem outdated.
 Backed by plenty of discussions online~\cite{hamburger-discoverabillity} as well as my own user experience with the native applications, the typical hamburger menu ☰ has gone out of style.
 
 One of the reasons is the increasing size of handheld devices.
-A hamburger menu (or `navigation drawer') located in the top left corner is nearly inaccessible for the majority of users, who are right-handed and use their thumb to operate the device~\cite{thumb-zone-article}.
+A hamburger menu (or \textit{navigation drawer}) located in the top left corner is nearly inaccessible for the majority of users, who are right-handed and use their thumb to operate the device~\cite{thumb-zone-article}.
 
 \begin{figure}[h!]
     \centering
@@ -26,7 +26,7 @@ Another reason is the fact that the hamburger menu decreases discoverability of 
 
 Lastly, using the hamburger menu often tempts the designer to just put everything there, without giving too much consideration to the use of the features.
 
-One of the most popular alternatives is the tab bar -- or `bottom navigation' in Android documentation.
+One of the most popular alternatives is the \textit{tab bar} -- or \textit{bottom navigation} in Android documentation.
 This type of navigation is mainly implemented by Apple's designers, but is fast spreading to Android-powered devices.
 It's a bar on the bottom of the screen containing three to five labelled icons representing \textit{tabs} where each leads to a different location in the app.
 It enforces the idea that a user should always know where in the application they are, what they can do there and where they can go because it's always on the screen (except when the keyboard is being used).
@@ -35,7 +35,7 @@ Other navigation options include dropdown menus, scrollable menus, single page d
 
 When describing the screens I will refer to the user stories which the discussed UI component covers.
 
-I chose the tab bar with five tabs: `Plans', `Routes', `Map', `Friends', and `Profile'.
+I chose the tab bar with five tabs: \code{Plans}, \code{Routes}, \code{Map}, \code{Friends}, and \code{Profile}.
 However, when installing the APP, the user needs to set the APP up.
 
 \section{Set up screens}
@@ -69,7 +69,7 @@ If the user decides to take the test, they are rerouted to the screen with fitne
 Again, it is possible to quit this screen.
 
 \section{Profile tab}
-After setup, the APP opens on the `Profile' tab~(fig.\ref{fig:profile1}), displaying all entered and calculated information on cards, as well as the option to log out, and the currently active device~(US~\ref{US:user-manage-info}, \ref{US:user-log-in}, \ref{US:HRM-device-activate}).
+After setup, the APP opens on the \code{Profile} tab~(fig.\ref{fig:profile1}), displaying all entered and calculated information on cards, as well as the option to log out, and the currently active device~(US~\ref{US:user-manage-info}, \ref{US:user-log-in}, \ref{US:HRM-device-activate}).
 
 \begin{figure}[h!]
     \centering
@@ -80,7 +80,7 @@ After setup, the APP opens on the `Profile' tab~(fig.\ref{fig:profile1}), displa
 
 The card with fitness opens to show the user's fitness data -- VO2 max, heart rate zones, and minimum and maximum heart rate.
 The heart rate zones are color-coded; these colors occur in the whole application to signify difficulty.
-There's an icon to get more information about the metrics (excerpts from the Fitness Assessment chapter), and the option to take a fitness test~(fig.\ref{fig:fitnessInfo}).
+There is an icon to get more information about the metrics (excerpts from the Fitness Assessment chapter), and the option to take a fitness test~(fig.\ref{fig:fitnessInfo}).
 The pictures are placeholders for charts of development of the metric over time.
 
 \begin{figure}[h!]
@@ -90,8 +90,8 @@ The pictures are placeholders for charts of development of the metric over time.
     \label{fig:fitnessInfo}
 \end{figure}
 
-On the `Fitness tests' screen~(fig.\ref{fig:fitnessTests}), the user can choose between multiple tests, each of which has a tag saying what it tests~(epic~\ref{epic:fit}).
-As an example, the `6 Minute Walking Test' screen has directions on what the user should do, and after the test, there is a screen with results~(fig.\ref{fig:6mwt}).
+On the \code{Fitness tests} screen~(fig.\ref{fig:fitnessTests}), the user can choose between multiple tests, each of which has a tag saying what it tests~(epic~\ref{epic:fit}).
+As an example, the \code{6 Minute Walking Test} screen has directions on what the user should do, and after the test, there is a screen with results~(fig.\ref{fig:6mwt}).
 Again, the pictures will contain the charts of the metric's values over the course of the test.
 
 \begin{figure}[h!]
@@ -109,13 +109,13 @@ Again, the pictures will contain the charts of the metric's values over the cour
     \label{fig:6mwt}
 \end{figure}
 
-When we come back to the `Profile' screen (fig.\ref{fig:profile1}), we can also manually edit all the information the user has provided.
+When we come back to the \code{Profile} screen (fig.\ref{fig:profile1}), we can also manually edit all the information the user has provided.
 The profile picture, basic data like height etc., as well as the fitness information (US~\ref{epic:manual}, \ref{US:user-manage-pic}).
 
 Another option from here is to see the devices by expanding the card with the active device.
-The `Devices' screen~(fig.\ref{fig:devices}) contains the active device which can be deactivated (US~\ref{US:HRM-device-activate}, \ref{US:HRM-device-management}), as well as other paired devices, which can be either activated or unpaired.
+The \code{Devices} screen~(fig.\ref{fig:devices}) contains the active device which can be deactivated (US~\ref{US:HRM-device-activate}, \ref{US:HRM-device-management}), as well as other paired devices, which can be either activated or unpaired.
 The user can also pair a new device with the app (opening a list of devices paired with the phone).
-Tapping the `Activate' button will deactivate the currently active device.
+Tapping the \code{Activate} button will deactivate the currently active device.
 
 \begin{figure}[h!]
     \centering
@@ -125,9 +125,9 @@ Tapping the `Activate' button will deactivate the currently active device.
 \end{figure}
 
 \section{Map tab}
-The default tab on which the application opens is the `Map' tab~(fig.\ref{fig:map}).
+The default tab on which the application opens is the \code{Map} tab~(fig.\ref{fig:map}).
 This is where the user can look at the integrated map (US~\ref{US:map-integrate}), as well as search for specific places~(fig.\ref{fig:map-searchPlace}) and add them as waypoints to the planned route (US~\ref{US:map-plan}).
-The waypoint will be added to the route as the `next' waypoint.
+The waypoint will be added to the route as the next waypoint.
 
 \begin{figure}[h!]
     \centering
@@ -154,10 +154,10 @@ The planning process consists of three steps:
     \item plan a hike.
 \end{enumerate}
 
-In the `Waypoints' step~fig.\ref{fig:plan-waypoints}), the user picks where they want to start their route, the destination, and all the points through which they want to pass.
+In the \code{Waypoints} step~fig.\ref{fig:plan-waypoints}), the user picks where they want to start their route, the destination, and all the points through which they want to pass.
 Each of the points can be picked directly from the map with a long press, or by searching for a place~(fig.\ref{fig:map-searchPlace}).
 The current location can also be used as a starting point.
-The intermediate points can be added using the plus button, and all the waypoints can be rearranged by drag'n'dropping each line by the menu icon on the left.
+The intermediate points can be added using the + button, and all the waypoints can be rearranged by drag'n'dropping each line by the menu icon on the left.
 The user can also remove individual waypoints using the X icon on the right: when removing the starting or destination point, only the text is removed, since every route needs two points.
 
 Another option is to choose a return trip, where the platform should offer routes that start in the starting point, go through the destination, and either give a different route to go back if possible, or has the user retrace their steps.
@@ -170,7 +170,7 @@ Another option is to choose a return trip, where the platform should offer route
     \label{fig:plan-waypoints}
 \end{figure}
 
-When the user is satisfied with the waypoints, they tap the `Find a route' button.
+When the user is satisfied with the waypoints, they tap the \code{Find a route} button.
 In this step the planning UI pulls up higher, covering a larger part of the map, while the visible part of the map contains all the route options on an appropriately zoomed-in map.
 The options are colour-coded based on their difficulty.
 The chosen option is highlighted, while the others are visible but translucent.
@@ -184,7 +184,7 @@ These details include its elevation, surface, and a difficulty chart.
 
 The route can be saved and unsaved by tapping the bookmark icon, and shared via link by tapping the share icon.
 
-If the user wants to just start the hike without planning for a different day or inviting friends, they can press the `GO' button and the APP navigates them,
+If the user wants to just start the hike without planning for a different day or inviting friends, they can press the \code{GO} button and the APP navigates them,
 or they can continue to the next step: Plan a hike.
 
 \begin{figure}[h!]
@@ -196,7 +196,7 @@ or they can continue to the next step: Plan a hike.
 \end{figure}
 
 Planning a hike means choosing the date with a date picker (US~\ref{US:map-hike-change}), and the people to join the user~(fig.\ref{fig:plan-plan-hike}; US~\ref{US:friends-invite}).
-These can be searched for among the user's friends, using the `invite people' button~(fig.\ref{fig:plan-invite-friends}).
+These can be searched for among the user's friends, using the \code{Invite people} button~(fig.\ref{fig:plan-invite-friends}).
 While searching for friends, their avatars are added to the summary on the bottom and the counter is incremented.
 
 \begin{figure}[h!]
@@ -216,23 +216,23 @@ While searching for friends, their avatars are added to the summary on the botto
 
 Once the friends are chosen, the user can see a summary of the hike, with the difficulty chart adjusted to the group's common fitness (fig.\ref{fig:plan-end}; US~\ref{US:friends-fitness}), the number of people who are coming or invited, and how long it is going to take them.
 
-This screen also contains a checkbox to allow friends join the hike -- whether the hike should be marked as joinable when it is shared to the friends' feed of `All plans'~(fig.\ref{fig:plan-all-plans}).
+This screen also contains a checkbox to allow friends join the hike -- whether the hike should be marked as joinable when it is shared to the friends' feed of \code{All plans}~(fig.\ref{fig:plan-all-plans}).
 
-Once the planning is finished, we return to the basic `Map' screen, with a snack bar notification telling the user where they can find the planned hike and how many people were invited~(fig.\ref{fig:plan-end}).
+Once the planning is finished, we return to the basic \code{Map} screen, with a snack bar notification telling the user where they can find the planned hike and how many people were invited~(fig.\ref{fig:plan-end}).
 
-The whole planning can be stopped at any point with the `Cancel' button, which will trigger a confirmation dialogue, as the user is about to delete all their progress, and after confirming, we return to the `Map' tab.
+The whole planning can be stopped at any point with the \code{Cancel} button, which will trigger a confirmation dialogue, as the user is about to delete all their progress, and after confirming, we return to the \code{Map} tab.
 
 \begin{figure}[h!]
     \centering
     \tmpframe{\includegraphics[width=0.4\textwidth]{Images/appScreens/map-plan8.pdf}}\hfill
     \tmpframe{\includegraphics[width=0.4\textwidth]{Images/appScreens/map-plan9.pdf}}\hfill
-    \caption{Overview of the hike. After pressing the `Finish' button, we are back to the `Map' screen.}
+    \caption{Overview of the hike. After pressing the \code{Finish} button, we are back to the \code{Map} screen.}
     \label{fig:plan-end}
 \end{figure}
 
 \section{Plans tab}
-The `Plans' tab is divided into three sections -- `All plans', `My plans' and `History'.
-The default `All plans' section~(fig.\ref{fig:plan-all-plans}) is a filterable feed of the users' and their friends' upcoming plans (US~\ref{US:friends-join-hikes}).
+The \code{Plans} tab is divided into three sections -- \code{All plans}, \code{My plans} and \code{History}.
+The default \code{All plans} section~(fig.\ref{fig:plan-all-plans}) is a filterable feed of the users' and their friends' upcoming plans (US~\ref{US:friends-join-hikes}).
 This is also where the user's invitations to friends' hikes are displayed; these can be either dismissed or accepted (US~\ref{US:friends-invite-accept}, \ref{US:friends-invite-refuse}).
 
 A collapsed hike card contains basic information, the route on a map (represented by the picture placeholder) such as who hosts it, when it is happening and how long it will take, whether it is joinable and how difficult it would be for the user.
@@ -240,7 +240,7 @@ A collapsed hike card contains basic information, the route on a map (represente
 When tapping on the card, the card expands to show more of the hike's details: 
 who is coming, how long it is currently planned to be plus how much longer it will take if the user joins, and all of its information recalculated to the user's fitness.
 
-If the hike is joinable, there is an `Ask to join' button (US~\ref{US:friends-join-hikes}); if not, the user can only go back.
+If the hike is joinable, there is an \code{Ask to join} button (US~\ref{US:friends-join-hikes}); if not, the user can only go back.
 
 Again, there are the options to save (US~\ref{US:map-saved}) or share the route (US~\ref{US:map-share-route}).
 
@@ -252,17 +252,17 @@ Again, there are the options to save (US~\ref{US:map-saved}) or share the route 
     \label{fig:plan-all-plans}
 \end{figure}
 
-The `My plans' section~(fig.\ref{fig:plan-my-plans}) contains the hikes that the user has planned or joined.
+The \code{My plans} section~(fig.\ref{fig:plan-my-plans}) contains the hikes that the user has planned or joined.
 The detail of a hike planned by the user is different, compared to looking at hikes planned by other people,
 since there have to be options to administer the hike.
-Requests to join are shown in this detail; by tapping at the `People' section the user can manage the people connected to the hike, as well as allow or disallow people to join the hike (US~\ref{US:friends-join-hikes}).
-The route can be cancelled by the red trash icon, and the user can also let others know that they can't go (US~\ref{US:friends-cancel-hike}).
+Requests to join are shown in this detail; by tapping at the \code{People} section the user can manage the people connected to the hike, as well as allow or disallow people to join the hike (US~\ref{US:friends-join-hikes}).
+The route can be cancelled by the red trash icon, and the user can also let others know that they cannot go (US~\ref{US:friends-cancel-hike}).
 If the user is the host of the hike, they have to appoint a new host from the people who have accepted the invitation.
 
-The `Start' button will become active on the day of the hike.
+The \code{Start} button will become active on the day of the hike.
 When it is pressed, the route will be activated on the phones of all the attendants, allowing to switch to navigation mode (US~\ref{US:friends-hike-active}).
 
-Tapping on the `Route' section will show the route's details, just like in fig.\ref{fig:plan-pick-route}.
+Tapping on the \code{Route} section will show the route's details, just like in fig.\ref{fig:plan-pick-route}.
 
 \begin{figure}[h!]
     \centering
@@ -273,9 +273,9 @@ Tapping on the `Route' section will show the route's details, just like in fig.\
     \label{fig:plan-my-plans}
 \end{figure}
 
-The `history' section~(fig.\ref{fig:plan-history}) of the `Plans' tab is the same as the `My plans' section, except all the hikes are in the past (US~\ref{US:map-history}).
-Each hikes' map contains the planned route, and the real route in case the user didn't precisely follow the plan.
-This hike can be repeated by pressing the `Plan a hike' button and choosing whether to use the originally planned or the actually taken route.
+The \code{History} section~(fig.\ref{fig:plan-history}) of the \code{Plans} tab is the same as the \code{My plans} section, except all the hikes are in the past (US~\ref{US:map-history}).
+Each hikes' map contains the planned route, and the real route in case the user did not precisely follow the plan.
+This hike can be repeated by pressing the \code{Plan a hike} button and choosing whether to use the originally planned or the actually taken route.
 Then the user is again taken to the planning UI.
 
 \begin{figure}[h!]
@@ -286,8 +286,8 @@ Then the user is again taken to the planning UI.
 \end{figure}
 
 \section{Routes tab}
-The `Routes' tab~(fig.\ref{fig:routes}) contains a filterable list of saved routes (US~\ref{US:map-saved}).
-The only difference between a hike card and a route card is the fact that routes are not planned, so they don't include a host, people who are going, or the date they are planned for.
+The \code{Routes} tab~(fig.\ref{fig:routes}) contains a filterable list of saved routes (US~\ref{US:map-saved}).
+The only difference between a hike card and a route card is the fact that routes are not planned, so they do not include a host, people who are going, or the date they are planned for.
 
 \begin{figure}[h!]
     \centering
@@ -298,7 +298,7 @@ The only difference between a hike card and a route card is the fact that routes
 \end{figure}
 
 \section{Friends tab}
-Finally, the last tab is the `Friends' tab.
+Finally, the last tab is the \code{Friends} tab.
 It contains a view of all the user's friends, as well as any pending friendship requests (US~\ref{US:friends-accept}, \ref{US:friends-dismiss}).
 The detail of a user's profile is similar to the user who is signed in, but contains only basic information.
 The profile is shareable (US~\ref{US:friends-share}), and the friend can also be removed from the user's friends list (US~\ref{US:friends-remove}).
@@ -317,10 +317,10 @@ By pressing the add button, the user is navigated to the Add friends screen~(fig
 
 \section{Navigation mode}
 The application allows a user to navigate a planned route using a map and written directions (fig.\ref{fig:navigation}; US~\ref{US:map-hike}).
-Once a hike is started, the view is switched to the `Map' tab.
+Once a hike is started, the view is switched to the \code{Map} tab.
 The route is visualized on the map in colours of respective hiking trails and the user's position is highlighted.
 There's also an overview of the difficulty of the current part of the route, and the user is notified if they are lagging behind the plan.
-If the user wants to see something else than the navigation mode, they can use the close button on the top right, or just switch between tabs.
+If the user wants to see something else than the navigation mode, they can use the \code{Close} button on the top right, or just switch between tabs.
 The navigation mode stays alive and accessible through a permanent notification.
 
 \begin{figure}[h!]

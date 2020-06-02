@@ -2,7 +2,7 @@ I decided to construe the user-focused features as one would in a real-life agil
 as this is in my experience more straightforward and easier to alter when necessary than flooding the reader -- for example, a developer -- with a long list of elaborate use cases right away.
 The discussions that take place before reaching a specific decision should be well documented -- brief enough and detailed enough at the same time to provide good value after a quick read.
 If the reader has access to a good transcript of these discussions, it is less likely that they will misunderstand the requested functionality;
-in the best-case scenario, if the reader is the potential developer, they are an active part of those discussions, so they have a substantial impact on the outcome, thus diminishing the `coding monkey' phenomenon.
+in the best-case scenario, if the reader is the potential developer, they are an active part of those discussions, so they have a substantial impact on the outcome, thus diminishing the ``coding monkey'' phenomenon.
 
 The top-down approach of the agile methodology which is perhaps the most common and natural to grasp is creating epics, decomposing them into user stories,
 and with good knowledge of the project's architecture and after due consideration, adding technical subtasks in an issue tracker of choice.
@@ -16,7 +16,7 @@ User stories (US) are short, simple descriptions of a feature told from the pers
 They are not system specifications or functional requirements.
 Rather, they are the beginning of a conversation that can lead to such specifications or requirements.
 However, they provide context and scope of the requested feature.
-Often they are written in simple, non-technical language, as most systems don't have tech-savvy users.
+Often they are written in simple, non-technical language, as most systems do not have tech-savvy users.
 The typical template for a user story is:
 \textit{As a < type of user >, I want < some goal >, so that < some reason >}~\cite{user-story-definition}, where the reason part is optional but recommended.
 Another important component of a US are \textit{acceptance criteria}, which define the functionality which needs to be working for the story to be finished, often including not only the happy path, but a sad path as well.
@@ -40,9 +40,9 @@ The user needs a method for getting their data to the mobile application and the
 As an APP user, I want to pair and unpair my wearables with the APP, so that the APP can use the data of all devices that I currently own.
 \end{quote}
 The app should provide the user with the list of the phone's paired devices, so that they can choose their fitness gadgets to use on their next hike.
-However, since the APP can only support some wearable vendors, the ones that aren't compatible shouldn't be pairable.
-Also, if this is programmatically possible, non-wearables shouldn't be displayed in the list, or at least shouldn't be pairable,
-so that the user doesn't get confused by the presence or pairability of their Bluetooth speaker.
+However, since the APP can only support some wearable vendors, the ones that are not compatible should not be pairable.
+Also, if this is programmatically possible, non-wearables should not be displayed in the list, or at least should not be pairable,
+so that the user does not get confused by the presence or pairability of their Bluetooth speaker.
 
 \paragraph*{Acceptance criteria}
 \begin{quote}
@@ -72,7 +72,7 @@ The user should be able to activate a device they want to use for monitoring of 
 
 \subsection{Choose and integrate a wearable}\label{US:HRM-device-integrate}
 \begin{quote}
-As an APP user, I want my heart rate-enabled wearable to work with the APP, so that I don't have to buy a new one.
+As an APP user, I want my heart rate-enabled wearable to work with the APP, so that I do not have to buy a new one.
 \end{quote}
 
 Based on the analysis of existing applications, the most often used type of wearable tech are smartwatches.
@@ -89,8 +89,8 @@ At the time of writing, however, Garmin seems like the most popular option, in s
 \end{quote}
 
 It will be more difficult to integrate some devices.
-Some vendors don't disclose their devices' API, or the API's documentation is only available for use exclusively by partners of the given vendor,
-some don't get paired with the phone itself and communicate with a proprietary app using server-based pairing instead (such as the Xiaomi Mi Band 4 I initially intended to use in the PoC) and there is no easy or straightforward way to get the data.
+Some vendors do not disclose their devices' API, or the API's documentation is only available for use exclusively by partners of the given vendor,
+some do not get paired with the phone itself and communicate with a proprietary app using server-based pairing instead (such as the Xiaomi Mi Band 4 I initially intended to use in the PoC) and there is no easy or straightforward way to get the data.
 For example, getting data from the Mi Band 4 would require root access to the user's phone~\cite{miband4-server-based}, which is just not an option for a normal user.
 Therefore I recommend limiting the supported devices to those that do not use server-based pairing, as this would cover most of the currently available gadgets,
 or take advantage of (and contribute to) existing open-source software for wearables integration, such as Gadgetbridge~\cite{Gadgetbridge}.
@@ -121,7 +121,7 @@ The networks can learn from the data collected from a good number of users over 
 
 \subsection{Implement support for VO2 max tests}\label{US:fit-vo2max}
 \begin{quote}
-As an APP user, I want to be able to take a guided test of my fitness in the APP, so that I don't have to look for tests elsewhere.
+As an APP user, I want to be able to take a guided test of my fitness in the APP, so that I do not have to look for tests elsewhere.
 \end{quote}
 
 The APP should implement a guide to multiple tests of VO2 max, with instructions on what they should do, and signals to direct the user while taking the test.
@@ -145,7 +145,7 @@ In order to calculate VO2 max, the APP can use Mänttäri's formulas.
 
 \subsection{Implement support for HR max and HR min tests}\label{US:fit-HR}
 \begin{quote}
-As an APP user, I want to be able to take a guided test to find my heart rate zones in the APP, so that I don't have to look for tests elsewhere and get as accurate heart rate zones as possible.
+As an APP user, I want to be able to take a guided test to find my heart rate zones in the APP, so that I do not have to look for tests elsewhere and get as accurate heart rate zones as possible.
 \end{quote}
 
 The implementation should be similar to VO2 max tests; if possible, both metrics should be measured by a single test to reduce the time a user has to spend setting up the APP.
@@ -179,7 +179,7 @@ If the user has a smart scale, it could be integrated to get the most recent val
 The APP needs the user's height, weight, biological sex and age.
 The age should be calculated based on their date of birth, so that it is always reasonably accurate.
 However, I myself have had issues with disclosing my exact date of birth to just any application that asks for it, and the accuracy would be good enough with even just the month and year.
-Yet again, it is reasonable to consider whether a user who doesn't have an issue giving out their heart rate and fitness data would show similar concern.
+Yet again, it is reasonable to consider whether a user who does not have an issue giving out their heart rate and fitness data would show similar concern.
 
 \paragraph*{Acceptance criteria}
 \begin{quote}
@@ -190,18 +190,18 @@ Yet again, it is reasonable to consider whether a user who doesn't have an issue
 
 \subsection{Allow manual input of advanced biometric values}\label{US:manual-advanced}
 \begin{quote}
-As an APP user who has recently done lab fitness tests, I want the APP to use these values instead of taking the APP's tests, so that I don't have to take fitness tests that are most probably less accurate than what I know.
+As an APP user who has recently done lab fitness tests, I want the APP to use these values instead of taking the APP's tests, so that I do not have to take fitness tests that are most probably less accurate than what I know.
 \end{quote}
 
 A user should be able to manually enter the VO2 max, resting heart rate and maximum heart rate, as well as the severity of the effect a potential condition might have on the individual's fitness.
-The APP should ask whether the user has such a condition and if there is a maximum heart rate (perhaps recommended by a doctor) the user shouldn't exceed when active.
+The APP should ask whether the user has such a condition and if there is a maximum heart rate (perhaps recommended by a doctor) the user should not exceed when active.
 
 \paragraph*{Acceptance criteria}
 \begin{quote}
 \begin{itemize}
     \item User can enter their advanced biometric data - VO2 max, HR max, HR min - manually.
     \item The APP asks about the severity of any conditions that the user has and its impact on their fitness.
-    \item The APP asks about a recommended maximum heart rate the user shouldn't exceed.
+    \item The APP asks about a recommended maximum heart rate the user should not exceed.
 \end{itemize}
 \end{quote}
 
@@ -224,7 +224,7 @@ The whole APP should be focused around the hikes a user takes and around their d
 \end{itemize}
 \end{quote}
 
-There isn't a large variety of maps available for use by developers.
+There is not a large variety of maps available for use by developers.
 While Google Maps would probably be a popular choice, Google decided to put their maps behind a paywall~\cite{google-maps-paywall} in 2018.
 Therefore it makes sense to choose the open-source OpenStreetMap~\cite{OpenStreetMap} and use one of its derivatives with a public API for route planning (such as OpenRouteService~\cite{OpenRouteService}).
 
@@ -235,7 +235,7 @@ It is important not to forget to credit the map's creator in their preferred way
 As an APP user, I want to plan a route from point A to point B.
 \end{quote}
 
-Hikers often don't want the easiest, fastest, or shortest possible path from A to B -- they look for a challenge and nice things to see.
+Hikers often do not want the easiest, fastest, or shortest possible path from A to B -- they look for a challenge and nice things to see.
 This is why they might make extra effort to take their hike through a specific spot, which might not be on the ideal route.
 Therefore, it should be possible to add such places to the route.
 
@@ -283,7 +283,7 @@ Filters should include the date on which the hike was taken, the time it took to
 
 \subsection{Saved routes}\label{US:map-saved}
 \begin{quote}
-As an APP user, I want to save some routes, so that I can don't have to create the same route again when I want to retake it.
+As an APP user, I want to save some routes, so that I can do not have to create the same route again when I want to retake it.
 \end{quote}
 
 Since the process of creating a route from scratch is somewhat lengthy, the user should be able to save it and find it later.
@@ -376,7 +376,7 @@ But since it is not the only important feature, it should also be possible to te
 
 \subsection{Change the hike date}\label{US:map-hike-change}
 \begin{quote}
-As an APP user, I want to replan my existing planned hike to a different day, so that if the weather is bad, I don't have to cancel it and plan all of it again.
+As an APP user, I want to replan my existing planned hike to a different day, so that if the weather is bad, I do not have to cancel it and plan all of it again.
 \end{quote}
 
 \paragraph*{Acceptance criteria}
@@ -416,7 +416,7 @@ As an APP user, I want to be able to upload and delete my profile picture or use
 \paragraph*{Acceptance criteria}
 \begin{quote}
 \begin{itemize}
-    \item If the user doesn't have a profile picture, there is a substitute placeholder.
+    \item If the user does not have a profile picture, there is a substitute placeholder.
     \item User can upload a profile picture.
     \item User can see the new profile picture once uploaded.
     \item User can delete their uploaded profile picture, which is replaced by a placeholder.
@@ -460,12 +460,12 @@ There is a third use case, the mix of the previous two, where the hike host know
 As an APP user, I want the estimations to be accurate even if I'm hiking with friends.
 \end{quote}
 
-In a diverse group of people, someone's fitness level will likely be lower than that of the others, which means that the whole hike will take longer than if this person wasn't in the group.
-This is why the estimated time spent on the hike should be calculated based on the `weakest link', and each participant's expected heart rate zones and all other biometric estimations should be adjusted accordingly.
+In a diverse group of people, someone's fitness level will likely be lower than that of the others, which means that the whole hike will take longer than if this person was not in the group.
+This is why the estimated time spent on the hike should be calculated based on the weakest link, and each participant's expected heart rate zones and all other biometric estimations should be adjusted accordingly.
 
 The estimations can be adjusted either to the weakest participant's capabilities, or the system can acknowledge the motivation that they will feel when with others and slightly overestimate.
 
-It wouldn't be user-friendly to expose the name of the weakest individual, as they might feel ostracised, disheartened and less likely to go on hikes with their friends for fear of holding them back
+It would not be user-friendly to expose the name of the weakest individual, as they might feel ostracised, disheartened and less likely to go on hikes with their friends for fear of holding them back
 (and, by extension, stop using the APP that made them feel that way).
 But at the same time, the aim of the solution is to provide accurate estimations for its users.
 This is why it should provide the information carefully.
@@ -497,7 +497,7 @@ The invitation should include the proposed date of the hike and all the hike's d
 
 \subsection{Refuse an invitation to hike with friends}\label{US:friends-invite-refuse}
 \begin{quote}
-As an APP user, I want to refuse invitations to hikes that I don't want to attend, so that the hike organiser knows I won't come and my invitation list isn't cluttered.
+As an APP user, I want to refuse invitations to hikes that I do not want to attend, so that the hike organiser knows I will not come and my invitation list is not cluttered.
 \end{quote}
 
 \paragraph*{Acceptance criteria}
@@ -541,7 +541,7 @@ A nice-to-have way would be using the phones' proximity if the two people are cl
 
 \subsection{Remove friends}\label{US:friends-remove}
 \begin{quote}
-As an APP user, I want to remove people I no longer meet with from friends, so that they can't invite me to hikes anymore.
+As an APP user, I want to remove people I no longer meet with from friends, so that they cannot invite me to hikes anymore.
 \end{quote}
 
 \paragraph*{Acceptance criteria}
@@ -570,7 +570,7 @@ As an APP user, I want to accept a friendship request that someone sent me, so t
 
 \subsection{Dismiss a friendship request}\label{US:friends-dismiss}
 \begin{quote}
-As an APP user, I want to dismiss a friendship request when I don't know the sender or don't want to hike with them, so that my request list isn't cluttered.
+As an APP user, I want to dismiss a friendship request when I do not know the sender or do not want to hike with them, so that my request list is not cluttered.
 \end{quote}
 
 \paragraph*{Acceptance criteria} 
@@ -599,7 +599,7 @@ As an APP user, I want to dismiss a friendship request when I don't know the sen
 
 \subsection{Joinable hikes}\label{US:friends-join-hikes}
 \begin{quote}
-As an APP user, I want to let my friends join my hikes, so that if I don't know who exactly I want there, my friends can decide for themselves if they want to come and I don't have to text everybody myself.
+As an APP user, I want to let my friends join my hikes, so that if I do not know who exactly I want there, my friends can decide for themselves if they want to come and I do not have to text everybody myself.
 \end{quote}
 
 When planning a hike, not always do we know who might want to come, and sometimes we really want to try out a specific route.
@@ -621,14 +621,14 @@ Another point to consider is the capacity of such a hiking trip -- the hike's ho
     \item User can see their friends' upcoming plans and their difficulty, relative to this user's fitness.
     \item User A can ask to join user B's joinable hike.
     \item When user B receives a request from user A to join one of their hikes, they can see how this changes the hike's total time so that they can make an informed decision.
-    \item A hike can be marked as `not joinable' after being joinable and vice versa.
-    \item When a hike is marked as `not joinable', all pending joining applications should be dismissed.
+    \item A hike can be marked as \code{not joinable} after being joinable and vice versa.
+    \item When a hike is marked as \code{not joinable}, all pending joining applications should be dismissed.
 \end{itemize}
 \end{quote}
 
 \subsection{Cancelling a hike}\label{US:friends-cancel-hike}
 \begin{quote}
-As an APP user, I want to let my friends know that I won't be able to go to the hike, so that their metrics are accurate when I'm not there.
+As an APP user, I want to let my friends know that I will not be able to go to the hike, so that their metrics are accurate when I'm not there.
 \end{quote}
 
 When different plans come up, a user will want to cancel their participation on a hike.
@@ -638,7 +638,7 @@ This is why it should be possible to appoint a new host from the invited friends
 \paragraph*{Acceptance criteria}
 \begin{quote}
 \begin{itemize}
-    \item When user A accepts an invitation from user B, user A can let user B know that they have changed their mind and won't attend. The total time and the attendees' biometric estimates should be recalculated.
+    \item When user A accepts an invitation from user B, user A can let user B know that they have changed their mind and will not attend. The total time and the attendees' biometric estimates should be recalculated.
     \item A hike's host can cancel, but they have to appoint a new host.
 \end{itemize}
 \end{quote}
@@ -695,18 +695,6 @@ Everybody who attends the hike should get a notification about the hike's planne
 \end{itemize}
 \end{quote}
 
-\subsection{Notifications for navigation}\label{US:notif-navig}
-\begin{quote}
-As an APP user, I want to know if I am lagging behind the plan, so that I can be sure I will reach the destination on time.
-\end{quote}
-
-\paragraph*{Acceptance criteria}
-\begin{quote}
-\begin{itemize}
-    \item If user A is hiking a planned hike and they are not going fast enough to follow the plan, they are notified.
-\end{itemize}
-\end{quote}
-
 %=========Considered features================================================================================================
 
 \section{Considered features}
@@ -721,8 +709,9 @@ Some other features that would be interesting to see in the application are
     \item user groups for users who always hike together, so that they would not have to search for their friends every time,
     \item multiple hike hosts, so that there are multiple people who can oversee the hike's activity,
     \item collecting data of non-planned, spontaneous hikes,
-    \item cancelling the hike once it has started, so that if the user decides they don't actually want to go, the APP doesn't force them,
+    \item cancelling the hike once it has started, so that if the user decides they do not actually want to go, the APP does not force them,
     \item pausing the hike so that the attendees can have a lunch break,
-    \item offline maps and navigation.
+    \item offline maps and navigation,
+    \item optional notifications for when the user is not following the plan (when being too slow or wandering off-route).
 \end{itemize}
 
