@@ -1,18 +1,4 @@
-In this chapter I aim to describe the proposed architecture of the solution, starting with a high-level glance -- the component diagram.
-
-The smartwatch requires an application to propagate the data from the heart rate sensor to the smart phone application.
-Once the raw data is received, it is combined with GPS data from the phone and forwarded through the 'biometric and GPS raw data exchange' interface to the IoT platform, where it gets processed and saved.
-When the smartphone application requires it, it requests the processed data through the 'processed data retrieval' and displays it.
-
-\begin{figure}[h]
-    \tmpframe{\includegraphics[width=\textwidth]{component.png}}
-    \caption{Component diagram of the designed IoT solution}
-\end{figure}
-
-Depending on the number and complexity of the features in the future, it is also possible to introduce a web client in order to make the smartphone APP lighter and easier to navigate.
-
-The watch communicates with the phone application over Bluetooth, with the watch application acting as a server, providing information for the client phone application.
-The phone application connects to the server using the phone's Internet connection.
+In this chapter I describe the process of designing and implementing the PoC solution.
 
 \section{PoC implementation}
 
@@ -21,7 +7,9 @@ This was fairly straightforward since Android's documentation is up to date and 
 
 The next step was to choose and integrate a smartwatch.
 
-Initially 
+Initially I meant to use the Xiaomi Mi Band 4 since I already owned one.
+However, Xiaomi watches do not pair directly with the phone, but with a proprietary application using server-based pairing,
+and there is no way to access the data from the phone other than to reverse engineer the protocol, root the phone, and access the pairing keys in the app's database~\cite{miband4-server-based}.
 
 I looked at multiple vendors' popularity based on market share and affordability, their documentation to see how good their development support is and whether or not they have public APIs for development.
 
@@ -34,17 +22,29 @@ According to Statista.com~\ref{fig:watch_market_share}, the most popular are App
 \end{figure}
 
 While Apple has a crushing lead on all other vendors, buying a unit just for development is not an option for me because of their high prices.
-This is why I chose the Samsung Activity Watch.
+This is why I chose the Samsung Galaxy Watch Active.
 
 Samsung watches run Tizen OS, which has public APIs, extensive documentation, tutorials and a large community.
 This is why I was surprised to find out how difficult it is to develop for this watch.
-The watch needs to be connected over the local network to the Tizen Studio IDE; the tutorial for this~\ref{tizen_connect_tutorial} omits the important step of enabling developer options when working with Bluetooth, so that the device does not disconnect when trying to use the Bluetooth API.
+The watch needs to be connected over the local network to the Tizen Studio IDE;
+the tutorial for this~\ref{tizen_connect_tutorial} omits the important step of enabling developer options when working with Bluetooth,
+so that the device does not disconnect when trying to use the Bluetooth API.
 The tutorial also doesn't mention that Bluetooth should not only be disabled, but has to be turned off, on, and off again in order to connect.
 
-Working with Bluetooth itself was tricky as well since their guide~\ref{tizen_bluetooth_guide} explicitly says that it should be implemented in the main thread, but then the app refuses to connect, and when I finally found a working sample application~\ref{tizen_bluetooth_sample}, its Bluetooth functionality was divided into different threads.
+Working with Bluetooth itself was tricky as well since their guide~\ref{tizen_bluetooth_guide} explicitly says that it should be implemented in the main thread,
+but the app refused to connect to the phone when it was implemented that way.
+When I finally found a working sample application~\ref{tizen_bluetooth_sample}, its Bluetooth functionality was divided into different threads.
 
 When implementing the watch's communication with the Android phone, another surprise was the missing step of asking for permissions to access the heart rate sensor~\ref{tizen_sensor_tutorial}.
 
-When my application could finally both measure heart rate and send string data to the Android phone, I attempted to send the heart rate data, which the application successfully performed and then crashed, without an accessible crash log, stack trace, or any log that could shed light at the issue at hand.
+When my application could finally both measure heart rate and send string data to the Android phone, I attempted to send the heart rate data,
+which the application successfully performed and then crashed, without an accessible crash log, stack trace, or any log that could shed light on the issue at hand.
+After spending a large amount of time on trying to find a solution to this problem without any results, even trying to run my app on a different watch (Samsung Galaxy Watch Active 2), I figured out that the problem was bigger than I initially expected and decided to leave the implementation unfinished.
 
+\section{Recommendations for future development}
+When it comes to wearables, I recommend limiting the supported devices to those that do not use server-based pairing, as this would cover most of the currently available gadgets,
+or take advantage of (and contribute to) existing open-source software for wearables integration, such as Gadgetbridge~\cite{Gadgetbridge}.
 
+In addition to these restrictions, continuous heart rate monitoring causes an extreme drain of the watch's battery,
+which is fine for short activities (sprints, swimming, cardio workouts), but can be a considerable issue while hiking.
+This is why I recommend supporting mostly devices which have a large capacity in this regard.

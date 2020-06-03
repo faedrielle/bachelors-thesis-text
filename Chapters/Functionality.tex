@@ -77,8 +77,8 @@ As an APP user, I want my heart rate-enabled wearable to work with the APP, so t
 
 Based on the analysis of existing applications, the most often used type of wearable tech are smartwatches.
 While most applications support other devices, such as chest straps, watches are the most convenient and wide-spread gadgets to be used by the general public.
-There are a few quite popular smartwatch vendors, most of whom have proprietary protocols of communicating with the system for data processing.
-At the time of writing, however, Samsung seems like the most popular option, in spite of being more than a little costly.
+
+Vendors are discussed in the Architecture and implementation chapter.
 
 \paragraph*{Acceptance criteria}
 \begin{quote}
@@ -87,16 +87,6 @@ At the time of writing, however, Samsung seems like the most popular option, in 
 \end{itemize}
 \end{quote}
 
-It will be more difficult to integrate some devices.
-Some vendors do not disclose their devices' API, or the API's documentation is only available for use exclusively by partners of the given vendor,
-some do not get paired with the phone itself and communicate with a proprietary app using server-based pairing instead (such as the Xiaomi Mi Band 4 I initially intended to use in the PoC) and there is no easy or straightforward way to get the data.
-For example, getting data from the Mi Band 4 would require root access to the user's phone~\cite{miband4-server-based}, which is just not an option for a normal user.
-Therefore I recommend limiting the supported devices to those that do not use server-based pairing, as this would cover most of the currently available gadgets,
-or take advantage of (and contribute to) existing open-source software for wearables integration, such as Gadgetbridge~\cite{Gadgetbridge}.
-By building on existing integrations it will be easier to spread across the market.
-
-In addition to these restrictions, continuous heart rate monitoring causes an extreme drain of the watch's battery, which is fine for short activities (sprints, swimming, cardio workouts), but can be a considerable issue while hiking.
-This is why I recommend supporting mostly devices which have a large capacity in this regard.
 
 For my PoC in this thesis, I chose the XXXXXXXXX.\todo{add what and why}
 
@@ -110,7 +100,7 @@ As an APP user, I want my fitness to be assessed, so that I can get relevant est
 Having analyzed the conventional ways of user fitness assessment in a previous chapter, the application should allow a user to use one of the multiple ways to get their fitness level.
 The outcome of the assessment should be the individual's VO2 max index and their heart rate zones -- so that if they need to maintain their heart rate in a specific range, they can cross-reference it with the exhaustion they perceive and learn to recognize when they are in the desired zone.
 
-If the user has no physical impairments, they can have their HR max assessed by a simple age-based formula, such as the one developed by Nes et al. (see the chapter on fitness assessment).
+If the user has no physical impairments, they can have their HR max assessed by a simple age-based formula, such as the one developed by Nes et al., or take one of the existing HR max tests knowing that they are dangerous when not done right (see the chapter on fitness assessment).
 
 Users with physical impairments could self-evaluate how much their condition affects their fitness, and based on this their HR max can be set by using one of the standard formulas and subtracting a smaller or larger number of beats per minute (further research needs to be done on how many beats this should be).
 This self-assessed value should be corrected as more data is available about the user.
@@ -696,6 +686,10 @@ Everybody who attends the hike should get a notification about the hike's planne
 
 %=========Considered features================================================================================================
 
+\section{Notes}
+Since the platform needs data from similar users to make estimations on routes, all features except for navigation require an active Internet connection.
+Navigation is working with already existing plans and reception in mountainous regions isn't ideal, which is why maps for planned routes should be downloaded.
+
 \section{Considered features}
 One feature that could help make the platform into a social network is messaging.
 I decided against it because everybody is already using their messaging apps of choice to communicate and it would be distracting the user from planning their hikes.
@@ -710,7 +704,6 @@ Some other features that would be interesting to see in the application are
     \item collecting data of non-planned, spontaneous hikes,
     \item cancelling the hike once it has started, so that if the user decides they do not actually want to go, the APP does not force them,
     \item pausing the hike so that the attendees can have a lunch break,
-    \item offline maps and navigation,
     \item optional notifications for when the user is not following the plan (when being too slow or wandering off-route).
 \end{itemize}
 
