@@ -13,25 +13,25 @@ In this chapter I will research a few such applications and judge them based on 
 \end{itemize}
 
 %==============================================================================================
-\subsection{komoot}
+\section{komoot}
 The cross-platform application for outdoor track suggestion can also be used as a tour planner, a map and a navigation system.
 
-\subsubsection*{Use of IoT possibilities}
+\subsection*{Use of IoT possibilities}
 Given its use of GPS sensors, komoot does qualify as a basic IoT system, however, it also relies heavily on user input for route rating.
 The smart watch only gets used for displaying of routes and navigation, not taking any advantage of the available biosensors.
-\subsubsection*{User fitness assessment}
+\subsection*{User fitness assessment}
 When a user is creating a route, they can set its difficulty as one of five levels, 
 describing the user's self-reported physical fitness and their current will to take up a challenge (or lack thereof): \textit{Couch Potato}, \textit{Average}, \textit{In Good Shape}, \textit{Athletic}, and \textit{Pro}.
 This parameter is considered when the app is generating a suitable route -- presumably by trying to adjust the elevation profile of the possible routes.
 The user's real fitness is not taken into account.
 
-\subsubsection*{Availability}
+\subsection*{Availability}
 The region-based pricing model allows users who do not travel too much to use the app for free,
 since the first region is provided at no cost.
 In the other pricing options Single Region, Region Bundle and All Regions -- the price-performance ratio seems to grow at a reasonable scale.
-\subsubsection*{Community}
+\subsection*{Community}
 With features like sharing and recommending of routes users have taken, following of other users, upvoting and commenting on their posts, the mobile application integrates a full-fledged social network.
-\subsubsection*{Extra features}
+\subsection*{Extra features}
 Komoot supports multiple sports, mainly hiking, running and multiple types of biking, to which it tailors the parameters of planned routes, such as mostly paved roads for road bikes and gravel for off-road biking.
 There are other activities the app supported by the app, which, however, do not offer the customized planning and can only be tagged later.
 These sports include skateboarding, skiing, climbing, and plenty of others.
@@ -63,7 +63,7 @@ All this information is delivered in easy-to-understand charts as well as intera
         \label{komoot-route-details-img}
 \end{figure}
 
-\subsubsection*{User-friendliness}
+\subsection*{User-friendliness}
 The mobile app uses a bottom tab bar for navigation, however, the way the tabs are designed is not entirely user-friendly.
 The \code{Plan} and \code{Record} tabs are clear enough, but the \code{Profile} tab contains a lot of information that does not seem entirely connected to the user's profile, such as people to follow and the app's settings.
 The last tab, titled \code{More}, only contains promotions for komoot offline maps and komoot premium, which is something a user does not expect under this tab.
@@ -72,10 +72,10 @@ The navigation through the mobile app takes some time to get used to -- it took 
 Once I created a route, the information provided was well-delivered and easy to read, however, there was no obvious way of completely cancelling the chosen route and picking another one.
 Instead, hiding in the Options of the route -- which I had not noticed before -- I found the "Reset route" option, which cleared the route.
 Overall, the app makers made some great UX decisions, but also some that do not seem natural to the user.
-\subsubsection*{Cross-platform}
+\subsection*{Cross-platform}
 The system is fully integrated with the Apple Watch and Samsung gear, and -- at least limitedly -- supports a number of other brands of smart watches and other Bluetooth-enabled devices.
 The mobile application runs both on iPhones and Android phones.
-\subsubsection*{Propriety}
+\subsection*{Propriety}
 The system is not entirely open-source, as a few of their repositories are public, but the core components remain proprietary~\cite{komoot-github}.
 
 \begin{figure}[h!]%
@@ -94,37 +94,38 @@ The system is not entirely open-source, as a few of their repositories are publi
 
 %==============================================================================================
 \pagebreak
-\subsection{endomondo}
+\section{endomondo}
 
 Under Armour's endomondo application serves as a personal trainer for distance-based sports, such as running, cycling, or hiking.
 Their main focus is on the endorphin release people get from encouragement and motivation -- this is why the app gives coaching advice, allows the users to send each other peptalks, and has over the course of its existence built a global fitness community.
-\subsubsection*{Use of IoT possibilities}
+\subsection*{Use of IoT possibilities}
 The application integrates with a wide range of watches and sensors, collecting data from GPS trackers, bicycle speed and cadence sensors, bike power sensors and heart rate measurement units.
 Some basic statistics based on this data (such as average heart rate) is presented to the user with a free plan, 
 while the more interesting statistics displayed with interactive graphs are for premium users only -- average heart rate history, heart rate zone analysis, even weather information collected from AccuWeather.com at the time of the workout.
 
 The application used to have a feature called Peer Banchmark, which used other users' data to compare the user with the rest of the community, however, this feature was removed due to lack of use~\cite{endomondo-HR-max-emails}.
-\subsubsection*{User fitness assessment}
-The premium version of the application promises personal exercise plans for running goals, and the heart rate zones are calculated using the Karvonen formula: $((max HR − resting HR) × \% Intensity) + resting HR$,
-however, endomondo's website does not mention how and when HRmax and HRmin are calculated, and the official support personnel does not have any additional information about what is written on their website~\cite{endomondo-HR-max-emails}.
+\subsection*{User fitness assessment}
+The premium version of the application promises personal exercise plans for running goals, and the heart rate zones are calculated using the Karvonen formula: 
+\[((max HR − resting HR) × \% Intensity) + resting HR\]
+However, endomondo's website does not mention how and when HRmax and HRmin are calculated, and the official support personnel does not have any additional information about what is written on their website~\cite{endomondo-HR-max-emails}.
 In spite of that, the values for the Karvonen formula are pre-filled when a user accesses the page, so they probably use age-based formulas to estimate all the variables.
 In any case, they are all editable, so if the user already knows their HRmax for example from a laboratory test, they can use it.
 When creating a new training plan (that is, having endomondo calculate the ``ideal'' plan for how a person should train if they want to run a specific distance on a specific day in the future),
 one of the steps has the user choose a recent workout which will be used for calculating the individual's fitness level and for the plan generation~\cite{endomondo-training-plan-fitness-assessment}.
-\subsubsection*{Availability}
+\subsection*{Availability}
 Endomondo comes in two versions -- free and premium.
 The free version has basic functionality, which is so limited that some have opted for free alternatives with more useful features such as Strava or Runmeter~\cite{endomondo-review}.
 It is supported by not too obtrusive ads on the bottom of the screen.
 
 The premium version is ad-free, brings a number of necessary features such as heart rate zones, training plans, and others, and is based on a monthly subscription.
-\subsubsection*{Community}
+\subsection*{Community}
 Endomondo's main focus in keeping their users on the platform is motivation, which is also demonstrated by the application's slogan -- ``Free your endorphines''.
 One of their features is a real-time audio motivator, which makes comments on how well the user is doing compared to previous workouts,
 encouraging them if they are lagging behind or is informing them about the personal record they are be about to hit.
 
 Competing against oneself, however, is not as much fun -- and therefore as motivating -- as getting to beat a friend or relative at the activity of choice.
 This is why the application also integrates a social network of millions of users with functions like sharing one's activities, sending peptalks and challenges.
-\subsubsection*{Extra features}
+\subsection*{Extra features}
 After the end of the workout, you can answer a ``How was your workout?'', however, since this is a plain text option, this data is only for the user's later reading, and cannot be used in any machine processing.
 
 A user can post photos in the description of the activity, as well as use tags which are useful on social media after sharing.
@@ -133,7 +134,7 @@ Other users can also be tagged, for example running partners or the person you a
 
 The premium version of the app also includes a few modes for interval training (periods of exercise alternating with periods of normal-to-high intensity training) as well as the option to build your own.
 There are many applications that support this feature -- after all, it is just fairly basic time tracking -- but it is nice to have all the functionality in a single app.
-\subsubsection*{User-friendliness}
+\subsection*{User-friendliness}
 The navigation in the mobile application is realized with a bottom tab bar, whose design is nicely done.
 The \code{More} tab hides a lot of functionality, effectively serving as an easy-to-reach hamburger menu.
 
@@ -141,7 +142,7 @@ Given the fact that that endomondo does not support planning of routes and merel
 
 \begin{figure}[h!]
     \centering
-        \tmpframe{\includegraphics[width=0.5\textwidth]{Images/endomondo_home.jpg}}
+        \tmpframe{\includegraphics[width=0.4\textwidth]{Images/endomondo_home.jpg}}
         \caption{endomondo's main screen~\cite{endomondo-home-img}.}
         \label{endomondo-home-img}
 \end{figure}
@@ -169,33 +170,33 @@ The application is easy to navigate and is fully made in, if somewhat blocky-fee
         \caption{endomondo history example from the web application~\cite{endomondo-history-img}.}
 \end{figure}
 
-\subsubsection*{Cross-platform}
+\subsection*{Cross-platform}
 All the features are available for iOS 9 and newer and Android 4.1 and newer.
 Endomondo also used to be available on Blackberry and Windows phones.
 Some features are only available in the web application.
-\subsubsection*{Propriety}
+\subsection*{Propriety}
 The whole endomondo application only has a single public repository on github, which is a fork of tapiriik -- a tool for data synchronization between different fitness applications, such as Endomondo, Garmin Connect, Strava, Runkeeper, and others~\cite{endomondo-tapiriik}.
 Otherwise, the whole application is completely proprietary.
 %==============================================================================================
 \pagebreak
 \pagebreak
-\subsection{Strava}
+\section{Strava}
 Strava is a social network for athletes that offers a large number of features mainly focused on tracking and analysis of users' activities, sharing, and competing~\cite{strava}.
 The target sports of the platform are running and cycling, but it supports plenty of other activities.
 It has both a web and a mobile application, with some features shared and some only available in one of them.
-\subsubsection*{Use of IoT possibilities}
+\subsection*{Use of IoT possibilities}
 Strava makes good use of sensors in the users' devices -- those for measuring heart rate, power, and GPS.
 The platform creates heatmaps of routes that are used the most, taking advantage of their tracking technology and the users' GPS sensors.
 They also use a novel way of determining the surface of routes, thanks to data not only from OpenStreetMap, but also from the users' bicycle frames.
 
-\subsubsection*{User fitness assessment}
+\subsection*{User fitness assessment}
 The Strava platform includes plenty of user fitness-related components, such as the premium \code{Fitness \& Freshness} feature,
 which shows the user how fit they are on a graph of past activities, and how fresh, based on the amount of exercise the user has recently done,
 all of this calculated using power data and heart rate or perceived exertion~\cite{strava-fitness-freshness}.
 The platform also has heart rate zones, which are primarily calculated using an age formula, but the user can manually customize them.
-\subsubsection*{Availability}
+\subsection*{Availability}
 Strava is available both for free and for an affordable monthly subscription.
-\subsubsection*{Community}
+\subsection*{Community}
 The platform has millions of active users who are connected in a large social network.
 It allows users to create clubs, such as groups of friends as well as racing teams.
 These clubs give the user the opportunity to keep track of the members' activity and exercise, with feeds and leaderboards.
@@ -206,12 +207,12 @@ Another community-building perk is the feed of challenges (fig.\ref{strava-chall
 
 \begin{figure}[h]
     \centering
-    \tmpframe{\includegraphics[width=0.5\textwidth]{Images/strava-challenges.jpg}}
+    \tmpframe{\includegraphics[width=0.4\textwidth]{Images/strava-challenges.jpg}}
     \caption{Challenges feed on Strava~\cite{strava-challenges}.}
     \label{strava-challenges}
 \end{figure}
 
-\subsubsection*{Extra features}
+\subsection*{Extra features}
 One of the most popular premium features is called Segments (fig.\ref{strava-segments-img}), where users can compare their times on specific portions of road or trail using leaderboards.
 This is supported by heatmaps of use frequency of specific routes.
 It also allows the user to input their pictures, gear, and perceived exertion to the activity session.
@@ -219,12 +220,12 @@ The premium version of the platform offers a lot of features that are somewhat l
 
 \begin{figure}[htb!]
     \centering
-        \tmpframe{\includegraphics[width=0.5\textwidth]{Images/strava-segments.jpg}}
+        \tmpframe{\includegraphics[width=0.4\textwidth]{Images/strava-segments.jpg}}
         \caption{Strava segments near the user's location~\cite{strava-segments-img}.}
         \label{strava-segments-img}
 \end{figure}
 
-\subsubsection*{User-friendliness}
+\subsection*{User-friendliness}
 The mobile app uses a tab bar for navigation, with nicely thought out tabs - \code{Feed} tab for posts from the community, \code{Explore} tab for challenges, clubs, and segments,
 the central \code{Record} tab for the actual activity, which is simple and clutter-free, with the options to change the sport, pick a route, and turn on the Strava Beacon.
 Another tab \code{Profile} keeps the user's account details and fitness information, such as their stats, activities, and training log.
@@ -236,26 +237,26 @@ Another unusual design decision was putting the \code{Find friends} button only 
 
 \begin{figure}[h]
     \centering
-    \tmpframe{\includegraphics[width=0.5\textwidth]{Images/strava-morning-run-stats.jpg}}
+    \tmpframe{\includegraphics[width=0.4\textwidth]{Images/strava-morning-run-stats.jpg}}
     \caption{Statistics of a run on Strava~\cite{strava-run-stats-img}.}
     \label{strava-run-stats-img}
 \end{figure}
 
-\subsubsection*{Cross-platform}
+\subsection*{Cross-platform}
 The mobile app Strava is available both on Android and iOS, as well as providing a web application.
 It supports a variety of smart watches, power sensors, and other devices.
-\subsubsection*{Propriety}
+\subsection*{Propriety}
 The application is closed-source, but it offers a publicly available API for custom development.
 %==============================================================================================
-\subsection{Garmin Explore and Garmin Connect}
+\section{Garmin Explore and Garmin Connect}
 The vast ecosystem Garmin has created for their users is filled with an assortment of wearables, radars, smart lights, navigations, customized maps, and plenty more, providing features which are presented to the user via modular mobile apps.
 
 Here I will analyse the Garmin Explore application, which is targeted at hikers, in tandem with Garmin Connect, which functions as a fitness tracker.
 
-\subsubsection*{Use of IoT possibilities}
+\subsection*{Use of IoT possibilities}
 Most fitness-focused Garmin watches do have a heart rate sensor and all of them include a step counter, however, this data is never compared with that of other users, keeping focus on the user's activity history with no prediction.
 The Garmin Connect app includes an ``Insights'' feature, which compares the user's simpler data, such as daily number of steps or hours of sleep, to that of all other users.
-\subsubsection*{User fitness assessment}
+\subsection*{User fitness assessment}
 Some of the heart-rate-monitor enabled watches allow a user to set the zones (see chapter on fitness assessment) in which they would like to keep their heart rate depending on the activity they choose to do.
 The Connect app also allows users to manually input their VO2 max, but doesn't test the user on it.
 
@@ -263,22 +264,22 @@ As mentioned in the Fitness assessment chapter, they offer the Performance condi
 
 \begin{figure}[h]
     \centering
-        \tmpframe{\includegraphics[width=0.5\textwidth]{Images/garmin-connect-myday-screen.png}}
+        \tmpframe{\includegraphics[width=0.4\textwidth]{Images/garmin-connect-myday-screen.png}}
         \caption{My day - Garmin Connect's home screen displays statistics of the user's recent activity~\cite{garmin-my-day-img}.}
         \label{garmin-my-day-img}
 \end{figure}
 
-\subsubsection*{Availability}
+\subsection*{Availability}
 In general, Garmin's pricing model relies on the user buying one of their high-end smartwatches, whereupon the rest of the components (apps, basic maps, support, etc.) are free, with some exceptions, such as advanced maps. 
 The company's smartwatches are considered premium quality, with a wide price range - target groups include \textit{potential Rolex buyers}~\cite{garmin-expensive} as well as ordinary users~\cite{garmin-watches-review}.
-\subsubsection*{Community}
+\subsection*{Community}
 The Connect application handles the data from the point of view of a fitness tracker, with social features like groups, competitions, likes, comments, and badges of accomplishment~\cite{garmin-connect}.
-\subsubsection*{Extra features}
+\subsection*{Extra features}
 The Explore application is very simple, mostly just containing the bare necessities such as the map, route planning, and a history of activities.
 It doesn't even contain navigation options; it is hard for me as a user to understand what its use is.
 It allows the user to group waypoints, tracks, routes and activities into collections for each trip.
 The Connect application, as a fitness tracker, gives insights into the user's fitness, allows to track the lifespan of the user's gear, their sleep quality, water intake, menstrual cycle (as this can affect the user's stamina), and other factorss.
-\subsubsection*{User-friendliness}
+\subsection*{User-friendliness}
 The modularity of Garmin's apps allows for cleaner, easier-to-navigate interfaces.
 
 The Garmin Explore app uses a tab bar for navigation; and while the four tabs do not have any inscriptions, the icons manage to communicate fairly clearly what the user can find in them.
@@ -289,8 +290,8 @@ Once the route was saved and shown on the map, I could not figure out how to can
 
 \begin{figure}[h]
     \centering
-        \tmpframe{\includegraphics[width=0.5\textwidth]{Images/Garmin-map-tab.jpg}}
-        \tmpframe{\includegraphics[width=0.5\textwidth]{Images/Garmin-route-create.jpg}}
+        \tmpframe{\includegraphics[width=0.4\textwidth]{Images/Garmin-map-tab.jpg}}\hfill
+        \tmpframe{\includegraphics[width=0.4\textwidth]{Images/Garmin-route-create.jpg}}
         \caption{Garmin's map tab~\cite{garmin-map-tab-img} and route creation screen~\cite{garmin-route-create}.}
         \label{fig:garmin-map}
 \end{figure}
@@ -300,16 +301,16 @@ The difference between the (otherwise synonymic) words ``route'' and ``track'' i
 
 The Connect app, as the main fitness app in the Garmin ecosystem, entails a larger number of features, resulting in a full tab bar as well as a hamburger menu, which I found a little confusing.
 
-\subsubsection*{Cross-platform}
+\subsection*{Cross-platform}
 All of Garmin's applications can be installed both on Android and iPhone.
 However, they can only be paired with watches inside Garmin's ecosystem, which is a drawback for users who already own a smartwatch.
-\subsubsection*{Propriety}
+\subsection*{Propriety}
 Some of the Garmin applications are completely open-source, either due to the software that they are derived from, or simply to provide the general public with opportunity to customize their Garmin experience~\cite{garmin-open-source}~\cite{garmin-connect-github-repos}.
 These apps are mostly concerned with map handling, navigation and sound codecs, but also include some bits of functionality like widgets, low power watch apps and others.
 
 While some of this code may be used in the Explore or Connect applications, these repositories don't contain their core functionality.
 
-\subsection{Summary}
+\section{Summary}
 All of the studied platforms are used by a wide community of users, are either mostly or completely closed-source, base their maps off the OpenStreetMap, and have their own ways (or lack thereof) of integrating IoT principles in their design.
 
 Komoot is a great app for navigation; its flexible way of route planning gives the user a good idea of what they can expect on their trip,

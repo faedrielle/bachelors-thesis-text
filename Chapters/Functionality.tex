@@ -18,7 +18,10 @@ Rather, they are the beginning of a conversation that can lead to such specifica
 However, they provide context and scope of the requested feature.
 Often they are written in simple, non-technical language, as most systems do not have tech-savvy users.
 The typical template for a user story is:
-\textit{As a < type of user >, I want < some goal >, so that < some reason >}~\cite{user-story-definition}, where the reason part is optional but recommended.
+
+\textit{As a <type of user>, I want <some goal>, so that <some reason>}~\cite{user-story-definition},
+
+where the reason part is optional but recommended.
 Another important component of a US are \textit{acceptance criteria}, which define the functionality which needs to be working for the story to be finished, often including not only the happy path, but a sad path as well.
 In general, acceptance criteria should be testable, which is why they are often used as starting points by testers, to get a better idea of what has been done, and provide them with some inspiration.
 
@@ -80,17 +83,14 @@ As an App user, I want my heart rate-enabled wearable to work with the App, so t
 Based on the analysis of existing applications, the most often used type of wearable tech are smartwatches.
 While most applications support other devices, such as chest straps, watches are the most convenient and wide-spread gadgets to be used by the general public.
 
-Vendors are discussed in the Architecture and implementation chapter.
+Vendors are discussed in the PoC implementation chapter.
 
 \paragraph*{Acceptance criteria}
 \begin{quote}
 \begin{itemize}
-    \item A popular kind of wearables can communicate with the App in both directions.
+    \item A popular kind of wearable can communicate with the App in both directions.
 \end{itemize}
 \end{quote}
-
-
-For my PoC in this thesis, I chose the XXXXXXXXX.\todo{add what and why}
 
 %================================================================================================================================
 
@@ -109,6 +109,7 @@ This self-assessed value should be corrected as more data is available about the
 
 As far as objective assessment, I see plenty of potential for the use of machine learning and neural networks.
 The networks can learn from the data collected from a good number of users over a longer period, and then categorize the new users into fitness groups based on this data, which will then be used to predict the users' future hikes.
+More research is needed in cooperation with data scientists and physical therapy professionals, in order to develop reliable models for fast difficulty assessment of a route for a specific individual.
 
 \subsection{Implement support for VO2 max tests}\label{US:fit-vo2max}
 \begin{quote}
@@ -517,7 +518,7 @@ As an App user, I want to accept invitations to hikes that I want to attend, so 
 As an App user, I want to add new friends, so that I can invite them to hikes.
 \end{quote}
 
-The only people that can be added, need to be users of the system.
+The only people that can be added need to be users of the App.
 In order to add friends, the App can use user profile links (primarily textual, but QR codes could be a popular option) and social media.
 A nice-to-have way would be using the phones' proximity if the two people are close to one another, for example with Bluetooth or NFC.
 

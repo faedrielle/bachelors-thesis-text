@@ -33,6 +33,8 @@ It enforces the idea that a user should always know where in the application the
 Another one of its advantages is the possibility of inobtrusive notifications using icon badges -- little red circles in the top right corner of the icon, often containing a number to show the number of notifications.
 Other navigation options include dropdown menus, scrollable menus, single page dot navigation, and others~\cite{hamburger-alternatives}.
 
+While designing the application, I followed the material design guidelines.
+
 When describing the screens I will refer to the user stories which the discussed UI component covers.
 
 I chose the tab bar with five tabs: \code{Plans}, \code{Routes}, \code{Map}, \code{Friends}, and \code{Profile}.
@@ -326,10 +328,10 @@ The navigation mode stays alive and accessible through a permanent notification.
 \begin{figure}[h!]
     \centering
     \tmpframe{\includegraphics[width=0.4\textwidth]{Images/appScreens/navigation.pdf}}
+    \caption{Navigation mode.}
     \label{fig:navigation}
 \end{figure}
 
 \section{Notifications}
 Notifications are communicated to the user via icon badges on the bottom tab bar.
-
-Notifications are primarily sent to the system and are displayed on the notification bar.
+When not using the app, the user receives notifications through the phone's notifications bar.

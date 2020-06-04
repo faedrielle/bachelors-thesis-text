@@ -1,19 +1,25 @@
-In this chapter I describe the process of designing and implementing the PoC solution.
+In this chapter I describe the process of implementing the PoC.
 
-\section{PoC implementation}
+A proof-of-concept is a quick and dirty solution that just works~\cite{poc}.
+The source code does not need to be pretty, or designed well, the main point is the functionality.
+
+\section{Android application}
 
 I started by implementing a simple Android application that acts as a server for incoming Bluetooth connections from paired devices.
 This was fairly straightforward since Android's documentation is up to date and there is a large community of developers for this OS.
 
+My application is written in Java.
+
+\section{Smartwatch application}
 The next step was to choose and integrate a smartwatch.
 
 Initially I meant to use the Xiaomi Mi Band 4 since I already owned one.
-However, Xiaomi watches do not pair directly with the phone, but with a proprietary application using server-based pairing,
-and there is no way to access the data from the phone other than to reverse engineer the protocol, root the phone, and access the pairing keys in the app's database~\cite{miband4-server-based}.
+However, Xiaomi watches do not pair directly with the phone; they use a proprietary application and server-based pairing.
+There is no way to access the data from the phone other than to reverse engineer the protocol, root the phone, and access the pairing keys in the app's database~\cite{miband4-server-based}.
 
 I looked at multiple vendors' popularity based on market share and affordability, their documentation to see how good their development support is and whether or not they have public APIs for development.
 
-According to Statista.com~\ref{fig:watch_market_share}, the most popular are Apple watches, followed by Samsung, Fitbit and other vendors.
+According to Statista.com (fig.~\ref{fig:watch_market_share}), the most popular are Apple watches, followed by Samsung, Fitbit and other vendors.
 
 \begin{figure}[h]
     \tmpframe{\includegraphics[width=\textwidth]{smartwatch_market_share.png}}
@@ -24,7 +30,7 @@ According to Statista.com~\ref{fig:watch_market_share}, the most popular are App
 While Apple has a crushing lead on all other vendors, buying a unit just for development is not an option for me because of their high prices.
 This is why I chose the Samsung Galaxy Watch Active.
 
-Samsung watches run Tizen OS, which has public APIs, extensive documentation, tutorials and a large community.
+Samsung watches run Tizen OS, which has public APIs, extensive documentation, tutorials and a large community, with native applications written in the C language.
 This is why I was surprised to find out how difficult it is to develop for this watch.
 The watch needs to be connected over the local network to the Tizen Studio IDE;
 the tutorial for this~\cite{tizen_connect_tutorial} omits the important step of enabling developer options when working with Bluetooth,
@@ -35,7 +41,7 @@ Working with Bluetooth itself was tricky as well since their guide~\cite{tizen_b
 but the app refused to connect to the phone when it was implemented that way.
 When I finally found a working sample application~\cite{tizen_bluetooth_sample}, its Bluetooth functionality was divided into different threads.
 
-When implementing the watch's communication with the Android phone, another surprise was the missing step of asking for permissions to access the heart rate sensor~\cite{tizen_sensor_tutorial}.
+When implementing the watch's communication with the Android phone, another surprise was the tutorial's missing step of asking for permissions to access the heart rate sensor~\cite{tizen_sensor_tutorial}.
 
 When my application could finally both measure heart rate and send string data to the Android phone, I attempted to send the heart rate data,
 which the application successfully performed and then crashed, without an accessible crash log, stack trace, or any log that could shed light on the issue at hand.

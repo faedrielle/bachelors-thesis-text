@@ -24,7 +24,7 @@
 
 \setlength{\fboxsep}{0.005pt}
 \newcommand{\tmpframe}[1]{\fbox{#1}}
-%\renewcommand{\tmpframe}[1]{#1}
+\renewcommand{\tmpframe}[1]{#1}
 
 \def\code#1{\texttt{#1}}
 
@@ -58,14 +58,16 @@
 \abstractEN{The subject of this bachelor's thesis is to perform a software analysis of an Internet of Things platform that estimates how difficult tourist tracks will be for people before they take them, based on heart rate data collected from their and other users' smartwatches.
 
 The research chapters of the thesis focus on modern methods of cardiovascular fitness assessment and the study of existing applications in the domain of fitness and e-health.
+
 Using methods of agile development, the functionality of the solution is analysed in the form of user stories, which can be directly taken as assignments for development teams.
-This analysis is the foundation for designing the front-end of a mobile application that supports navigation, informed planning of hikes both alone and with other users based on all the participants' fitness, and smartwatch integration. The whole design is built with an emphasis on user experience guidelines.
+This analysis is the foundation for designing the front-end of a mobile application that supports navigation, smartwatch integration, and informed planning of hikes both alone and with other users based on all the participants' fitness. The whole design is built with an emphasis on user experience guidelines.
 
 Subsequently, a high-level architecture of the solution is designed, and a proof of concept of the platform is developed, however, due to technical difficulties, it is unfinished.}
-\abstractCS{Predmetom bakalárskej práce je softvérová analýza platformy Internetu vec{\' i}, ktorá odhaduje náročnosť turistických trás pre turistov na základe údajov o srdcovej činnosti zozbieraných zo zariadení smartwatch patriacich používateľom.
+\abstractCS{Predmetom bakalárskej práce je softvérová analýza platformy Internetu vec{\' i}, ktorá odhaduje náročnosť turistických trás pre turistov na základe údajov o srdcovej činnosti zozbieraných z inteligentných hodiniek patriacich používateľom.
 
-Výskumné kapitoly práce sa sústredia na moderné metódy pre hodnotenie kardiovaskulárnej kondície, ako aj štúdiu existujúcich aplikácií v oblasti fitness a e-health.
-V práci je využitá metodika agilného vývoja. Funkcionalita riešenia je analyzovaná fo forme user stories, ktoré môžu byť priamo preberané ako zadania pre vývojárske tímy. Táto analýza je základom pre návrh front-endovej časti mobilnej aplikácie, ktorá podporuje navigáciu, integráciu zariadení smartwatch a informované plánovanie túr samostatne alebo spolu s inými používateľmi aplikácie na základe ich fyzickej kondície. Celý design je vytvorený s dôrazom na smernice pre user experience.
+Výskumné kapitoly práce sa sústredia na moderné metódy hodnotenia kardiovaskulárnej kondície, ako aj štúdiu existujúcich aplikácií v oblasti fitness a e-health.
+
+V práci je využitá metodika agilného vývoja. Funkcionalita riešenia je analyzovaná vo forme user stories, ktoré môžu byť priamo preberané ako zadania pre vývojárske tímy. Táto analýza je základom pre návrh front-endovej časti mobilnej aplikácie, ktorá podporuje navigáciu, integráciu inteligentných hodiniek a informované plánovanie túr samostatne alebo spolu s inými používateľmi aplikácie na základe ich fyzickej kondície. Celý design je vytvorený s dôrazom na smernice pre user experience.
 
 Okrem toho je nadizajnovaná high-level architektúra riešenia a vyvinutý proof of concept platformy, ktorý je z dôvodu technických problémov nedokončený.}
 \placeForDeclarationOfAuthenticity{Prague}
@@ -83,8 +85,6 @@ Okrem toho je nadizajnovaná high-level architektúra riešenia a vyvinutý proo
 
 
 \setsecnumdepth{part}
-\chapter{Task - temporary chapter}
-\input{Chapters/Task.tex}
 
 \setsecnumdepth{all}
 \chapter{Introduction}
@@ -119,10 +119,13 @@ Okrem toho je nadizajnovaná high-level architektúra riešenia a vyvinutý proo
 \input{Chapters/Dictionary.tex}
 
 \chapter{Contents of enclosed CD}
+\section*{Available online}
+The contents of the attached medium are also available at:
 
-change appropriately
+\href{https://github.com/faedrielle/fit-bachelors-thesis-data.git}{https://github.com/faedrielle/fit-bachelors-thesis-data.git}
 
-\begin{figure}
+\section*{Visualization}
+\begin{figure}[h]
 	\dirtree{%
 		.1 readme.txt\DTcomment{the file with CD contents description}.
 		.1 exe\DTcomment{the directory with executables}.
