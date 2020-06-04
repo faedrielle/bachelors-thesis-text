@@ -1,7 +1,7 @@
 In this chapter I will describe the architecture of the IoT platform, starting with a high-level glance -- the component diagram.
 
-The smartwatch requires an application to propagate the data from the heart rate sensor to the mobile application through the \code{hr_data} interface.
-Once the raw data is received, it is combined with GPS data from the phone and forwarded through the \code{data_access} interface to the IoT platform, where it gets processed and saved.
+The smartwatch requires an application to propagate the data from the heart rate sensor to the mobile application through the \code{hr\_data} interface.
+Once the raw data is received, it is combined with GPS data from the phone and forwarded through the \code{data\_access} interface to the IoT platform, where it gets processed and saved.
 When the smartphone application requires it, it requests the processed data through the same interface and displays it.
 
 \begin{figure}[h]
