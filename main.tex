@@ -54,12 +54,23 @@
 \author{Zuzana Václaviková} %author's name without academic degrees
 \authorWithDegrees{Zuzana Václaviková} %author's name with academic degrees
 \supervisor{Ing. Jan Krákora, PhD.}
-\acknowledgements{THANKS (remove entirely in case you do not with to thank anyone)}
-\abstractEN{The subject of this bachelor's thesis is the software analysis of an IoT solution}
-\abstractCS{V n{\v e}kolika v{\v e}t{\' a}ch shr{\v n}te obsah a p{\v r}{\' i}nos t{\' e}to pr{\' a}ce v {\v c}esk{\' e}m jazyce.}
+\acknowledgements{I would like to thank my supervisor, Ing. Jan Krákora, PhD., for his guidance and encouraging words when I was out of my depth. Many thanks to \{v S}imon Let for reviewing my work throughout the writing process and giving valuable advice. Finally, thank you to my partner David for providing endless support, and my family and friends, for never ceasing to believe in me.}
+\abstractEN{The subject of this bachelor's thesis is to perform a software analysis of an Internet of Things platform that estimates how difficult tourist tracks will be for people before they take them, based on heart rate data collected from their and other users' smartwatches.
+
+The research chapters of the thesis focus on modern methods of cardiovascular fitness assessment and the study of existing applications in the domain of fitness and e-health.
+Using methods of agile development, the functionality of the solution is analysed in the form of user stories, which can be directly taken as assignments for development teams.
+This analysis is the foundation for designing the front-end of a mobile application that supports navigation, informed planning of hikes both alone and with other users based on all the participants' fitness, and smartwatch integration. The whole design is built with an emphasis on user experience guidelines.
+
+Subsequently, a high-level architecture of the solution is designed, and a proof of concept of the platform is developed, however, due to technical difficulties, it is unfinished.}
+\abstractCS{Predmetom bakalárskej práce je softvérová analýza platformy Internetu vec{\' i}, ktorá odhaduje náročnosť turistických trás pre turistov na základe údajov o srdcovej činnosti zozbieraných zo zariadení smartwatch patriacich používateľom.
+
+Výskumné kapitoly práce sa sústredia na moderné metódy pre hodnotenie kardiovaskulárnej kondície, ako aj štúdiu existujúcich aplikácií v oblasti fitness a e-health.
+V práci je využitá metodika agilného vývoja. Funkcionalita riešenia je analyzovaná fo forme user stories, ktoré môžu byť priamo preberané ako zadania pre vývojárske tímy. Táto analýza je základom pre návrh front-endovej časti mobilnej aplikácie, ktorá podporuje navigáciu, integráciu zariadení smartwatch a informované plánovanie túr samostatne alebo spolu s inými používateľmi aplikácie na základe ich fyzickej kondície. Celý design je vytvorený s dôrazom na smernice pre user experience.
+
+Okrem toho je nadizajnovaná high-level architektúra riešenia a vyvinutý proof of concept platformy, ktorý je z dôvodu technických problémov nedokončený.}
 \placeForDeclarationOfAuthenticity{Prague}
-\keywordsEN{Internet of Things, hiking track difficulty, activity tracking, heart rate monitoring, physical fitness assessment, smart wearables, software analysis, mobile application design, user experience}
-\keywordsCS{Internet vecí, náročnosť turistickej trasy, sledovanie fyzickej aktivity, meranie tepu srdca, posudzovanie telesnej kondície, nositeľná elektronika, softvérová analýza, dizajn mobilnej aplikácie, užívateľské skúsenosti}
+\keywordsEN{Internet of Things, hiking track difficulty, heart rate monitoring, physical fitness assessment, smart wearables, software analysis, mobile application design, user experience}
+\keywordsCS{Internet vecí, náročnosť turistickej trasy, meranie tepu srdca, posudzovanie telesnej kondície, nositeľná elektronika, softvérová analýza, dizajn mobilnej aplikácie, užívateľské skúsenosti}
 \declarationOfAuthenticityOption{1} %select as appropriate, according to the desired license (integer 1-6)
 % \website{http://site.example/thesis} %optional thesis URL
 
@@ -107,21 +118,20 @@
 \chapter{Acronyms}
 \input{Chapters/Dictionary.tex}
 
-% \chapter{Contents of enclosed CD}
+\chapter{Contents of enclosed CD}
 
-%change appropriately
+change appropriately
 
-% \begin{figure}
-% 	\dirtree{%
-% 		.1 readme.txt\DTcomment{the file with CD contents description}.
-% 		.1 exe\DTcomment{the directory with executables}.
-% 		.1 src\DTcomment{the directory of source codes}.
-% 		.2 wbdcm\DTcomment{implementation sources}.
-% 		.2 thesis\DTcomment{the directory of \LaTeX{} source codes of the thesis}.
-% 		.1 text\DTcomment{the thesis text directory}.
-% 		.2 thesis.pdf\DTcomment{the thesis text in PDF format}.
-% 		.2 thesis.ps\DTcomment{the thesis text in PS format}.
-% 	}
-% \end{figure}
-
+\begin{figure}
+	\dirtree{%
+		.1 readme.txt\DTcomment{the file with CD contents description}.
+		.1 exe\DTcomment{the directory with executables}.
+		.1 src\DTcomment{the directory of source codes}.
+		.2 tizen-app\DTcomment{smartwatch app sources}.
+        .2 android-app\DTcomment{smartphone app sources}.
+        .2 thesis\DTcomment{the directory of \LaTeX{} source codes of the thesis}.
+		.1 text\DTcomment{the thesis text directory}.
+		.2 thesis.pdf\DTcomment{the thesis text in PDF format}.
+	}
+\end{figure}
 \end{document}
