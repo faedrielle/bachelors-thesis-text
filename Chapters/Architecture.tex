@@ -29,7 +29,7 @@ According to Statista.com~\ref{fig:watch_market_share}, the most popular are App
 
 \begin{figure}[h]
     \tmpframe{\includegraphics[width=\textwidth]{smartwatch_market_share.png}}
-    \caption{Market share of smartwatch unit shipments worldwide from the 2Q'14 to 1Q '20*, by vendor~\ref{watch_market_share}.}
+    \caption{Market share of smartwatch unit shipments worldwide from the 2Q'14 to 1Q '20*, by vendor~\cite{watch_market_share}.}
     \label{fig:watch_market_share}
 \end{figure}
 
@@ -38,12 +38,12 @@ This is why I chose the Samsung Activity Watch.
 
 Samsung watches run Tizen OS, which has public APIs, extensive documentation, tutorials and a large community.
 This is why I was surprised to find out how difficult it is to develop for this watch.
-The watch needs to be connected over the local network to the Tizen Studio IDE; the tutorial for this~\ref{tizen_connect_tutorial} omits the important step of enabling developer options when working with Bluetooth, so that the device does not disconnect when trying to use the Bluetooth API.
+The watch needs to be connected over the local network to the Tizen Studio IDE; the tutorial for this~\cite{tizen_connect_tutorial} omits the important step of enabling developer options when working with Bluetooth, so that the device does not disconnect when trying to use the Bluetooth API.
 The tutorial also doesn't mention that Bluetooth should not only be disabled, but has to be turned off, on, and off again in order to connect.
 
-Working with Bluetooth itself was tricky as well since their guide~\ref{tizen_bluetooth_guide} explicitly says that it should be implemented in the main thread, but then the app refuses to connect, and when I finally found a working sample application~\ref{tizen_bluetooth_sample}, its Bluetooth functionality was divided into different threads.
+Working with Bluetooth itself was tricky as well since their guide~\cite{tizen_bluetooth_guide} explicitly says that it should be implemented in the main thread, but then the app refuses to connect, and when I finally found a working sample application~\cite{tizen_bluetooth_sample}, its Bluetooth functionality was divided into different threads.
 
-When implementing the watch's communication with the Android phone, another surprise was the missing step of asking for permissions to access the heart rate sensor~\ref{tizen_sensor_tutorial}.
+When implementing the watch's communication with the Android phone, another surprise was the missing step of asking for permissions to access the heart rate sensor~\cite{tizen_sensor_tutorial}.
 
 When my application could finally both measure heart rate and send string data to the Android phone, I attempted to send the heart rate data, which the application successfully performed and then crashed, without an accessible crash log, stack trace, or any log that could shed light at the issue at hand.
 
